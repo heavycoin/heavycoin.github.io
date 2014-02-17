@@ -1,0 +1,143 @@
+---
+layout: default
+title: Installation unstructions
+name: installation
+hvc_win32: heavycoin-1.0-win32.zip
+hvc_mac: heavycoin-1.0-mac.zip
+hvc_debian: heavycoin-1.0-debian.tar.gz
+hvc_ubuntu: heavycoin-1.0-ubuntu.tar.gz
+---
+
+<div class="container">
+    <div class="well well-main">
+        <h2 class="page-header ">Installation instructions</h2>
+           
+            <ul id="myTab" class="nav nav-tabs">
+                <li class="active"><a href="#windows" data-toggle="tab">Windows</a>
+                </li>
+                <li><a href="#mac" data-toggle="tab">Mac</a>
+                </li>
+                <li><a href="#linux" data-toggle="tab">Linux</a>
+                </li>
+            </ul>
+
+            <div id="myTabContent" class="tab-content">
+
+                <div class="tab-pane fade in active" id="windows">
+
+				<div class="item">
+					<h3>Windows</h3>
+					<ul>
+						<li>Unzip <code>{{ page.hvc_win32 }}</code></li>
+						<li>Run <code>heavycoin-qt</code> from the installation directory</li>
+					</ul>
+					<h4>Daemon</h4>
+					<ul>
+						<li>Create <code><a class="internal present" href="#hvcconf" id="conflink">heavycoin.conf</a></code> in <code>%APPDATA%\heavycoin</code></li>
+						<li>Run <code>heavycoind</code></li>
+					</ul>
+					<p>Your wallet is located in <code>C:\Users\&lt;username&gt;\AppData</code> <em>(hidden folder)</em>. Open the folder with <code>Start menu -&gt; Run...</code> (or press <code>Winkey-R</code>), type <code>%APPDATA%\heavycoin</code> into the field, and press <code>Enter</code>.</p>
+				</div>
+                </div>
+
+
+                <div class="tab-pane fade in" id="mac">
+
+				<div class="item">
+					<h3>OS X</h3>
+					<ul>
+						<li>Unzip <code>{{ page.hvc_mac }}</code></li>
+						<li>Copy <code>Heavycoin-Qt.app</code> into your <code>Applications</code> folder</li>
+						<li>Double-click <code>Heavycoin-Qt</code> icon to launch</li>
+					</ul>
+					<h4>Daemon</h4>
+					<ul>
+						<li>Create <code><a class="internal present" href="#hvcconf">heavycoin.conf</a></code> in <code>~/Library/Application Support/Heavycoin</code></li>
+						<li>Run <code>heavycoind</code></li>
+					</ul>
+					<p>Your wallet is located in <code>~/Library/Application Support/Heavycoin</code>.
+					To open the folder, press <code>Command-Shift-G</code> in Finder, insert the path, and press <code>Enter</code>.</p>
+				</div>
+                </div>
+
+                <div class="tab-pane fade in" id="linux">
+				<div class="item">
+					<h3>Linux</h3>
+					<ul>
+					<li>Unpack <code>{{ page.hvc_debian }}</code> or <code>{{ page.hvc_ubuntu }}</code></li>
+					<li>Run <code>heavycoin-qt</code> <em>(requires libqt4-gui)</em></li>
+					</ul>
+					<h4>Daemon</h4>
+					<ul>
+						<li>Create <code><a class="internal present" href="#heavycoin_conf">heavycoin.conf</a></code> in <code>~/.heavycoin</code></li>
+						<li>Run <code>heavycoind</code></li>
+					</ul>
+					<p>Your wallet is located in <code>~/.heavycoin</code>.</p>
+
+				</div>
+                </div>
+
+
+           </div><!-- tab-content -->
+
+
+				<div class="item">
+					<h2 id="config" class="page-header">Configuration</h2>
+					<p>Create <code><a class="internal present" href="#hvcconf">heavycoin.conf</a></code> in the wallet directory.</p>
+				</div>
+
+				<div class="item">
+				<h3 id="hvcconf">Sample Heavycoin configuration</h3>
+				<p>You have to set <code>rpcpassword</code> to something secure. If you run <code>heavycoind</code> without setting it you will get a computer generated password.</p>
+
+<pre><code># heavycoin.conf configuration file. Lines beginning with # are comments.
+
+### Network-related settings
+
+# Run on the test network instead of the production Heavycoin network
+#testnet=0
+
+# Connect via a SOCKS4 proxy (default: none)
+#proxy=127.0.0.1:9050
+
+# Accept incoming connections
+listen=1
+
+# Enable UPnP negotiation with router/firewall to accept incoming connections
+#upnp=1
+
+# Use as many addnode= settings as you like to connect to specific peers
+#addnode=69.164.218.197
+#addnode=10.0.0.2:8333
+
+# Maximum number of inbound+outbound connections
+#maxconnections=
+
+
+### JSON-RPC options
+
+# Enable JSON-RPC commands
+server=1
+
+# You must set rpcuser and rpcpassword to secure the JSON-RPC API
+#rpcuser=user
+#rpcpassword=!!!YourPassword!!!
+
+# By default, only RPC connections from localhost are allowed.  Specify
+# as many rpcallowip= settings as you like to allow connections from
+# other hosts (and you may use * as a wildcard character):
+#rpcallowip=192.168.1.*
+#rpcallowip=10.1.1.2
+
+# Listen for RPC connections on this TCP port:
+#rpcport=9902
+
+### Miscellaneous options
+
+# Set gen=1 to generate Heavycoins
+gen=1
+
+</code></pre>
+</div>
+</div>
+</div>

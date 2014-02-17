@@ -1,0 +1,50 @@
+- title: Windows wallet
+  desc: 
+  filename: heavycoin-1-win32.zip
+  downloaduri: wallet
+  modified: 2014-01-20 
+  size: 10.3 MB
+  version: 1
+  gpgsiglink: heavycoin-1-win32.zip.asc
+  osicon: fa-windows 
+
+- title: Mac wallet
+  desc: 
+  filename: heavycoin-1-mac.zip
+  downloaduri: wallet
+  modified: 2014-01-20 
+  size: 10.3 MB
+  version: 1
+  gpgsiglink:
+  osicon: fa-apple 
+
+- title: Debian wallet
+  desc: 
+  filename: heavycoin-1-debian.tar.gz
+  downloaduri: wallet
+  modified: 2014-01-20 
+  size: 10.3 MB
+  version: 1
+  gpgsiglink:
+  osicon: fa-linux 
+
+- title: Ubuntu 13.10 wallet
+  desc: 
+  filename: heavycoin-1-ubuntu.tar.gz
+  downloaduri: wallet
+  modified: 2014-01-20 
+  size: 10.3 MB
+  version: 1
+  gpgsiglink:
+  osicon: fa-linux 
+
+- title: Source code
+  desc:
+  filename:
+  downloaduri: http://github.com
+  modified: 2014-01-20 
+  size: 
+  version: 1
+  gpgsiglink:
+  osicon: fa-github 
+

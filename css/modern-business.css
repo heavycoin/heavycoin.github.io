@@ -1,0 +1,381 @@
+/* 
+*/
+
+
+#launch-header-info a {
+  text-decoration: none;
+}
+#launch-header-info a:hover {
+  text-decoration: none;
+}
+
+.col-center {
+    float: none;
+    margin: 0 auto;
+}
+
+div.centre
+{
+  width: 550px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.vphases {
+        vertical-align:middle;
+        text-align:center;
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  padding: 8px;
+  line-height: 1.428571429;
+  vertical-align: middle;
+  text-align: center;
+  border-top: 1px solid #dddddd;
+}
+
+.table > thead > tr > th {
+  background-color: #f5f5f5;
+}
+
+.table > thead > tr {
+   height: 50px;
+}
+
+.panel-heading {
+    text-align: center;
+}
+
+/* download */
+.downloads {
+        vertical-align:middle;
+        text-align:center;
+}
+.download-data ul {
+        list-style:none;
+        margin:0;
+        padding:0;
+}
+
+.download-data ul li {
+        margin-bottom:10px;
+}
+
+.download-data ul li:last-child {
+        margin-bottom:0;
+}
+
+.downloads i {
+       margin: 10px 0;
+}
+
+
+
+
+/* nav */
+
+.navbar-inverse {
+background-color: transparent;
+border-top: 1px solid #555;
+border-bottom: 1px solid #444;
+background: #333;
+}
+
+.navbar-inverse .active {
+background-color: red;
+}
+
+
+.features {
+  background: #fff;
+  padding: 40px 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  line-height: 1.9em;
+}
+
+.specialOffer{background:#f5f5f5; padding:18px 0; border-top: 1px solid #eee;}
+
+
+/* Global Styles */
+
+html, body {
+  height:100%;
+}
+
+body {
+  padding-top: 75px; /* body padding for fixed top nav */
+  background:rgb(236, 236, 236);
+}
+
+
+.img-home-portfolio,
+.img-customer,
+.portfolio-item {
+  margin-bottom: 30px;
+}
+
+.tab-pane {
+  margin-top: 15px;
+}
+
+/* Page Sections */
+.section,
+.section-colored {
+  padding: 50px 0;
+}
+
+.section-colored {
+  background-color: #e1e1e1; /* change this to change the background color of a colored section */
+}
+
+.sidebar {
+  margin-top: 40px;
+}
+
+.sidebar ul {
+  border-radius: 5px;
+  padding: 5px;
+  border: 1px solid #cccccc;
+}
+
+/* Half Page Height Carousel Customization */
+.carousel {
+  height: 50%;
+}
+
+.item,
+.active,
+.carousel-inner {
+  height: 100%;
+}
+
+.fill {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Social Icons Styles */
+.list-social-icons {
+  margin-bottom: 45px;
+}
+
+.tooltip-social a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.facebook-link a:hover {
+  color: #3b5998;
+}
+
+.linkedin-link a:hover {
+  color: #007fb1;
+}
+
+.twitter-link a:hover {
+  color: #39a9e0;
+}
+
+.google-plus-link a:hover {
+  color: #d14836;
+}
+
+/* Service Page Styles */
+.service-icon {
+  font-size: 50px;
+}
+
+/* 404 Page Styles */
+.error-404 {
+  font-size: 8em;
+}
+
+
+/* Footer Styles */
+.footer, .footer-home {
+  margin: 50px 0;
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 70px;
+}
+.footer-home {
+  margin: 0;
+
+}
+.footer p, .footer-home p {
+    color: #fff;
+}
+
+#footer {
+  padding: 40px 0;
+  text-align: left;
+}
+#footer p, #footer i {
+  color: #999999;
+}
+#footer i {
+  margin: 0px 5px;
+}
+#footer a:hover
+{
+  text-decoration: none;
+}
+
+.footer h2, .footer-home h2 {
+	font-size: 26px;
+	color: #fff;
+	margin-bottom: 15px;
+}
+
+.footer ul, .footer-home ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.footer p,
+.footer a, .footer-home a, .footer-home p {
+	line-height: 24px;
+	color: #fff;
+        font-size: 12px;
+}
+
+.footer a:hover, .footer-home a:hover {
+	text-decoration: underline;
+}
+
+.footer h5, .footer-home h5 {
+	color: #677786;
+	font-weight: 300;
+}
+
+/* Headerwrap */
+
+#headerwrap {
+	background: url(images/heavycoin-logo.png) no-repeat center top;
+	margin-top: 0px;
+	padding-top:160px;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 600px;
+	width: 100%;
+
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#headerwrap h1 {
+	color: #ffffff;
+}
+
+#headerwrap-2 {
+	margin-top: 0px;
+	padding-top: 15px;
+	text-align: center;
+	min-height: 600px;
+	width: 100%;
+        background-color: #f0f0f0;
+}
+
+#headerwrap-2 h1 {
+	color: #000000;
+	line-height: 75px;
+	margin-bottom: 15px;
+}
+
+#headerwrap-2 h1 span {
+	display: block;
+}
+
+#headerwrap-2 a.btn {
+	font-size: 16px;
+	padding: 16px 30px;
+	margin: 0 15px;
+}
+
+.marketcap {
+	text-align: center;
+	padding-top: 30px;
+	color: #000;
+	font-size: 18px;
+}
+
+.marketcap ul {
+	margin: 0;
+	padding: 0;
+}
+
+.marketcap li {
+	display: inline-block;
+	width: 20%;
+}
+
+.marketcap li span {
+	display: block;
+	font-size: 26px;
+}
+
+.marketcap li span:last-child {
+	font-weight: 100;
+	text-transform: uppercase;
+	font-size: 16px;
+	padding-top: 5px;
+}
+
+.marketcap .updated {
+	font-size: 14px;
+	font-weight: 300;
+	padding-top: 15px;
+	color: #ccc;
+}
+
+
+
+
+/* .accordion-group, .well,.nav-pills > .active > a, .nav > li > a:hover,.nav-tabs .open .dropdown-toggle, .nav-pills .open .dropdown-toggle, .nav > li.dropdown.open.active > a:hover {
+*/
+.well-main {
+  margin: 40px 0 0;
+  background: white;
+  border: solid 1px #CCCBC9;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+/* -moz-box-shadow: 0 0 1px 1px #fff inset,inset 0 0 20px 3px rgba(230,226,220,.6);
+-webkit-box-shadow: 0 0 1px 1px white inset,inset 0 0 20px 3px rgba(230, 226, 220, .6);
+box-shadow: 0 0 1px 1px white inset,inset 0 0 20px 3px rgba(230, 226, 220, .6); */
+  -moz-transition: all .18s;
+  -o-transition: all .18s;
+  -webkit-transition: all .18s;
+  transition: all .18s;
+}
+
+.well-news {
+  padding: 0px 19px 19px;
+}
+
+.news-item-content {
+  padding: 20px 0;
+}
+
+.merchant-icons {
+  margin: 30px 0 10px 0;
+}

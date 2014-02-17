@@ -1,0 +1,99 @@
+---
+layout: default
+title: How to mine Heavycoins and vote
+name: mining
+---
+
+<a name="how-to-vote"></a>
+<div class="container">
+    <div class="well well-main">
+        <h2 class="page-header" >How to Vote</h2>
+
+        <p>To enable voting set your block reward vote and then enable mining.</p></br>
+
+
+        <h4>Step #1: Setup the Heavycoin wallet.</h4>
+        <p>Download the heavycoin-qt wallet if you did not do this already. Install it and let it sync.</p>
+        </br>
+
+        <h4>Step #2: Go to the options in your wallet.</h4>
+	<center>
+        <img src="images/how-to-vote-settings.png"></img>
+	<br/>
+	<p>
+	  F 2: Heavycoin Voting Controls
+	</p>
+	</center>
+        <p>
+          To set your block reward vote update field <b>3</b> - "Vote on block reward".</br>
+        </p>
+        </br>
+
+        <h4>Step #3: Enable mining</h4>
+          <p>
+             Check box (<b>1</b>) - "Mine Heavycoins" and select number of threads you wish to use for mining in field (<b>2</b>) - "Mining threads".
+          </p>
+        
+
+        <h2 class="page-header ">Showing information about voting and money supply</h2>
+        <p>You can keep track of current voting and money supply by showing detailed information on overview page of your Heavycoin wallet.</p>
+        </br>
+        <h4>Step #1: Setup overview page</h4>
+
+        <p>To show information about voting select box (<b>4</b>) - "show block reward voting on overview page"</p>
+        <p>To show information about money supply select box (<b>5</b>) - "show money supply on overview page"</p>
+
+        <h2 class="page-header">Overview page</h2>
+        </br>
+	<center>
+        <img src="images/how-to-vote-overview.png"></img>
+	<br/>
+	<p>
+	  Figure 3: Heavycoin Voting Overview
+	</p>
+	</center>
+        </br>
+        </br>
+        <h4>"Block reward voting" - section <b>1</b></h4>
+        <ul>
+          <li>Current - current block reward</li>
+          <li>Next - estimated next block reward, based on decentralised voting</li>
+          <li>When - estimated time remaining until the votes are tallied and we change to the next block reward</li>
+          <li>Your vote - your block reward vote</li>
+          <li>Phase - Mint, Limit, Sustain</li>
+        </ul>
+
+        </br>
+
+        <h4>"Money supply" - section <b>2</b></h4>
+        <ul>
+          <li>Current - current money supply</li>
+          <li>Next - next target</li>
+          <li>Max - maximum possible money supply</li>
+        </ul>
+        </br>
+
+        <p>For a detailed explenation of voting and what it affects have a look at <a href="about.html#decentralised-voting">how voting works</a>.</p>
+        </br>
+
+        <h2 class="page-header" >RPC Voting</h2>
+
+	<p>
+	The following RPC interface has been added for voting.
+	</p>
+
+	<ul>
+        <li><strong>setvote &#60;vote&#62;</strong> - Set your block reward vote.  The <vote> parameter is an integer between 0 and the maximum permitted vote for the given phase of voting.</li>
+        <li><strong>getvote</strong> - Returns the current block reward vote setting.</li>
+        <li><strong>getreward</strong> - Returns the current block reward, which has been decided democratically in the previous round of block reward voting.</li>
+        <li><strong>getsupply</strong> - Returns the current money supply.</li>
+        <li><strong>getmaxmoney</strong> - Returns the maximum possible money supply.</li>
+	</ul>
+
+        <h4>Happy voting!<h4>
+
+
+    </div>
+</div>
+
+

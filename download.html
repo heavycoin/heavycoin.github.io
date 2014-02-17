@@ -1,0 +1,37 @@
+---
+layout: default
+title: Download
+name: download
+---
+      {% for item in site.data.downloads-genkeys %}
+<div class="container">
+    <div class="well well-main">
+       <div class="row">
+              <div class="col-md-4 cell">
+                  <h3><a href="{{ item.downloaduri }}">{{ item.title }}</a></h3>
+                  <p>{{ item.desc }}</p>
+              </div>
+              <div class="cell col-md-5 download-data">
+                  <ul>
+                    <li><span>Version:</span> {{ item.version }}</li>
+                    <li><span>File Size:</span> {{ item.size }}</li>
+                    {% if item.gpgsiglink %}
+                    <li><span>GPG Sig:</span> <a href="{{ item.gpgsiglink }}" class="file-link">Click</a> </li>
+                    {% endif %}
+                    {% if item.sha256 %}
+                    <li><span>SHA256:</span><span style="font-size: 12px"> {{ item.sha256 }}<span></li>
+                    {% endif %}
+                  </ul>
+              </div>
+              <div class="cell col-md-3 downloads">
+                  <p><a href="{{ item.downloaduri }}" class="btn btn-primary btn-lg rt-button rt-button" role="button"><span class="glyphicon glyphicon-cloud-download"></span>&nbsp; Download</span></a>
+                  <div><i class="fa {{ item.osicon }} fa-2x"></i></div>
+                  <div><a href="{{ item.downloaduri }}" class="file-link">{{ item.filename }}</a></div>
+              </div>
+          </div>
+
+     </div>
+  </div>
+        {% endfor %}
+
+

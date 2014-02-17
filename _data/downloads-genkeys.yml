@@ -1,0 +1,43 @@
+- title: Windows
+  desc: Heavycoin Keypair and Address Tool
+  filename: heavycoin-genkeys-1.0-win32.zip
+  downloaduri: http://ubuntuone.com/6D9ov5NJblJ6QqpPMII5su
+  modified: 2014-02-17
+  size: 677K
+  version: 1.0
+  gpgsiglink: http://ubuntuone.com/46HNX1WMHP3OSztyqVNDJ8
+  sha256: f606f52143aa6a0a893f2b80461839efba137b9e8ac73dbec3a0d6297d6fbd90
+  osicon: fa-windows
+
+- title: Mac
+  desc:  Heavycoin Keypair and Address Tool
+  filename: heavycoin-genkeys-1.0-mac.zip
+  downloaduri: http://ubuntuone.com/39h8GgHaekmmnb6AA4dIgt
+  modified: 2014-02-17
+  size: 475K
+  version: 1.0
+  gpgsiglink: http://ubuntuone.com/2uNRfKOQqlmlAGT8huCx35
+  sha256: 240d85f59356b1bdbc4e886011e69099fecb73a1600577b247474634ba898b8e
+  osicon: fa-apple
+
+- title: Ubuntu-13.10 (Saucy)
+  desc:  Heavycoin Keypair and Address Tool
+  filename: http://ubuntuone.com/5S9M7taug27QBVCfAtqZQy
+  downloaduri: wallet
+  modified: 2014-02-17
+  size: 66K
+  version: 1.0
+  gpgsiglink: http://ubuntuone.com/2kTtbZr6AiW4nyf0I4W55i
+  sha256: 58710f433bd42ff1fa7762adeca3a7d5337734ab698f0c764a38d03f582781be
+  osicon: fa-linux
+
+- title: Debian 7 (Wheezy)
+  desc:  Heavycoin Keypair and Address Tool
+  filename: heavycoin-genkeys-1.0-debian-7.tar.gz
+  downloaduri: http://ubuntuone.com/68WdTOfnbZuAbK7FVqhb0y
+  modified: 2014-02-17
+  size: 66K
+  version: 1.0
+  gpgsiglink: http://ubuntuone.com/6SJsJ0P12GA1DBoTJrVBRn
+  sha256: ecdb18c67d42c900eac2298295e0656d93e44a54bfafee6e7f3a89a6d9807777
+  osicon: fa-linux
