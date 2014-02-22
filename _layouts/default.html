@@ -38,7 +38,14 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li {% if page.name == "about" %} class="active" {% endif %}><a href="about.html">About</a>
                     </li>
-                    <li {% if page.name == "launch" %} class="active" {% endif %}><a href="launch.html">Launch</a>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Launch <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="launch.html">Details and Launch</a>
+                            </li>
+                            <li><a href="ipo-calculator.html">IPO Calculator and Live Investment Updates</a>
+                            </li>
+                        </ul>
                     </li>
                     <li {% if page.name == "news" %} class="active" {% endif %}><a href="news.html">News</a>
                     </li>
@@ -125,6 +132,23 @@
 <script src="bootstrap/js/bootstrap.min.js"></script>
 
 <script type='text/javascript'>
+
+{% if page.name == "launch" %}
+$(document).ready(function() {
+  fetchIPOBalance();
+});
+function fetchIPOBalance()
+{
+    $.get("http://blockr.io/api/v1/address/balance/{{ site.HVCIPOAddr }}", function( rdata ) {
+        $('#total_sold').html(rdata.data.balance);        
+  }, "json")
+    .fail(function() {
+        alert("Failed to load data from http://blockr.io/api/v1/address/balance/{{ site.HVCIPOAddr }}");
+    });
+}
+{% endif %}
+
+
 {% if page.name == "ipo-calc" %}
 
 var address='{{ site.HVCIPOAddr }}';
@@ -145,7 +169,10 @@ function fetchIPOBalance()
         window.totalSoldPlusInvest = window.totalSold;
         $('#total_sold').html(window.totalSold);        
         fetchIPOtxs();
-  }, "json" );
+  }, "json")
+     .fail(function() {
+        alert("Failed to load data from http://blockr.io/api/v1/address/balance/{{ site.HVCIPOAddr }}");
+    });
 
 }
 
@@ -154,7 +181,11 @@ function fetchIPOtxs()
     $.get("http://blockr.io/api/v1/address/txs/"+window.address, function( rdata ) {
         transactions = rdata;
         populateTable();
-  }, "json" );
+  }, "json")
+      .fail(function() {
+        alert("Failed to load data from http://blockr.io/api/v1/address/txs/{{ site.HVCIPOAddr }}");
+    });
+
 }
 
 function populateTable()
@@ -166,9 +197,9 @@ function populateTable()
     {
         var share = window.transactions.data.txs[i].amount/window.totalSoldPlusInvest;
         row[0] = '<tr class="center">';
-        row[1] = '<td>'+(i+1)+'</td>';
+        row[1] = '<td>'+(transactions.data.nb_txs-i)+'</td>';
         row[2] = '<td>'+window.transactions.data.txs[i].time_utc+'</td>';
-        row[3] = '<td>'+window.transactions.data.txs[i].tx.substring(0,6)+'</td>';
+        row[3] = '<td><a href="http://blockchain.info/tx/'+window.transactions.data.txs[i].tx+'" target="_blank">'+window.transactions.data.txs[i].tx.substring(0,6)+'...</a></td>';
         row[4] = '<td>'+window.transactions.data.txs[i].amount+'</td>';
         row[5] = '<td>'+(share*100).toFixed(4)+' %</td>';
         row[6] = '<td class="ipo_share">'+(totalIPO * share).toFixed(8)+'</td>';

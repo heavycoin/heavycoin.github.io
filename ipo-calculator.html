@@ -5,9 +5,11 @@ name: ipo-calc
 ---
 <div class="container">
     <div class="well well-main">
-                <h2 class="page-header ">IPO calculator</h2>
+                <h2 class="page-header ">IPO Calculator and Live Investment Updates</h2>
 
-<p><strong>Total IPO investment received so far: <span id="total_sold">0</span> BTC</strong></p></br>
+<p>Total IPO investment received so far: <strong><span id="total_sold">0</span> BTC</strong></p>
+<p>Heavycoin IPO address <img src="images/btc.jpg" alt="฿"/><strong><a href="http://blockchain.info/address/{{ site.HVCIPOAddr }}" target="_blank"> {{ site.HVCIPOAddr }}</a></strong></p></br>
+
 <div class="row">
   <div class="col-xs-2">
         <input id="yi" type="email" class="form-control" placeholder="Your investment:" required autofocus>
@@ -19,7 +21,7 @@ name: ipo-calc
 
 <div style="height:75px; margin-top: 15px;">
   <div id="myshare">
-  <p>Your IPO stake would be <b><span id="myshare_p"></span></b> % of the total Heavycoin IPO.</br>
+  <p>Your IPO stake would currently be <b><span id="myshare_p"></span></b> % of the total Heavycoin IPO.</br>
 If no further investment is received you would receive <b><span id="myshare_hvc"></span></b></p>
   </div>
 
