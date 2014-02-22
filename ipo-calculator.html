@@ -1,0 +1,51 @@
+---
+layout: default
+title: IPO calculator
+name: ipo-calc
+---
+<div class="container">
+    <div class="well well-main">
+                <h2 class="page-header ">IPO calculator</h2>
+
+<p><strong>Total IPO investment received so far: <span id="total_sold">0</span> BTC</strong></p></br>
+<div class="row">
+  <div class="col-xs-2">
+        <input id="yi" type="email" class="form-control" placeholder="Your investment:" required autofocus>
+  </div>
+  <div class="col-xs-2">
+        <button class="btn btn-block" type="submit" id="btnCheck">check</button>
+  </div>
+</div>
+
+<div style="height:75px; margin-top: 15px;">
+  <div id="myshare">
+  <p>Your IPO stake would be <b><span id="myshare_p"></span></b> % of the total Heavycoin IPO.</br>
+If no further investment is received you would receive <b><span id="myshare_hvc"></span></b></p>
+  </div>
+
+</div>
+
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+    <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th width="10%"><h3>No</h3></th>
+            <th width="18%"><h3>Date</h3></th>
+            <th width="18%"><h3>Transaction</h3></th>
+            <th width="18%"><h3>BTC Invested</h3></th>
+            <th width="18%"><h3>&#37</h3></th>
+            <th width="18%"><h3>HVC Stake</h3></th>
+          </tr>
+        </thead>
+        <tbody id="table-investors">
+          <tr class="center">
+            <td colspan="6"><h3>Loading...</h3></td>
+          </tr>
+        </tbody>
+    </table>
+</div>
+
+    </div>
+</div>
+
