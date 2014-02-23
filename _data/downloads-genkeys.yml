@@ -22,8 +22,8 @@
 
 - title: Ubuntu-13.10 (Saucy)
   desc:  Heavycoin Keypair and Address Tool
-  filename: http://ubuntuone.com/5S9M7taug27QBVCfAtqZQy
-  downloaduri: wallet
+  filename: heavycoin-genkeys-1.0-ubuntu-13.10.tar.gz
+  downloaduri: http://ubuntuone.com/5S9M7taug27QBVCfAtqZQy
   modified: 2014-02-17
   size: 66K
   version: 1.0
