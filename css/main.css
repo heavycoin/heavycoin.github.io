@@ -158,3 +158,33 @@ a:visited { color: #a0a; }
 .post pre.terminal code {
   background-color: #333;
 }
+
+.code2
+{
+	color: #000000;
+	background-color: #fff;
+	font-family: "courier new", "times new roman", monospace;
+	font-size: 12px;
+	line-height: 1.3em;
+	/* Put a nice border around it. */
+	border: 1px solid #000000;
+	padding: 5px;
+	margin: 1px 3px 4px 6px;
+	 width: 93%;
+	/* Don't wrap its contents, and show scrollbars. */
+	white-space: nowrap;
+	overflow: auto;
+	/* Stop after about 24 lines, and just show a scrollbar. */
+	max-height: 24em;
+}
+
+.quoteheader2, .codeheader2
+{
+	color: #476C8E;
+	text-decoration: none;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 10px;
+	line-height: 1.2em;
+	 margin-left: 6px;
+}
