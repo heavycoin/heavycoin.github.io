@@ -27,7 +27,6 @@ name: about
                 <div class="tab-pane fade in active" id="ultra-secure">
                     <i class="fa fa-thumbs-o-up  pull-left fa-4x"></i>
                     <p>
-
                     Heavycoin introduces a novel ultra-secure hash
                     algorithm that employs multiple redundant
                     cryptographic hash functions to secure its block
@@ -36,7 +35,6 @@ name: about
                     is a significant step forward over Bitcoin,
                     Litecoin and most other crypto-currencies, which
                     rely on a single cryptographic hash function.
-
                     </p>
 
                     <p><center><img src="images/multi-hash.png" title="If one of these hash functions fail, then Heavycoin is still protected by the others. This is a significant step forward over Bitcoin and most other crypto-currencies." /></center></p>
@@ -44,9 +42,9 @@ name: about
                     <p>
                     Moreover, Bitcoin and most other altcoins rely
                     only on SHA-256, which was developed by the NSA.
-                    The recent Snowden revelations bring into question
-                    the security promise of SHA-256 and, thus, the
-                    true government independence of Bitcoin.
+                    The recent Snowden revelations could bring into
+                    question the security promise of SHA-256 and,
+                    thus, the true government independence of Bitcoin.
                     </p>
 
                     <p>
@@ -69,11 +67,10 @@ name: about
                     </p>
 
                     <p>
-                    <b>A:</b>
-		    Yes, but incorrectly and without increasing
-                    security.  Quarkcoin (and its many clones)
-                    actually implement multiple hash functions as a
-                    simple chain of function compositions
+                    <b>A:</b> Yes, but without increasing security
+		    against collisions.  Quarkcoin (and its many
+		    clones) actually implement multiple hash functions
+		    as a simple chain of function compositions
                     </p>
 
                     <center>
@@ -88,18 +85,15 @@ name: about
 		    </p>
 
 		    <p>
-
                     The problem is that, due to Quarkcoin's simple use
                     of function compositions, if BLAKE512(x) has
                     collisions, then so does BMW512(BLAKE512(x)) and
-                    SKEIN512(KECCAK512(... so on, until we reach
+                    SKEIN512(KECCAK512(... and so on, until we reach
                     Quark(x), which also has collisions.  Similarly,
-                    SKEIN-512 or Grøestl-512 turn out to be
-                    cryptographically weak, then so is Quark(x).
-                    Simply put, the way that Quarkcoin combines
-                    multiple hash functions does not provide extra
-                    security.  If BLAKE-512 is cracked, then so is
-                    Quark(x).
+                    SKEIN-512 or Grøestl-512 turn out to be collide,
+                    then so is Quark(x).  Simply put, if there's a
+                    collision attack or second-preimage attack for
+                    BLAKE-512(x), then Quark(x) is cracked.
                     </p>
 
                     <p></br>
@@ -107,17 +101,16 @@ name: about
                     </p>
 
                     <p>
-                    <b>A:</b> Heavycoin takes the strongest 64 bits
-                    from 4 well-known cryptographic hash functions
-                    (SHA-256, Keccak-512, Grøestl-512 and BLAKE-512)
-                    and interleaves these bits into a combined 256-bit
-                    hash.  This is safe because, by definition, a
-                    cryptographic hash function's outputs are
-                    considered random bits.
+                    <b>A:</b> Heavycoin takes 64 bits from the output
+                    of each of 4 well-known cryptographic hash
+                    functions (SHA-256, Keccak-512, Grøestl-512 and
+                    BLAKE-512) and interleaves these bits into a
+                    combined 256-bit hash that is more resistant
+                    against collisions and second-preimage attacks.
                     </p>
 
 		    <center>
-		    <img src="images/heavycoin-combined-hash.png" style="padding: 15px; height: 230px;" title="Heavycoin takes the strongest 64 bits from 4 well-known cryptographic hash functions and interleaves these bits into a combined 256-bit hash" />
+		    <img src="images/heavycoin-combined-hash.png" style="padding: 15px; height: 230px;" title="Heavycoin takes 64 bits from 4 well-known cryptographic hash functions and interleaves these bits into a combined 256-bit hash" />
 		    </center>
 
                     <p>
@@ -128,7 +121,8 @@ name: about
                     it does not rely on the long-term security of any
                     single cryptographic hash function.  If BLAKE-512
                     is cracked, then Heavy(x) is only weakened, but
-                    Heavycoin would remain fully functional and secure.
+                    Heavycoin would remain fully functional and
+                    secure.
                     </p>
                 </div>
 
