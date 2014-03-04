@@ -43,7 +43,7 @@
                         <ul class="dropdown-menu">
                             <li><a href="launch.html">Details</a>
                             </li>
-                            <li><a href="ipo-calculator.html">IPO shares</a>
+                            <li><a href="ipo-calculator.html">IPO stakeholders</a>
                             </li>
                             <li><a href="video-demo.html">Video demo</a>
                             </li>
@@ -141,109 +141,6 @@
 <script src="bootstrap/js/bootstrap.min.js"></script>
 
 <script type='text/javascript'>
-
-{% if page.name == "launch" %}
-$(document).ready(function() {
-  fetchIPOBalance();
-});
-function fetchIPOBalance()
-{
-    $.get("http://blockr.io/api/v1/address/balance/{{ site.HVCIPOAddr }}", function( rdata ) {
-        $('#total_sold').html(rdata.data.balance);        
-  }, "json")
-    .fail(function() {
-        alert("Failed to load data from http://blockr.io/api/v1/address/balance/{{ site.HVCIPOAddr }}");
-    });
-}
-{% endif %}
-
-
-{% if page.name == "ipo-calc" %}
-
-var address='{{ site.HVCIPOAddr }}';
-var transactions;
-var totalIPO=5000000;
-var totalSold=0;
-var totalSoldPlusInvest = 0;
-
-$(document).ready(function() {
-  $('#myshare').hide()
-  fetchIPOBalance();
-});
-
-function fetchIPOBalance()
-{
-    $.get("http://blockr.io/api/v1/address/balance/"+window.address, function( rdata ) {
-        window.totalSold = rdata.data.balance;
-        window.totalSoldPlusInvest = window.totalSold;
-        $('#total_sold').html(window.totalSold);        
-        fetchIPOtxs();
-  }, "json")
-     .fail(function() {
-        alert("Failed to load data from http://blockr.io/api/v1/address/balance/{{ site.HVCIPOAddr }}");
-    });
-
-}
-
-function fetchIPOtxs()
-{
-    $.get("http://blockr.io/api/v1/address/txs/"+window.address, function( rdata ) {
-        transactions = rdata;
-        populateTable();
-  }, "json")
-      .fail(function() {
-        alert("Failed to load data from http://blockr.io/api/v1/address/txs/{{ site.HVCIPOAddr }}");
-    });
-
-}
-
-function populateTable()
-{
-    var row = new Array();
-    var table = "";
-
-    for (var i = 0; i < transactions.data.nb_txs; i++)
-    {
-        var share = window.transactions.data.txs[i].amount/window.totalSoldPlusInvest;
-        row[0] = '<tr class="center">';
-        row[1] = '<td>'+(transactions.data.nb_txs-i)+'</td>';
-        row[2] = '<td>'+window.transactions.data.txs[i].time_utc+'</td>';
-        row[3] = '<td><a href="http://blockchain.info/tx/'+window.transactions.data.txs[i].tx+'" target="_blank">'+window.transactions.data.txs[i].tx.substring(0,6)+'...</a></td>';
-        row[4] = '<td>'+window.transactions.data.txs[i].amount+'</td>';
-        row[5] = '<td>'+(share*100).toFixed(4)+' %</td>';
-        row[6] = '<td class="ipo_share">'+(totalIPO * share).toFixed(8)+'</td>';
-        row[7] = '</tr>';
-        table += row.join();
-    }
-
-    $('#table-investors').html(table);
-
-    $('.ipo_share').formatCurrency({
-                   symbol: '',
-                   positiveFormat: '%n %s',
-                   roundToDecimalPlace: '8'
-                   });
-}
-
-$('#btnCheck').click(function(){
-    var invest = parseFloat($('#yi').val());
-    window.totalSoldPlusInvest = window.totalSold + invest;
-    var share = invest/window.totalSoldPlusInvest;
-    
-    $('#myshare_p').html((share * 100).toFixed(4));
-    $('#myshare_hvc').html((5000000 * share).toFixed(8));
-    $('#myshare_hvc').formatCurrency({
-                   symbol: '',
-                   positiveFormat: '%n %s',
-                   roundToDecimalPlace: '8'
-                   });
-
-    $('#myshare').show()
-    populateTable();
- });
-  
-{% endif %}
-
 
 {% if page.name == "home" %}
 
