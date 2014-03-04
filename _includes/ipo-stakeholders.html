@@ -82,9 +82,9 @@ of your IPO funds.
             <th width="18%"><h3>HVC Stake</h3></th>
           </tr>
         </thead>
-        <tbody id="xtable-investors">
  {% for item in site.data.ipo-investors %}
    {% if item.procedure == 2 %}    
+        <tbody>
         <tr class="center">
           <td rowspan="2">{{ item.number }}</td>
           <td>{{ item.date }}</td>
@@ -96,9 +96,9 @@ of your IPO funds.
           <tr style="text-align: margin: 10px 0">
           <td colspan="5" style="text-align: left" title="Address">{{ item.hvcaddress }}</td>
         </tr>
+        </tbody>
  {% endif %}
  {% endfor %}
-        </tbody>
     </table>
   </div>
  </div>
