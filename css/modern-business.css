@@ -1,3 +1,6 @@
+tbody:hover td[rowspan], tr:hover td {
+   background: #f5f5f5; 
+}
 
 #launch-header-info a {
   text-decoration: none;

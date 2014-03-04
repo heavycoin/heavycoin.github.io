@@ -5,13 +5,24 @@ name: ipo-calc
 ---
 <div class="container">
     <div class="well well-main">
-                <h2 class="page-header ">IPO stakeholders</h2>
-
-<div id="xdata-investors"></div>
+        <h2 class="page-header ">IPO stakeholders</h2>
 
 <p>Total IPO investment received: <strong><span id="xtotal_sold">173.84775614</span> BTC</strong></p>
+</br>
 
 <h3>Procedure 1</h3>
+</br>
+
+<p>
+Procedure 1 investors should examine their records very careuflly and double check that their stakes and public keys are correct. 
+Investors should also double check that they have their corresponding private keys. 
+You must report any mistakes to the Heavycoin developers before March 6th 00:00 UTC. 
+If you have lost your private key then you will need to generate a new keypair and send it to us along with your list of IPO investment transactions. 
+It is extremely important that you check over your details very carefully. 
+Failure to do so could result in the unrecoverable loss of your IPO funds!
+</p>
+</br>
+
 <div class="panel panel-default">
   <!-- Default panel contents -->
     <table class="table table-bordered table-hover">
@@ -25,9 +36,9 @@ name: ipo-calc
             <th width="18%"><h3>HVC Stake</h3></th>
           </tr>
         </thead>
-        <tbody id="xtable-investors">
  {% for item in site.data.ipo-investors %}
-   {% if item.procedure == 1 or item.procedure != 2 %}    
+   {% if item.procedure == 1 or item.procedure != 2 %}
+        <tbody>
         <tr class="center">
           <td rowspan="2">{{ item.number }}</td>
           <td>{{ item.date }}</td>
@@ -39,13 +50,21 @@ name: ipo-calc
         <tr style="text-align: margin: 10px 0">
           <td colspan="5" style="text-align: left" title="Public Key">{{ item.hvcpubkey }} </td>
         </tr>
+        </tbody>
    {% endif %}    
  {% endfor %}
-        </tbody>
     </table>
 </div>
 
+</br>
 <h3>Procedure 2</h3>
+</br>
+<p>
+Procedure 2 investors should examine their records very careuflly and double check that their stakes and Heavycoin addresses are correct. 
+You must report any mistakes to the Heavycoin developers before March 6th 00:00 UTC. 
+Failure to do so could result in the loss of your IPO funds.
+</p>
+
 <div class="panel panel-default">
   <!-- Default panel contents -->
     <table class="table table-bordered table-hover">
