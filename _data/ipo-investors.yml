@@ -1129,9 +1129,9 @@
   btc: 9.3
   stakepc: 5.3495 %
   hvcstake: 267475.41085634
-  hvcpubkey: 04c96ddce0a8a87820f77802d7484c4b7e24a158a4357cbd87792ed224464442bb29e419cf2e5cc131d108eda43331ed523219697b535636e91ccda7173575e884
-  hvcaddress:
-  procedure: 1
+  hvcpubkey:
+  hvcaddress: HCjT9cKcy6yHPQGjkMUhSNrZRjhxFxoUQY
+  procedure: 2
 - number: 46
   date: 2014-02-27T09:46:32Z
   tx: 8345a635ef63ca7cb0c5d8ea13faa70d5307e7ea405cebfe068289f637e5d595
