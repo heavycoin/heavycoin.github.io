@@ -1,0 +1,105 @@
+<div class="container">
+    <div class="well well-main">
+        <h2 class="page-header ">IPO stakeholders</h2>
+
+<p>Total received: <strong><span id="xtotal_sold">173.84775614</span> BTC</strong></p>
+<p>Number of transaction : <strong>172</strong></p>
+</br>
+
+<h3>Procedure 1</h3>
+</br>
+
+<p>
+Please examine your investment details carefully and double check that
+your stakes and public keys are correct.  You must also check that you
+have the corresponding private keys.  Any mistakes must be reported to
+the Heavycoin developers before March 6th 00:00 UTC.  Failure to do so
+will result in the unrecoverable loss of your IPO funds!  If we do not
+hear from you, then we consider this to mean that there are no
+mistakes.  If you have lost your Heavycoin Private Key then you need
+to generate a new keypair and PM it to us (before March 6th) along
+with your list of IPO investment transactions.
+</p>
+</br>
+
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+    <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th width="10%"><h3>No</h3></th>
+            <th width="18%"><h3>Date</h3></th>
+            <th width="18%"><h3>Transaction</h3></th>
+            <th width="18%"><h3>BTC Invested</h3></th>
+            <th width="18%"><h3>&#37</h3></th>
+            <th width="18%"><h3>HVC Stake</h3></th>
+          </tr>
+        </thead>
+ {% for item in site.data.ipo-investors %}
+   {% if item.procedure == 1 or item.procedure != 2 %}
+        <tbody>
+        <tr class="center">
+          <td rowspan="2">{{ item.number }}</td>
+          <td>{{ item.date }}</td>
+          <td><a href="http://blockchain.info/tx/{{ item.tx }}" target="_blank">{{ item.tx | truncate: 9}}</td>
+          <td>{{ item.btc }}</td>
+          <td>{{ item.stakepc }}</td>
+          <td class="ipo_share">{{ item.hvcstake }}</td>
+        </tr>
+        <tr style="text-align: margin: 10px 0">
+          <td colspan="5" style="text-align: left" title="Public Key">{{ item.hvcpubkey }} </td>
+        </tr>
+        </tbody>
+   {% endif %}
+ {% endfor %}
+    </table>
+</div>
+
+</br>
+<h3>Procedure 2</h3>
+</br>
+<p>
+Please examine your investment details very careuflly and double check
+that your stakes and Heavycoin addresses are correct.  You should compare
+the Heavycoin address to the one we PM'd to you on bitcointalk.org.  You must report
+any mistakes to the Heavycoin developers before March 6th 00:00 UTC.
+If we do not hear from you, then we consider this to mean that there
+are no mistakes.  Failure to report a mistake will result in the loss
+of your IPO funds.
+</p>
+
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+    <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th width="10%"><h3>No</h3></th>
+            <th width="18%"><h3>Date</h3></th>
+            <th width="18%"><h3>Transaction</h3></th>
+            <th width="18%"><h3>BTC Invested</h3></th>
+            <th width="18%"><h3>&#37</h3></th>
+            <th width="18%"><h3>HVC Stake</h3></th>
+          </tr>
+        </thead>
+        <tbody id="xtable-investors">
+ {% for item in site.data.ipo-investors %}
+   {% if item.procedure == 2 %}    
+        <tr class="center">
+          <td rowspan="2">{{ item.number }}</td>
+          <td>{{ item.date }}</td>
+          <td><a href="http://blockchain.info/tx/{{ item.tx }}" target="_blank">{{ item.tx | truncate: 9}}</td>
+          <td>{{ item.btc }}</td>
+          <td>{{ item.stakepc }}</td>
+          <td class="ipo_share">{{ item.hvcstake }}</td>
+        </tr>
+          <tr style="text-align: margin: 10px 0">
+          <td colspan="5" style="text-align: left" title="Address">{{ item.hvcaddress }}</td>
+        </tr>
+ {% endif %}
+ {% endfor %}
+        </tbody>
+    </table>
+  </div>
+ </div>
+</div>
+

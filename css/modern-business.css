@@ -1,4 +1,4 @@
-tbody:hover td[rowspan], tr:hover td {
+tbody:hover td, tr:hover td {
    background: #f5f5f5; 
 }
 
