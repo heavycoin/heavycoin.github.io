@@ -1103,8 +1103,8 @@
   stakepc: 0.1779 %
   hvcstake: 8896.73921793
   hvcpubkey: 049b6ce35f48f67521fc6dec29dc8ecb25506674a2fd53cb392494b1d76ddc38b11b2ae093531f7c0fd5bd67b217c84e2a9f781e0fa6b0bc121d5cbf634e6c9176
-  hvcaddress:
-  procedure: 1
+  hvcaddress: HUQ1t5omww1TAHB7tjzG9TkShZbJP2Rc3d
+  procedure: 2
 - number: 49
   date: 2014-02-27T12:21:31Z
   tx: 0edef715244a46b6d220b754721a2dfc3894149b0681db17f1e2c261a83ea2ff
@@ -1121,8 +1121,8 @@
   stakepc: 0.5784 %
   hvcstake: 28922.43254466
   hvcpubkey: 04ebfb8ba437ec725d5368ec65123a188dd1d8e7fea189044ae0f5496ce6f6a9f825c8440212472448e52e170928dd6093c3737c4c0d56d0b55a6460c31e6c45b7
-  hvcaddress:
-  procedure: 1
+  hvcaddress: HDoowkQtTeECpsY2m1mYuJCjHBeA7nkN1p
+  procedure: 2
 - number: 47
   date: 2014-02-27T09:46:32Z
   tx: 534640b2c766fd52ad43fa2f8c9c8c46228e6c074ad2d84b74ef032e8eb9cc27
