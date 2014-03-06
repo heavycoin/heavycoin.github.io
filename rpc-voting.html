@@ -1,0 +1,32 @@
+---
+layout: default
+title: RPC voting
+name: RPC voting
+---
+
+<a name="rpc-voting"></a>
+<div class="container">
+    <div class="well well-main">
+        <h2 class="page-header" >RPC voting</h2>
+	<p>
+	The following RPC interface has been added for voting.
+	</p>
+
+	<ul>
+        <li><strong>setvote &#60;vote&#62;</strong> - Set your block reward vote.  The <vote> parameter is an integer between 0 and the maximum permitted vote for the given phase of voting.</li>
+        <li><strong>getvote</strong> - Returns the current block reward vote setting.</li>
+        <li><strong>getmaxvote</strong> - Returns the maximum allowed vote for the current phase of voting.</li>
+        <li><strong>getphase</strong> - Returns the current voting phase ('Mint', 'Limit' or 'Sustain').</li>
+        <li><strong>getreward</strong> - Returns the current block reward, which has been decided democratically in the previous round of block reward voting.</li>
+        <li><strong>getnextrewardestimate</strong> - Returns an estimate for the next block reward based on the current state of decentralized voting.</li>
+        <li><strong>getsupply</strong> - Returns the current money supply.</li>
+        <li><strong>getmaxmoney</strong> - Returns the maximum possible money supply.</li>
+	</ul>
+
+        <h4>Happy voting!<h4>
+
+
+    </div>
+</div>
+
+
