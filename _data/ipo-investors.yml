@@ -4,7 +4,7 @@
   btc: 1
   stakepc: 0.5752 %
   hvcstake: 28760.79686627
-  hvcpubkey:
+  hvcpubkey: 0434374dec40a10ed26d0e09f9e214c33eeb60f29cba3ebe0e6fe8fe9deaf972b1947020491be6cd51a5e199ee9cc39ef35ec17131c44cdc537f85625810a2d4a3
   hvcaddress: HFdoYjCN2StqnuK5zvKjX3iWRSxMd7G1Vo
   procedure: 2
 - number: 171
@@ -13,7 +13,7 @@
   btc: 1
   stakepc: 0.5752 %
   hvcstake: 28760.79686627
-  hvcpubkey:
+  hvcpubkey: 0481b663eb18b875091d8f71b44d32d325e374fc7bd1aa785072124a5adc9c88f9fca53ed79cd796a61ebbc4f20ad4ecf41a6eff6bf5f4f3a84aed521cd94f29d4
   hvcaddress: HQK359WxDGF18BFVZQ2VDFRZL4UBEJh1y9
   procedure: 2
 - number: 170
@@ -22,7 +22,7 @@
   btc: 2.2
   stakepc: 1.2655 %
   hvcstake: 63273.75310580
-  hvcpubkey:
+  hvcpubkey: 04506de84205025cd32a711e90486a33d0971cb4aab3f689e261ca60d56c7ade4857949cc90daeadfac03dba88c4e6d9c001901d8ebc4bad0d48fb2ac30a397396
   hvcaddress: HUzy4oLSLjf8YL8REpZPqLjfzYgfgDP7q3
   procedure: 2
 - number: 169
@@ -31,7 +31,7 @@
   btc: 2
   stakepc: 1.1504 %
   hvcstake: 57521.59373255
-  hvcpubkey:
+  hvcpubkey: 04122ab9b83f0b960a8391b2983b5401a9d4385a74af28ebcb5f7bbd269c137bd9c5355b147db1640c5c2b496d80b3e0498ff3b07de98c480444862437b68460eb
   hvcaddress: HAuARoK5PbJG3aXzRZCGb1E9hjmH4qoUge
   procedure: 2
 - number: 168
@@ -49,7 +49,7 @@
   btc: 0.229
   stakepc: 0.1317 %
   hvcstake: 6586.22248238
-  hvcpubkey:
+  hvcpubkey: 0410de30c0489d922da0c1ca805565f139730cd9b69bded0f3378e9dfe7ac277bf48002e9f014d6084cf1074d2994033ad4c11dd0f7b9f8e5bfb4a723d82a1e675
   hvcaddress: HTZBPjBfGr98QKG1mD3RGc61Kn9hHo6kDH
   procedure: 2
 - number: 166
@@ -67,7 +67,7 @@
   btc: 0.25
   stakepc: 0.1438 %
   hvcstake: 7190.19921657
-  hvcpubkey:
+  hvcpubkey: 04f2af866c7dacc894381ef0b2ef69eb2e391d9ab589143d5d494e630a4978629ab66540f92e327c35e21f0fd4bbd877fe5979a386e7946e4bd2839d6f5c9b8c34
   hvcaddress: HMRkJ3x6GzcabArKq4eAkbDkfzHMfzB6tX
   procedure: 2
 - number: 164
@@ -94,7 +94,7 @@
   btc: 0.37
   stakepc: 0.2128 %
   hvcstake: 10641.49484052
-  hvcpubkey:
+  hvcpubkey: 04488b734534668ca6155436bdf021f0c431b58c6b0cc7527ce62dd0bc8b8be320789e6368920350014459278bb3eb9c755ddd90ba9f02477adbf86d3029675aba
   hvcaddress: HLCDti369tCreGFiX5xy4pi18sTC7HBqxJ
   procedure: 2
 - number: 161
@@ -103,7 +103,7 @@
   btc: 0.1995
   stakepc: 0.1148 %
   hvcstake: 5737.77897482
-  hvcpubkey:
+  hvcpubkey: 046947fe6f5535802dd8eec0c4a2b4ec18b1cf75c9b797dc543fdae9fc6f2205cf8e0608fbcb5238e98efdc94beec68fade5aede52a9f8c5de5bc7397a04564f3a
   hvcaddress: HJgm9Tsi2EHtsowCzkn6oiUyB4xkFnwBV6
   procedure: 2
 - number: 160
@@ -121,7 +121,7 @@
   btc: 0.121
   stakepc: 0.0696 %
   hvcstake: 3480.05642082
-  hvcpubkey:
+  hvcpubkey: 0483e631640981c765e4e5a34d3138e000b43c17ff181427ba6f74a89597f4a8e2664623672e5e3ab8f9596c38c9f61e6d943efcad5bb3433a44657837db49de30
   hvcaddress: HJs21vBo88Pn52jPbMgeQ7FZYTX7kjmnYD
   procedure: 2
 - number: 158
@@ -130,7 +130,7 @@
   btc: 0.1837
   stakepc: 0.1057 %
   hvcstake: 5283.35838433
-  hvcpubkey:
+  hvcpubkey: 0404790163471e1121bcce870567f3331feb787603f3d26939a1aebc975052897cdad6fa4aa9850bb30beefcde7fb686a130bab870c8dbc1861d49112d5bf09859
   hvcaddress: HRy1DDmK2YQrDcar6ifv4oqVHN7RruADVA
   procedure: 2
 - number: 157
@@ -139,7 +139,7 @@
   btc: 0.25
   stakepc: 0.1438 %
   hvcstake: 7190.19921657
-  hvcpubkey:
+  hvcpubkey: 044a043444f9127df71006e423034e0ad3a63ab1b77da28a80b47e273eefc5e8712f3a6c6ca7823e71155593ab76278815bbee3d73228c432d5eacdee6e0f41eba
   hvcaddress: HMgnoxqiyTaoXVt6atyHCpbxN3zFSzYuCd
   procedure: 2
 - number: 156
@@ -166,7 +166,7 @@
   btc: 0.2743
   stakepc: 0.1578 %
   hvcstake: 7889.08658042
-  hvcpubkey:
+  hvcpubkey: 049cb411a156f8480d82176c1a9a64940447b16220edd44502c4f79ff79a9019947183b73894b57bf6aba99f99aa16709914b7b2f9cb71f431aa5b463089581dda
   hvcaddress: H9oEXYXNssa2kAirzpGKQzxLg4e2yATqhM
   procedure: 2
 - number: 153
@@ -184,7 +184,7 @@
   btc: 1.5
   stakepc: 0.8628 %
   hvcstake: 43141.19529941
-  hvcpubkey:
+  hvcpubkey: 0454380b3e001d99867b26d6f87eaa0b9385183a08bbfcd94d2f9dea1ee3264168bc6d207a45016c99fc397611d76bfdb32bc84c477d47eb5bfaad3986ccacd803
   hvcaddress: HKcRKw2s56YjNyZ1Psm8TQxVxN1BCvSBgW
   procedure: 2
 - number: 151
@@ -193,7 +193,7 @@
   btc: 10
   stakepc: 5.7522 %
   hvcstake: 287607.96866274
-  hvcpubkey:
+  hvcpubkey: 0431af43fa783a8cb517eb2e176ce2374794388adc45fd08e7a2107ac8025b0e427e3b9b0f8bcc898fc5a73464d23f705a3181e0fdea5f745df059a4f68826703c
   hvcaddress: HSHqKWY8oK2F8mh8j7sXnqRfETVZBNBia5
   procedure: 2
 - number: 150
@@ -202,7 +202,7 @@
   btc: 0.021
   stakepc: 0.0121 %
   hvcstake: 603.97673419
-  hvcpubkey:
+  hvcpubkey: 04104e9c43c1082c1c0184f24cf23acc00577d4ba51b4b95ac76731d04a16e01c3de7e73babfe0e6fb5deea2a16cc06894b84759ff626c3dbc5a7ed4356e536f89
   hvcaddress: HAZzt4LCAQLZQUzDvqPT8EUkEB1Z31Tfie
   procedure: 2
 - number: 149
@@ -220,7 +220,7 @@
   btc: 0.1
   stakepc: 0.0575 %
   hvcstake: 2876.07968663
-  hvcpubkey:
+  hvcpubkey: 04efbbb10e189123cf921aa7f7b1ab91deaf1ea8c2d3602ef9d9d13d778d8241dd38c31e6ed6e7f7720a644b71a80c6fafa9b8283c84e9c5878207c3bbc990e539
   hvcaddress: HTFzBUY3HyFDQyVnsyMoBB5xNoM1ggCzt5
   procedure: 2
 - number: 147
@@ -247,7 +247,7 @@
   btc: 0.1
   stakepc: 0.0575 %
   hvcstake: 2876.07968663
-  hvcpubkey:
+  hvcpubkey: 04b5475e5650e72e48da6d639e8dbda423782d1f3445bb06bfac69fbe7cc548ab986e98bbbb111cb0d42c647704462241e9152574ba3f04becebd32f27acf15082
   hvcaddress: HRojEhAB6LZENNtEANHbPf13hnGVzPuc4i
   procedure: 2
 - number: 144
@@ -265,7 +265,7 @@
   btc: 0.068
   stakepc: 0.0391 %
   hvcstake: 1955.73418691
-  hvcpubkey:
+  hvcpubkey: 04d9c39d55aa779412490e7d6efbf1c3d5aa10e2fb6f9e2efe70da72c2e9285618f8f88680d83978593684b469d831f6373836fc10de94bae76bfc626dedf570e0
   hvcaddress: H8ica3sRJMyrb79WBzfPDRtrUgbTi3ziRk
   procedure: 2
 - number: 142
@@ -328,7 +328,7 @@
   btc: 3
   stakepc: 1.7256 %
   hvcstake: 86282.39059882
-  hvcpubkey:
+  hvcpubkey: 045b1afd6815107f4d6f5da84f391621669661c92029695682f46298fb9cf49f28ed135f9a7eb2dfe56dbe375463c8f6da4afe36d8c79eeb6eb7a0465b1e9a5545
   hvcaddress: HCuZipg12pTtbkXc5DmPFfarASJHA5fcTJ
   procedure: 2
 - number: 135
@@ -337,7 +337,7 @@
   btc: 2
   stakepc: 1.1504 %
   hvcstake: 57521.59373255
-  hvcpubkey:
+  hvcpubkey: 04de10de0ac1f1418586ef7deee1d7125cbdda7ce0404c410f0a6ab967e6c51684e3fae6c388ac8faf6f466a79c62a2435cb0dd94e7f2c41bc6a24fffd1220dfb6
   hvcaddress: HBjkuf7LzTxSPfv8y5zHYrwHude1LeFa5X
   procedure: 2
 - number: 134
@@ -364,7 +364,7 @@
   btc: 0.21963715
   stakepc: 0.1263 %
   hvcstake: 6316.93945544
-  hvcpubkey:
+  hvcpubkey: 04103327b2d7e2af499e3c09325d5e928487d21faca41199fa9c4449576fda047d4ce39654725caeec43611d53ae422061826e3dc688aced64abd61c7e947f6321
   hvcaddress: H7FgcmogZXuvEckrrRMWvRCRysZQdBvy4K
   procedure: 2
 - number: 131
@@ -382,7 +382,7 @@
   btc: 0.15
   stakepc: 0.0863 %
   hvcstake: 4314.11952994
-  hvcpubkey:
+  hvcpubkey: 049d3edc696b971915ba8ed89dc3ca0d2277d7e846afc8bd7f3e903272b037eb5f6adbd6b4c5e8833cceb701de63280739467f5aa2928105260b9242416e4a95f4
   hvcaddress: HA9K61SqDpyPpDEGDTa1q7NxPFD7ZXtr7z
   procedure: 2
 - number: 129
@@ -391,7 +391,7 @@
   btc: 0.9
   stakepc: 0.5177 %
   hvcstake: 25884.71717965
-  hvcpubkey:
+  hvcpubkey: 04d11ba73b248a3aaf51ba787177592b88bc522bb1a2123371a14d94911855811b3569fca4dc17857163e18b19072e7af1471a8a8495fda23c8e04ebdb866836b0
   hvcaddress: HSRL5Kz2qLhfyC7YMCBxYfQy7tiq4Zszkk
   procedure: 2
 - number: 128
@@ -472,7 +472,7 @@
   btc: 0.4
   stakepc: 0.2301 %
   hvcstake: 11504.31874651
-  hvcpubkey:
+  hvcpubkey: 041f2661b75bb2fce7daa092c267c082f52c5109a695e005fb73aec4d18dae9e4820b24c29eb646fc829974a0852cc85a6970fbd4fb625a5c4bfe223b3a77f9530
   hvcaddress: HVWbAV3JTn3CfTqFRVvqFjYJZJPJzfE1pS
   procedure: 2
 - number: 119
@@ -517,7 +517,7 @@
   btc: 0.2
   stakepc: 0.1150 %
   hvcstake: 5752.15937325
-  hvcpubkey:
+  hvcpubkey: 04936566a5b373fff0d774eff30024d200141dabb279bd182473eef44171868e99c82dbeeeb5414cba3d263539eb649b64b8a816a68213d2d500c7def37301dde1
   hvcaddress: HFvicuasyAkoJp1izSvDeTiiF621h3u54v
   procedure: 2
 - number: 114
@@ -526,7 +526,7 @@
   btc: 0.2
   stakepc: 0.1150 %
   hvcstake: 5752.15937325
-  hvcpubkey:
+  hvcpubkey: 0408a757d29e30a49240d091686854270e38717c2a4d357df0953f38c79ca57b080f805a51bb399942716d1e757fb8ee1a474f75de0b3338012d1b26af305f7461
   hvcaddress: HQc1i2C63m4aFJKLJjips8yivrq72QysQ6
   procedure: 2
 - number: 113
@@ -544,7 +544,7 @@
   btc: 0.14312132
   stakepc: 0.0823 %
   hvcstake: 4116.28321175
-  hvcpubkey:
+  hvcpubkey: 04327591c6f9a41571128cb83c88ed671c32988f784585638e9fc5cd7ddd803af1bfb1ec10af62f7c20dc226903db12d27204224a77038302c68efe48f5837f69c
   hvcaddress: H6jsEaB4hBG8PFZtFBczgv2pCQLYqa1csc
   procedure: 2
 - number: 111
@@ -553,7 +553,7 @@
   btc: 2.6
   stakepc: 1.4956 %
   hvcstake: 74778.07185231
-  hvcpubkey:
+  hvcpubkey: 040615d64e8991da9fc16a64464cc1febccb4822ee0e794553896427f74a92bd9a30899c3e17fdf09632b04f1feb77a833cd36cd0f9a53f94f1845e6a083cbf664
   hvcaddress: HQ77TZGWPjXAAtZBoyiJMfriW6esLpP8LV
   procedure: 2
 - number: 110
@@ -571,7 +571,7 @@
   btc: 0.1648014
   stakepc: 0.0948 %
   hvcstake: 4739.81958868
-  hvcpubkey:
+  hvcpubkey: 0471b9dd895f41cf7b82eff237dd29ca258369f67844d9824e9ea0f5919a3d65525c9aededea170bba18fed97b45d05a359fd5a9f9d0087ddd71de753fec8ad99c
   hvcaddress: HMFKjYw7YMhbnRz6643xnERL4a71tK7mch
   procedure: 2
 - number: 108
@@ -634,7 +634,7 @@
   btc: 1.558
   stakepc: 0.8962 %
   hvcstake: 44809.32151765
-  hvcpubkey:
+  hvcpubkey: 0490c0271e4387a3804d81b210278a82f7705d0ec8c320840c2b2bb05a55ae17abcfe7575b0b9e79838b48ecd44b015033b2d228b6e2fc1e5ac5a73736901b5d49
   hvcaddress: HGg7Zz6XNZS1Zh8Dv1k19gnMAcUYntCS5v
   procedure: 2
 - number: 101
@@ -670,7 +670,7 @@
   btc: 0.245
   stakepc: 0.1409 %
   hvcstake: 7046.39523224
-  hvcpubkey:
+  hvcpubkey: 048f9d62fc83a990ca141bfa63d4771420a33f9b75af197cde980173ae395ecb5147297a9d4b59d6d3c705468e45beef70d43a4d8e302a9343ed69c7506f6ec549
   hvcaddress: HL6jm6pGt9imyH9i8ogu1k4RQKeAt2VfrT
   procedure: 2
 - number: 97
@@ -697,7 +697,7 @@
   btc: 0.0611338
   stakepc: 0.0352 %
   hvcstake: 1758.25680346
-  hvcpubkey:
+  hvcpubkey: 048df96594e1e6197ba347c0ed32141bc6846c8268baed22cc1c5bc2c4986fe8a75ebef159a9b008b55c1a10c07a9606b9ef1e11d753dff94d26f5dbe187c8b6aa
   hvcaddress: HUzTstkqF6pV1rJwiapPh32tNoFqT7zmGV
   procedure: 2
 - number: 94
@@ -724,7 +724,7 @@
   btc: 0.5
   stakepc: 0.2876 %
   hvcstake: 14380.39843314
-  hvcpubkey:
+  hvcpubkey: 04eab7aa9d256d707f9572b5293cc7934f68f7ea356f2e255673cc2f1cef7ad65bc2bf42d41f6f5e47e8716f24bfac061da7977f2cc6cd1950ddf226dc6df8ef6b
   hvcaddress: HVX1FEvhNJVrK1jTA7r6B6RMk4e6L1suNm
   procedure: 2
 - number: 91
@@ -760,7 +760,7 @@
   btc: 1
   stakepc: 0.5752 %
   hvcstake: 28760.79686627
-  hvcpubkey:
+  hvcpubkey: 04afeaeb4e1acc9ad8b11296a08b88effe83f6040a69c6ca68cc0fc8e9ff7aca6879ed786483e7495e2245464b58cbf9b3d074f5f1a662a19a3f272fe5ac627635
   hvcaddress: HTNke9BhZyYXuba3DBKaf9bKj9TKri7kAS
   procedure: 2
 - number: 87
@@ -823,7 +823,7 @@
   btc: 0.1999
   stakepc: 0.1150 %
   hvcstake: 5749.28329357
-  hvcpubkey:
+  hvcpubkey: 047dd4e2553f40bf7d0c7570db1ca7213a20571011c5638222e9175e33af4f5bd14e10149d7374cb7871a2bf014b64e1d1647c16fa48114b9ee7293aa0aee6030e
   hvcaddress: H7bucKYvL1eh7bSDu3kEBFN8DXEL2t2r6S
   procedure: 2
 - number: 80
@@ -904,7 +904,7 @@
   btc: 0.08
   stakepc: 0.0460 %
   hvcstake: 2300.86374930
-  hvcpubkey:
+  hvcpubkey: 04014f524ac398f01e8124a697141a8466e67cef06246718844a6ed7d36e826483c6d58a1f33c4785a9641c55818c7818b1b95cbb2c8ee6d6c1b8f4d8d5fcf89f2
   hvcaddress: HCHcDMDtmoyeTc83AYoXHnFWXPBEWEuo6B
   procedure: 2
 - number: 71
@@ -949,7 +949,7 @@
   btc: 2.61099326
   stakepc: 1.5019 %
   hvcstake: 75094.24677007
-  hvcpubkey:
+  hvcpubkey: 042f6f9fdac0d845d3378d9a28d0a7e0200586484e54773e529391275da3f639f468a131ff215798b31ec1a93be917ca299de40bac970490089bf000a3a792c4a2
   hvcaddress: HPKWPxEZUFf7LevKY2MisvNc948i4iZ6EL
   procedure: 2
 - number: 66
@@ -1075,7 +1075,7 @@
   btc: 4
   stakepc: 2.3009 %
   hvcstake: 115043.18746509
-  hvcpubkey:
+  hvcpubkey: 04a5fab59775fc46b215e3154406b90c42486a4795b4b78d1f8fd3e6c1af9c3e01c83edc39f8cd0c2abbd1cb6b9bf0eba2be08498ea53031db995862177d1762be
   hvcaddress: H6q9dMdu5nyWxYzmEpiR4CiCDbZQhA2xxW
   procedure: 2
 - number: 52
@@ -1093,7 +1093,7 @@
   btc: 0.2232
   stakepc: 0.1284 %
   hvcstake: 6419.40986055
-  hvcpubkey:
+  hvcpubkey: 043e34540cb6e3002c6515d1178efbaa82909aa1a2cc989b8c09892b794ad0c244da9c2cc8d9954f10022e0e168f99a87a11db33fef002d68380fee3f4cb8210e5
   hvcaddress: H9QNeA983mbWPFFwjkyiRy26Yc6Yr4Fvek
   procedure: 2
 - number: 50
@@ -1129,7 +1129,7 @@
   btc: 9.3
   stakepc: 5.3495 %
   hvcstake: 267475.41085634
-  hvcpubkey:
+  hvcpubkey: 04c96ddce0a8a87820f77802d7484c4b7e24a158a4357cbd87792ed224464442bb29e419cf2e5cc131d108eda43331ed523219697b535636e91ccda7173575e884
   hvcaddress: HCjT9cKcy6yHPQGjkMUhSNrZRjhxFxoUQY
   procedure: 2
 - number: 46
@@ -1138,7 +1138,7 @@
   btc: 0.8619
   stakepc: 0.4958 %
   hvcstake: 24788.93081904
-  hvcpubkey:
+  hvcpubkey: 0405d4501caf1d252a342dff84afcb35e57883f0158fcb424e60b2b78026c4ff97fcb2c0e8cdc14b1696483b319943c6e70b51875420584efd9b9d747171d1958b
   hvcaddress: HD739435LPxDLGuJYJ1N8PFcgSSzRTnegU
   procedure: 2
 - number: 45
@@ -1156,7 +1156,7 @@
   btc: 0.1
   stakepc: 0.0575 %
   hvcstake: 2876.07968663
-  hvcpubkey:
+  hvcpubkey: 0400a91279ebf40af49f4f2867e65ce8a5364505c8c70ce1d5baafdcc0d90c55570b356599dbda367f3713cc25add7f846032823a453ec0ea22fcf32614035854f
   hvcaddress: HMALNTuPQdDTx6VcGWXCAjHEbTY8Bmp7Jc
   procedure: 2
 - number: 43
@@ -1165,7 +1165,7 @@
   btc: 0.04
   stakepc: 0.0230 %
   hvcstake: 1150.43187465
-  hvcpubkey:
+  hvcpubkey: 048dbee5ef060ba4986ef279de47bdda6f49e1c54116ba533d99735bf803b2fed609e33c111d4f6120d7dac751d48cc58364256f4de34b94b3a5d97137a5adbc36
   hvcaddress: HDGiut9EQf8KaoanBP9342jadYH3hEUF9z
   procedure: 2
 - number: 42
@@ -1174,7 +1174,7 @@
   btc: 0.057
   stakepc: 0.0328 %
   hvcstake: 1639.36542138
-  hvcpubkey:
+  hvcpubkey: 04e7a5dba7eaf851fa77529493ca6cbeafcf573abed87c4864c830c2b0d0a913111739a7581c993e4256b59872d7e45bf894554b4b4520a4339de898ab4fab9284
   hvcaddress: HEneUAYaFGDKoUhLifAez2TnvQvagnshGP
   procedure: 2
 - number: 41
@@ -1192,7 +1192,7 @@
   btc: 2.36
   stakepc: 1.3575 %
   hvcstake: 67875.48060441
-  hvcpubkey:
+  hvcpubkey: 044e0c6fa6fb923fb0a99671aa69dc7978db612fa7c2d3f40f99bda1d0b6943a68526c0ec2c799fb330a09b2cf65fd68d0dc7d6c3af1765588d094cdb7723a6a4c
   hvcaddress: HFth1CJJ9XMAdSFRujTkwuGQy3DsdWozvn
   procedure: 2
 - number: 39
@@ -1210,7 +1210,7 @@
   btc: 0.362
   stakepc: 0.2082 %
   hvcstake: 10411.40846559
-  hvcpubkey:
+  hvcpubkey: 04531f47502eb2cbdded88867247c97803db43a478b1267b14b30ce8c2604335fddc4b6b42c10d4ce5b05b3f5bba9cdb1a6005244717f48a3bb0b205134c910894
   hvcaddress: HDJobmsYdEUuCrJzh4Z6UZueX2R9Qg6WaT
   procedure: 2
 - number: 37
@@ -1237,7 +1237,7 @@
   btc: 0.2
   stakepc: 0.1150 %
   hvcstake: 5752.15937325
-  hvcpubkey:
+  hvcpubkey: 0411e1993a1656742e28272a8e67693fd03f7e12843f2e22f49ee5d1b6f77700f4acf9459994d9f3ae919b136f6b0bc83a482f341067c2e1056f0baebdea718570
   hvcaddress: HLQB8fQDAEgBGPGHn2KVjPM73fmXTR2FTB
   procedure: 2
 - number: 34
@@ -1246,7 +1246,7 @@
   btc: 0.1995
   stakepc: 0.1148 %
   hvcstake: 5737.77897482
-  hvcpubkey:
+  hvcpubkey: 04b9e3002aaab7b712d37d4a94d1ac2c20fc13e31728f28b790b5aacefdca2b3dba54a6a5c7cdc2c7c26abf90fa89ce841ef627468548e2e8563cc1b75cd54abe1
   hvcaddress: HAFt2QdWRBdEbM2Harrwj4TigcSRXyFhuu
   procedure: 2
 - number: 33
@@ -1255,7 +1255,7 @@
   btc: 1.5
   stakepc: 0.8628 %
   hvcstake: 43141.19529941
-  hvcpubkey:
+  hvcpubkey: 04f08bf2890cfb78eeb6c7cc503241da9560609074214a85f6a30101e07c61228b9dd20b0c07c9b91bec7575e8af1e72bfc7db0dd14edb802ab8eeefa5c24ba725
   hvcaddress: HLDvidXS3vLhRA9zpbDzTiQpf6JUNqT1tD
   procedure: 2
 - number: 32
@@ -1264,7 +1264,7 @@
   btc: 0.2
   stakepc: 0.1150 %
   hvcstake: 5752.15937325
-  hvcpubkey:
+  hvcpubkey: 04b7d8bea1c1c197e6b9e6af7309562494ac360b9f792503fb1fae1fb70176fbebcec7320646c676841d28403c24ae9e5fab25eee44d4b04e17155b248571e211c
   hvcaddress: HDHwvmPY6Qgig1Ake9NJSPLgMs5gq7fuRq
   procedure: 2
 - number: 31
@@ -1282,7 +1282,7 @@
   btc: 0.25
   stakepc: 0.1438 %
   hvcstake: 7190.19921657
-  hvcpubkey:
+  hvcpubkey: 04bb29821c0249da97df15f291860fc36947c914847c628460e362a6b705a5b61fc751cbb5f40bdb8ce8c340558141a198898c28c00aa5a4c5f6a15692709cf445
   hvcaddress: HSCwsNKqeUjZjsgTiwxRdZ1eB95aSTgD8X
   procedure: 2
 - number: 29
@@ -1291,7 +1291,7 @@
   btc: 0.0808
   stakepc: 0.0465 %
   hvcstake: 2323.87238679
-  hvcpubkey:
+  hvcpubkey: 046e965a2e40d0861ecf3d3dad1a5d858224ddd91631477d4d9bb274abc54d2f257d93f5db69092d2edb2d1487c59b0dbf0a68e02044049d0f332a79d7d1a6e472
   hvcaddress: H8K7qUJh4NRw6uzviPe7BmHnu8RBhdUVL3
   procedure: 2
 - number: 28
@@ -1318,7 +1318,7 @@
   btc: 0.220479
   stakepc: 0.1268 %
   hvcstake: 6341.15173228
-  hvcpubkey:
+  hvcpubkey: 040a54ac2761d7fcdbae5e1e75bfdb01022b49b628046b10058ab6658f60ea7ef7daa0b60d2a0a1a9792bb1b3c12139152590b1b9e7f2cb8746554bc2781118763
   hvcaddress: HLts4QNVp9QWMf5BNwZYuDXZTwSAhvmFPr
   procedure: 2
 - number: 25
@@ -1345,7 +1345,7 @@
   btc: 0.81367016
   stakepc: 0.4680 %
   hvcstake: 23401.80218791
-  hvcpubkey:
+  hvcpubkey: 0489a8c6303ecd9d57bea0ae43c1569f0af6b35fd3c46bcff5c07951f977a63c47f65e04648cba855862424f9998bffa75d16039895bfe65ea9024b593bcb29633
   hvcaddress: HMqoaSMQKWXZj3P292X3wcssJRXTvPugL7
   procedure: 2
 - number: 22
@@ -1354,7 +1354,7 @@
   btc: 0.1999
   stakepc: 0.1150 %
   hvcstake: 5749.28329357
-  hvcpubkey:
+  hvcpubkey: 0417a02a907d733f979cdf9faab2a2fabbe6268ef71b41c90c144402de2df1266237a285d8dad5ed0c5b64379efe43d41159b9170db97c64f8308cb07e0ed9b3b6
   hvcaddress: HGAReGgJJvQGiQBWeZqwKyQ7fVCoENxoNX
   procedure: 2
 - number: 21
@@ -1381,7 +1381,7 @@
   btc: 0.4
   stakepc: 0.2301 %
   hvcstake: 11504.31874651
-  hvcpubkey:
+  hvcpubkey: 0449a635966ae8b1bb4268384554d1ca65ff7b4bb4e08b1ecbbbf8f5ba05fac04297d0e627ab30468cccc112e7511fd318cde54c1d01edff9f95bb06ef160568a8
   hvcaddress: HF3gKEdPHVWNHDUUEDB4xox4CaHG2HHjQF
   procedure: 2
 - number: 18
@@ -1399,7 +1399,7 @@
   btc: 0.01027575
   stakepc: 0.0059 %
   hvcstake: 295.53875840
-  hvcpubkey:
+  hvcpubkey: 0422c93d26ac789c86b986e1b56c3df9fe9a774a3dc3b40e185a6b0fc9eb5989f00401fdee0d3182ade6b32d97eec07c59318236c3be13f787eef72af9a8906787
   hvcaddress: HGuRfNmuveasV8NMVX8gHpaa1ek28Skf7u
   procedure: 2
 - number: 16
@@ -1408,7 +1408,7 @@
   btc: 0.03
   stakepc: 0.0173 %
   hvcstake: 862.82390599
-  hvcpubkey:
+  hvcpubkey: 04fe02e611c7576cea9477e8dc095388c927907b5d7da5f8c66c7e693036b687cf5d916296499a6d5620c563639ac665b721065e3c84276b9ed62d10598fa3a90c
   hvcaddress: HFxewu61upjgv21rKkwGzPmbsrTQQ5jzQd
   procedure: 2
 - number: 15
@@ -1435,7 +1435,7 @@
   btc: 0.01
   stakepc: 0.0058 %
   hvcstake: 287.60796866
-  hvcpubkey:
+  hvcpubkey: 04bc799b964af579ed31386b8db94af932818bc2c74750dede794a2a9b874d3796156b90c4654d0711c0c495c634358f110eafc44e3c5303850cab624072522598
   hvcaddress: HFkF1mX6mfEpgwUEwzV69GLBhD81t7cDwZ
   procedure: 2
 - number: 12
@@ -1453,7 +1453,7 @@
   btc: 0.5
   stakepc: 0.2876 %
   hvcstake: 14380.39843314
-  hvcpubkey:
+  hvcpubkey: 04840fa1ee36bacfb8f5cdfbf6f02eb3232f7c42e71052a420583c41582b807fff51550b94808c351f3ee37216a81753772da58fb8e03be6c505d0f96ca536281b
   hvcaddress: HQ8h63njJPmFcto3z2TAxGq8BLGhh9TWw2
   procedure: 2
 - number: 10
@@ -1462,7 +1462,7 @@
   btc: 0.0994986
   stakepc: 0.0572 %
   hvcstake: 2861.65902308
-  hvcpubkey:
+  hvcpubkey: 04842161c2818fcd5d69a16d1e02734eb340f2603f46abe0f4126cda910824cbde90f5b2c1fdcd5530fb8e59db91daa8b648d55452f9085d0f3281b75b9687778e
   hvcaddress: HFiKHZq4ft92pWfX6SjoQndBuiWTGh8fQG
   procedure: 2
 - number: 9
@@ -1489,7 +1489,7 @@
   btc: 0.25
   stakepc: 0.1438 %
   hvcstake: 7190.19921657
-  hvcpubkey:
+  hvcpubkey: 04c4ffb3b773dc2578ec917d85914b9318cdef0ec90e77d527629d0f938f3c00e1ec3c729208dc325d0c851ea7428879ca01e7f22e227fc3ee435bf5a8985ecc14
   hvcaddress: HLrvZLATYK91mf3KqxP3UmpDo6HhvXVz1X
   procedure: 2
 - number: 6
@@ -1498,7 +1498,7 @@
   btc: 0.01
   stakepc: 0.0058 %
   hvcstake: 287.60796866
-  hvcpubkey:
+  hvcpubkey: 0436ce6c13a201a59bb5a43d76fd7a7aa8c19ac63fc195b67697a5c8435870e79e67620c6f70a2eb43ba55e419e24ff443e5c0bd89c808edc9d86803cbf41d0771
   hvcaddress: HVSotusr8DVNUbjrJ1NJPw9pxmweDtt4S9
   procedure: 2
 - number: 5
@@ -1507,7 +1507,7 @@
   btc: 0.5002
   stakepc: 0.2877 %
   hvcstake: 14386.15059251
-  hvcpubkey:
+  hvcpubkey: 0407108ffbdf64d3620424b05ea9434942def144d5359b5bee4ca1f1a27df7fa1fab48477399a71588db0f57c7d37a11b117a95d42db67a936ed4c7eb569f70d7b
   hvcaddress: HC88nht7MXdPwYPJsusnenozcy1xoAwToF
   procedure: 2
 - number: 4
@@ -1534,7 +1534,7 @@
   btc: 20
   stakepc: 11.5043 %
   hvcstake: 575215.93732547
-  hvcpubkey:
+  hvcpubkey: 0452955f4a625684fd2899f307fa87fad2f6acb369cb75c5583de88b37b81e7a830337fe358d845695ccb96359f2715b934d3f697c67dd6d596a0eace00aa1ae4b
   hvcaddress: HNwkRXWom6V9uTEAnQShuuiKBpsQZynjvN
   procedure: 2
 - number: 1
