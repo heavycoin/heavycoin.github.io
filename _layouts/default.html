@@ -151,23 +151,8 @@
 
 var seconds_since_update = 0;
 $(document).ready(function() {
- go();
+ fetch();
 });
-
-function go()
-{
-  $('#countdown').countDown({
-        targetDate: {
-            'day':      8,
-            'month':    3,
-            'year':     2014,
-            'hour':     12,
-            'min':      0,
-            'sec':      0,
-            'utc':      true
-        }, omitWeeks: true
-    });
-}
 
 var tick = function tick()
 {
@@ -185,7 +170,8 @@ var tick = function tick()
 
 function fetch()
 {
-  $.get("http://0.0.0.0/getstats.php", function( data ) {
+  $.get("http://198.52.200.43/getstats.php", function( data ) {
+
       $('#total_supply').text(data.total_supply);
       $('#max_supply').text(data.max_supply);
       $('#current_reward').text(data.reward);
