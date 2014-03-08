@@ -1,0 +1,99 @@
+---
+layout: default
+ltitle: Mining launch
+name: mining-launch
+---
+<div class="container">
+  <div class="well well-main">
+    <div class="span12 center">
+      <h2 class="text-center">LAUNCH TIME!</h2>
+    </div>
+
+    <h3 class="page-header">Wallet downloads</h3>
+    <p>
+    </p>
+
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <table class="table table-bordered col-center" id="wallets">
+        <thead>
+          <tr>
+            <th width="30%"><h3>Platform</h3></th>
+            <th width="35%"><h3>Mirror 1</h3></th>
+            <th width="35%"><h3>Mirror 2</h3></th>
+          </tr>
+        </thead>
+      {% for item in site.data.downloads-wallet %}
+        <tbody>
+          <tr class="center">
+            <td rowspan="2"><b>{{ item.title }}</b></td>
+            <td><a href="{{ item.mirror1 }}" class="file-link">{{ item.filename }}</a></td>
+            <td><a href="{{ item.mirror2 }}" target="_blank" class="file-link">{{ item.filename }}</a></td>
+          </tr>
+          <tr>
+            <td colspan="2" style="text-align: left">
+               {% if item.gpgsiglink %}
+               GPG Sig: <a href="{{ item.gpgsiglink }}" class="file-link">Click</a>
+               {% endif %}
+               {% if item.sha256 %}
+               </br>SHA256: {{ item.sha256 }}
+               {% endif %}
+            </td>
+          </tr>
+        </tbody>
+        {% endfor %}
+
+        <tbody>
+          <tr class="center">
+            <td rowspan="2"><b>Source code</b></td>
+            <td colspan="2"><a href="https://github.com/heavycoin/heavycoin" class="file-link">heavycoin source code</a></td>
+          </tr>
+        </tbody>
+
+      </table>
+    </div>
+
+<h3 class="page-header">Ports</h3>
+<pre><code>port=7203
+rpcport=7202</code></pre>
+
+<h3 class="page-header">Seed nodes</h3>
+<pre><code>addnode=94.102.53.183
+addnode=198.52.200.43
+addnode=172.245.221.171
+addnode=node01.heavycoin.cc</code></pre>
+<p>Wallet is configured with the above seed nodes and will connect automatically after 1 minute.</p>
+
+<h3 class="page-header">How to mine</h3>
+<ul>
+  <li><a href="mining.html">GUI wallet miner</a></li>
+  <li><a href="external-mining.html">External miner</a></li>
+</ul>  
+
+<h3 class="page-header">How to vote</h3>
+<ul>
+  <li><a href="voting.html">GUI voting</a></li>
+  <li><a href="rpc-voting.html">RPC voting</a></li>
+</ul>  
+
+<h3 class="page-header">Mining pools</h3>
+<ul>
+  <li><a href="https://heavycoinpool.com" target="_blank">Heavycoin Pool</a></li>
+  <li><a href="http://heavy.stablehash.com" target="_blank">Heavy Hash</a></li>
+  <li><a href="http://heavycoin.zhpool.com" target="_blank">Heavycoin@Zhpool</a></li>
+</ul>
+
+<h3 class="page-header">CPU external miners</h3>
+<ul>
+  <li><a href="https://github.com/heavycoin/cpuminer-heavycoin" target="_blank">cpuminer-heavycoin</a></li>
+</ul>
+
+<h3 class="page-header">Stratum mining software</h3>
+<ul>
+  <li><a href="https://github.com/heavycoin/mpos" target="_blank">MPOS</a></li>
+  <li><a href="https://github.com/heavycoin/stratum-mining-heavycoin" target="_blank">stratum-mining-heavycoin</a></li>
+  <li><a href="https://github.com/heavycoin/heavycoin-hash-python" target="_blank">heavycoin-hash-python</a></li>
+</ul>
+
+  </div>
+</div>

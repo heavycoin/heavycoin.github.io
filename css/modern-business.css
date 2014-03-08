@@ -36,6 +36,19 @@ code {
   border-radius: 4px;
 }
 
+#wallets.table > thead > tr > th,
+#wallets.table > tbody > tr > th,
+#wallets.table > tfoot > tr > th,
+#wallets.table > thead > tr > td,
+#wallets.table > tbody > tr > td,
+#wallets.table > tfoot > tr > td {
+  padding: 20px;
+  line-height: 1.428571429;
+  vertical-align: middle;
+  text-align: center;
+  border-top: 1px solid #dddddd;
+}
+
 .table > thead > tr > th,
 .table > tbody > tr > th,
 .table > tfoot > tr > th,
@@ -293,7 +306,8 @@ body {
   margin-top: 0px;
   padding-top: 15px;
   text-align: center;
-  min-height: 600px;
+  /* min-height: 600px; */
+  min-height: 500px;
   width: 100%;
   background-color: #f0f0f0;
 }

@@ -1,50 +1,48 @@
-- title: Windows wallet
+- title: Windows
   desc: 
-  filename: heavycoin-1-win32.zip
-  downloaduri: wallet
-  modified: 2014-01-20 
-  size: 10.3 MB
-  version: 1
-  gpgsiglink: heavycoin-1-win32.zip.asc
+  filename: heavycoin-1.0-win32.zip
+  mirror1: http://ubuntuone.com/7PpBvo99P7maKSNAtGGa36
+  mirror2: http://s000.tinyupload.com/?file_id=15661720162575159581
+  modified: 2014-03-08 
+  size: 14.7 MB
+  version: 1.0
+  gpgsiglink: http://ubuntuone.com/7Jyuejq3OB0cI6evP7G5Ok
   osicon: fa-windows 
+  sha256: 9365aac05e86fb0de8fd8046bcc82b73c6ab2b3ebdc5d745a9b9b7de744a6737
 
-- title: Mac wallet
+- title: OSX (Mavericks)
   desc: 
-  filename: heavycoin-1-mac.zip
-  downloaduri: wallet
-  modified: 2014-01-20 
-  size: 10.3 MB
-  version: 1
-  gpgsiglink:
+  filename: heavycoin-1.0-osx-mavericks.zip
+  mirror1: http://ubuntuone.com/0mXpQC3dTh8ygn2BKlEqap
+  mirror2: http://s000.tinyupload.com/?file_id=27010666539698830643
+  modified: 2014-03-08 
+  size: 14.8 MB
+  version: 1.0
+  gpgsiglink: http://ubuntuone.com/0wA8HLVLEPoczWBqSOdckh
   osicon: fa-apple 
+  sha256: bd52d95500bf4b9c03e92ac07839acb50e7024af36d060255fb72c130d1d5929
 
-- title: Debian wallet
+- title: Debian7 (Wheezy)
   desc: 
-  filename: heavycoin-1-debian.tar.gz
-  downloaduri: wallet
-  modified: 2014-01-20 
-  size: 10.3 MB
-  version: 1
-  gpgsiglink:
+  filename: heavycoin-1.0-debian-7.tar.gz
+  mirror1: http://ubuntuone.com/4PhJ1tsUyRnGFHO47HbAZ4
+  mirror2: http://s000.tinyupload.com/?file_id=20507992901116257559
+  modified: 2014-03-08 
+  size: 5.8 MB
+  version: 1.0
+  gpgsiglink: http://ubuntuone.com/4YIJuBmjppnkOisfl0qHDQ
   osicon: fa-linux 
+  sha256: 0e2dc4444bb98dc54dee039e288b231aa2590e6872388158cdde922c432ed44c
 
-- title: Ubuntu 13.10 wallet
+- title: Ubuntu 13.10 (Saucy)
   desc: 
-  filename: heavycoin-1-ubuntu.tar.gz
-  downloaduri: wallet
-  modified: 2014-01-20 
-  size: 10.3 MB
-  version: 1
-  gpgsiglink:
+  filename: heavycoin-1.0-ubuntu-13.10.tar.gz
+  mirror1: http://ubuntuone.com/1ox7ymGI6B1L0MymIMOW0A
+  mirror2: http://s000.tinyupload.com/?file_id=34927297995560214234
+  modified: 2014-03-08 
+  size: 4.9 MB
+  version: 1.0
+  gpgsiglink: http://ubuntuone.com/3sM57lhfWC7SAXrynwJlX5
   osicon: fa-linux 
-
-- title: Source code
-  desc:
-  filename:
-  downloaduri: http://github.com
-  modified: 2014-01-20 
-  size: 
-  version: 1
-  gpgsiglink:
-  osicon: fa-github 
+  sha256: c855c345c3fafaa33896ddd731a8c96ee968c604a0b3b7b95d10304e65964e31
 

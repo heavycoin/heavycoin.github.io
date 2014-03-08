@@ -1,0 +1,55 @@
+- title: Windows
+  desc: 
+  filename: heavycoin-cpuminer-1.0-win32.zip
+  mirror1: ubuntuone.com
+  mirror2: tinyupload.com
+  modified: 2014-01-20 
+  size: 10.3 MB
+  version: 1
+  gpgsiglink: heavycoin-cpuminer-1.0-win32.zip.asc
+  osicon: fa-windows 
+
+- title: Mac OS
+  desc: 
+  filename: heavycoin-cpuminer-1.0-mac.zip
+  mirror1: ubuntuone.com
+  mirror2: tinyupload.com
+  modified: 2014-01-20 
+  size: 10.3 MB
+  version: 1
+  gpgsiglink:
+  osicon: fa-apple 
+
+- title: Debian (Wheezy)
+  desc: 
+  filename: heavycoin-cpuminer-1.0-debian.tar.gz
+  mirror1: ubuntuone.com
+  mirror2: tinyupload.com
+  modified: 2014-01-20 
+  size: 10.3 MB
+  version: 1
+  gpgsiglink:
+  osicon: fa-linux 
+
+- title: Ubuntu 13.10 (Saucy)
+  desc: 
+  filename: heavycoin--cpuminer-1.0-ubuntu.tar.gz
+  mirror1: ubuntuone.com
+  mirror2: tinyupload.com
+  modified: 2014-01-20 
+  size: 10.3 MB
+  version: 1
+  gpgsiglink:
+  osicon: fa-linux 
+
+- title: Source code
+  desc:
+  filename:
+  mirror1: github.com
+  mirror2: 
+  modified: 2014-01-20 
+  size: 
+  version: 1
+  gpgsiglink:
+  osicon: fa-github 
+

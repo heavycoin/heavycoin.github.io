@@ -3,12 +3,12 @@ layout: default
 title: Download
 name: download
 ---
-      {% for item in site.data.downloads-genkeys %}
+      {% for item in site.data.downloads-wallet %}
 <div class="container">
     <div class="well well-main">
        <div class="row">
               <div class="col-md-4 cell">
-                  <h3><a href="{{ item.downloaduri }}">{{ item.title }}</a></h3>
+                  <h3><a href="{{ item.mirror1 }}">{{ item.title }}</a></h3>
                   <p>{{ item.desc }}</p>
               </div>
               <div class="cell col-md-5 download-data">
@@ -24,9 +24,10 @@ name: download
                   </ul>
               </div>
               <div class="cell col-md-3 downloads">
-                  <p><a href="{{ item.downloaduri }}" class="btn btn-primary btn-lg rt-button rt-button" role="button"><span class="glyphicon glyphicon-cloud-download"></span>&nbsp; Download</span></a>
+                  <p><a href="{{ item.mirror1 }}" class="btn btn-primary btn-lg rt-button rt-button" role="button"><span class="glyphicon glyphicon-cloud-download"></span>&nbsp; Download</span></a>
+
                   <div><i class="fa {{ item.osicon }} fa-2x"></i></div>
-                  <div><a href="{{ item.downloaduri }}" class="file-link">{{ item.filename }}</a></div>
+                  <div><a href="{{ item.mirror1 }}" class="file-link">{{ item.filename }}</a></div>
               </div>
           </div>
 
@@ -35,3 +36,21 @@ name: download
         {% endfor %}
 
 
+<div class="container">
+    <div class="well well-main">
+       <div class="row">
+              <div class="col-md-4 cell">
+                  <h3><a href="https://github.com/heavycoin/heavycoin">Source code</a></h3>
+                  <p></p>
+              </div>
+              <div class="cell col-md-5 download-data">
+              </div>
+              <div class="cell col-md-3 downloads">
+                  <p><a href="https://github.com/heavycoin/heavycoin" class="btn btn-primary btn-lg rt-button rt-button" role="button"><span class="glyphicon glyphicon-cloud-download"></span>&nbsp; Download</span></a>
+
+                  <div><a href="https://github.com/heavycoin/heavycoin" class="file-link">source code</a></div>
+              </div>
+          </div>
+
+     </div>
+  </div>
