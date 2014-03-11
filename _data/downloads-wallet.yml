@@ -12,15 +12,15 @@
 
 - title: OSX (Mavericks)
   desc: 
-  filename: heavycoin-1.0-osx-mavericks.zip
-  mirror1: http://ubuntuone.com/0mXpQC3dTh8ygn2BKlEqap
-  mirror2: http://s000.tinyupload.com/?file_id=27010666539698830643
-  modified: 2014-03-08 
-  size: 14.8 MB
-  version: 1.0
-  gpgsiglink: http://ubuntuone.com/0wA8HLVLEPoczWBqSOdckh
+  filename: heavycoin-1.0-2-osx-mavericks.zip
+  mirror1: http://ubuntuone.com/3AxBC0uTI4DIq7HP18BIgv
+  mirror2: http://s000.tinyupload.com/?file_id=28236154285945874300
+  modified: 2014-03-10
+  size: 17.0 MB
+  version: 1.0-2
+  gpgsiglink: http://ubuntuone.com/0KiLogLFk7IFFnpCfe3y9G
   osicon: fa-apple 
-  sha256: bd52d95500bf4b9c03e92ac07839acb50e7024af36d060255fb72c130d1d5929
+  sha256: 655d1ddcfd6bb7bfa0efb2ecb3886ef8a5c65093cd7f97dc6d1e23736765d8f6
 
 - title: Debian7 (Wheezy)
   desc: 
