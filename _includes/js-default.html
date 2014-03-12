@@ -1,0 +1,71 @@
+{% if page.name == "home" %}
+
+var seconds_since_update = 0;
+$(document).ready(function() {
+ fetch();
+});
+
+var tick = function tick()
+{
+    if (seconds_since_update == 29)
+    {
+        fetch();
+    }
+    else
+    {
+        setTimeout(tick, 1000);
+    }
+    seconds_since_update++;
+    $('#last_update span:first-child').next().text(seconds_since_update + " seconds ago");
+}
+
+function fetch()
+{
+  $.get("http://198.52.200.43/getstats.php", function( data ) {
+
+      $('#total_supply').text(data.total_supply);
+      $('#max_supply').text(data.max_supply);
+      $('#current_reward').text(data.reward);
+
+      $('#total_supply').formatCurrency({
+                   symbol: 'HVC',
+                   positiveFormat: '%n %s',
+                   roundToDecimalPlace: '0'
+                   });
+      $('#max_supply').formatCurrency({
+                   symbol: 'HVC',
+                   positiveFormat: '%n %s',
+                   roundToDecimalPlace: '0'
+                   });
+      $('#current_reward').formatCurrency({
+                   symbol: 'HVC',
+                   positiveFormat: '%n %s',
+                   roundToDecimalPlace: '0'
+                   });
+
+  seconds_since_update = 0;
+  setTimeout(tick, 1000);
+
+  }, "json" );
+}
+
+{% endif %}
+
+{% if page.name == "about" %}
+
+// enable link to tab
+var hash = document.location.hash;
+var prefix = "tab_";
+if (hash) {
+    $('.nav-tabs a[href='+hash.replace(prefix,"")+']').tab('show');
+    $('html').animate({scrollTop:0}, 'slow');
+    $('body').animate({scrollTop:0}, 'slow');
+}
+
+// change hash for page-reload
+$('.nav-tabs a').on('shown', function (e) {
+    window.location.hash = e.target.hash.replace("#", "#" + prefix);
+});
+
+{% endif %}
+

@@ -1,0 +1,60 @@
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="height=100px">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html"><img src="../images/heavycoin-logo-text.png" alt="Heavycoin" /></a>
+            </div>
+
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+               <div class="text-right" style="padding-top: 5px">
+                   <a href="/"><img src="../images/United-states-flag.png" width="20px"/></a>
+                   <a href="/ch"><img src="../images/China-flag.png" width="20px"/></a>
+               </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li {% if page.name == "about" %} class="active" {% endif %}><a href="about.html">About</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Launch <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="launch.html">Details</a>
+                            </li>
+                            <li><a href="mining-launch.html">Launch</a>
+                            </li>
+                            <li><a href="ipo-stakeholders.html">IPO stakeholders</a>
+                            </li>
+                            <li><a href="video-demo.html">Video demo</a>
+                            </li>
+                            <li><a href="code-sample.html">Code sample</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li {% if page.name == "news" %} class="active" {% endif %}><a href="news.html">News</a>
+                    </li>
+                    <li {% if page.name == "community" %} class="active" {% endif %}><a href="community.html">Community</a>
+                    </li>
+                    <li {% if page.name == "download" %} class="active" {% endif %}><a href="download.html">Download</a>
+                    </li>
+                    <li {% if page.name == "merchants" %} class="active" {% endif %}><a href="merchants.html">Merchants</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Help <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="installation.html">Installation</a>
+                            </li>
+                            <li><a href="voting.html">How to vote</a>
+                            </li>
+                            <li><a href="mining.html">How to mine</a>
+                            </li>
+                            <li><a href="rpc-voting.html">RPC voting</a>
+                            </li>
+                            <li><a href="video-demo.html">Video demo</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+

@@ -1,0 +1,286 @@
+---
+layout: default-ch
+title: About Heavycoin
+name: about
+---
+<div class="container">
+<div class="well well-main">
+    <!-- Service Tabs -->
+    <div class="row">
+        <div class="col-lg-12">
+
+            <h2 class="page-header">创新与特色</h2>
+            <ul id="myTab" class="nav nav-tabs">
+                <li class="active"><a href="#ultra-secure" data-toggle="tab">超级安全</a>
+                </li>
+                <li><a href="#cpu-only" data-toggle="tab">仅仅CPU</a>
+                </li>
+                <li><a href="#decentralised-voting" data-toggle="tab">去中心化投票</a>
+                </li>
+                <li><a href="#fast-transactions" data-toggle="tab">创新与特色</a>
+                </li>
+                <li><a href="#temporal-retargeting" data-toggle="tab">临时重定位</a>
+                </li>
+            </ul>
+
+            <div id="myTabContent" class="tab-content">
+                <div class="tab-pane fade in active" id="ultra-secure">
+                    <i class="fa fa-thumbs-o-up  pull-left fa-4x"></i>
+                    <p>
+                    Heavycoin引进了一系列新型的、超级安全的散列算法，这些算法利用冗余加密散列函数来确保区块链的安全。如果其中一个散列函数遭到攻击的话，其他函数依然保护着Heavycoin。这相对于Bitcoin、Litecoin和其他电子货币依赖一种加密散列算法是一个重要的进步。
+                    </p>
+
+                    <p><center><img src="images/multi-hash.png" title="If one of these hash functions fail, then Heavycoin is still protected by the others. This is a significant step forward over Bitcoin and most other crypto-currencies." /></center></p>
+
+                    <p>
+                    另外，Bitcoin和其他依赖SHA-256算法的电子货币，该算法由美国国家安全局（NSA）开发完成，而斯诺登泄密事件的出现却将SHA-256算法的安全性推上了风口浪尖，尤其是独立于政府的货币体系外的Bitcoin。
+                    </p>
+
+                    <p>
+                    Heavycoin采用了如下的加密散列算法：
+                    <ul>
+                      <li><a href="https://en.wikipedia.org/wiki/SHA-256" target="_blank">SHA-256</a></li>
+                      <li><a href="https://en.wikipedia.org/wiki/SHA-3" target="_blank">Keccak-512</a> (a.k.a., SHA-3)</li>
+                      <li><a href="https://en.wikipedia.org/wiki/Groestl" target="_blank">Grøestl-512</a></li>
+                      <li><a href="https://en.wikipedia.org/wiki/BLAKE_(hash_function)" target="_blank">BLAKE-512</a></li>
+                    </ul>
+                    <p/>
+                    <p>
+                    这些选择的加密散列算法由于在很少有相同的地方， 所以这些算法存在共同的弱点也是不大可能的。
+                    </p>
+
+                    <p></br>
+                    <b>问题：</b> Quarkcoin不是已经采用了很多不同的加密散列算法吗？</b>
+                    </p>
+
+                    <p>
+                    <b>答：</b> 是的，但是Quarkcoin没有增加其安全性能。Quarkcoin(包括其他类似Quarkcoin的)电子货币只是把各种不同的函数罗列一起，就像一个简单的函数组合链。
+                    </p>
+
+                    <center>
+                    <img src="images/quarkcoin-hash9.png" style="margin: 20px 0 20px; height: 24px;" title="Quarkcoin and its many clones implement the use of multiple hash functions incorrectly" alt="Quark(x) = ... SKEIN512(KECCAK512( ... BMW512(BLAKE512(x))))" />
+                    </center>
+                    <p>
+                    这个散列函数包括JH-512，Keccak-512，BMW-512，BLAKE-512, SKEIN-512或者Grøestl-512。根据前面的散列函数输出的第四位来随机选择函数。
+		    </p>
+
+		    <p>
+                    问题是，由于Quarkcoin只是很多函数的简单组合，如果BLAKE512(x)发生冲突的话BMW512(BLAKE512(x)) and SKEIN512(KECCAK512(...也会发生冲突，那么最终Quark(x)会发生冲突。同理，如果SKEIN-512或Grøestl-512加密学有弱点的话，那么Quark(x)也一样会。Quark组合了很多的散列函数并没有提供额外的安全支持，如果BLAKE-512被破解的话，Quark(x)也会被破解。
+                    </p>
+
+                    <p></br>
+                    <b>问题：Heavycoin如何实现和运用加密散列函数？</b>
+                    </p>
+
+                    <p>
+                    <b>答：</b> Heavycoin采用64位的四种加密散列函数（SHA-256, Keccak-512, Grøestl-512 and BLAKE-512），这些组合成256位的散列。这是安全的，因为根据定义，加密散列函数的输出值是任意位的。
+                    </p>
+
+		    <center>
+		    <img src="images/heavycoin-combined-hash.png" style="padding: 15px; height: 230px;" title="Heavycoin takes 64 bits from 4 well-known cryptographic hash functions and interleaves these bits into a combined 256-bit hash" />
+		    </center>
+
+                    <p>
+                    以上的图给我们解释了Heavycoin是如何组合四种加密散列函数的结果的，这种组合给Heavycoin很显著的安全优势。因为它不依赖于单一函数的长期安全性能，如果BLAKE-512被破解的话，那么Heavy(x)仅仅存在弱点，但是Heavycoin网络还会保持运作和安全。
+                    </p>
+                </div>
+
+              <div class="tab-pane fade" id="cpu-only">
+                  <i class="fa fa-gears pull-left fa-4x"></i>
+
+		  <p>
+                  采矿的中心化对于Bitcoin、Litecoin和大部分电子货币来说都是一个问题。越来越多的电子货币都是由大玩家来开采，他们拥有昂贵的、定制的硬件。当大部分电子货币都是由一些有钱的小团队来操控的时候，那么电子货币的独立性和所带来的利益都是来自于中心化。
+		  </p>
+
+		  <center>
+		    <img src="images/mining-centralization.png" style="height: 250px;"/>
+		  </center>
+
+                  <p>
+                  为了支援绝大多数充满活力的挖矿社区，Heavycoin引进了一种新型的只支持CPU的加密散列函数HEFTY1。它让每个人只要拥有一台普通电脑就可以来成为我们的股东。HEFTY1打破了GPU和ASIC挖矿机所依赖的单指令多数据流假设。我们保证一直都是只能由CPU来挖矿。
+                  </p>
+
+		  <h3>特点</h3>
+		  <ul>
+		    <li>永远都只能CPU来挖矿</li>
+		    <li>很小的内存占用</li>
+		  </ul>
+
+		  <h3>细节</h3>
+
+		  <p>
+                  简而言之，GPU和ASIC挖矿机都可以同时处理多区块的哈希猜测，它通过代码嵌入特定的功能处理单元，然后利用SHA-256算法的SIMD特性对每一个寄存器同时运行相同的代码来处理区块哈希猜测，这使得GPU和ASICS的哈希算力得到几何级的增长。
+		  </p>
+
+		  <p>
+                  现在有很多防止GPU和ASIC来挖矿的电子货币，但是很多都失败了，最后使用GPU依然可以挖矿。有些试图增加挖矿时内存的占用（如Scrypt，Litecoin，Yacoin，Memorycoin）。还有的试图来增加加密散列函数的复杂性（如Quark等），但是直到今天，所有试图来防止GPU和ASIC的努力都白费了，因为GPU和ASIC矿机哦那个能通过增加内存容量和算力来解决。另外，试图增加内存占用有很严重的缺点，这会导致很多普通电脑用户不能来进行挖矿。
+		  </p>
+
+		  <p>
+Heavycoin的设计初衷就是只允许CPU来开采，我们引进了HEFTY1算法来阻挠GPU和ASIC来破坏SIMD样式。哈希猜测会随着输入数据不同而不同。这就导致了内嵌的特定代码不能用于处理这些不同的哈希猜测。所以相较于CPU而言，GPU和ASIC矿机没有任何速度优势。
+		  </p>
+
+		  <center>
+		    <img src="../images/simd.png"/>
+                    <p>Instruction 指令 Guess 猜测</p>
+		  </center>
+
+		  <p>
+                  HEFYT1在阻止GPU和ASIC挖矿的同时还提供了安全的加密散列算法。详细请参阅HEFTY1项目网站。
+		  </p>
+
+		  <h3>安全性</h3>
+
+                  <p>
+                  HEFTY1是新的加密散列函数，它的安全性还没有被证明。因此，我们使用一个安全的部署办法，这个办法可以证明和4种加密散列函数一样的安全来保护Heavycoin。我们使用HEFTY1来哈希已经被这四种加密散列函数哈希过得结果。特别的，我们对每一种加密散列函数，我们使用下面的的构造来避免冲突：
+                  <img src="../images/h-variable.png" style="height: 12px; margin-bottom: 6px;" alt="H" />
+                  </p>
+
+                  <p><center>
+                  <img src="../images/heavycoin-hash.png" style="margin: 10px 0 10px; height: 24px;" title="We guarantee that the Heavycoin hash is always at least as good as SHA256, KECCAK, GROESTL and BLAKE" alt="Heavycoin(x) = H(x + HEFTY1(x))ROESTL(SKEIN(BLAKE(x))))" />
+                  </center></p>
+
+                  <p>
+                  ⊕是连接运算符，这就是说如果HEFTY1可能会产生冲突的话，加密散列函数依然会包含着原始的输入，就不会产生冲突。
+		  </p>
+
+		  <p>
+                  通过与HEFTY1进行连接运算可以阻挠GPU来开采，而我们的区块依然由这四种知名的加密散列函数来保护。最坏的情况是如果HEFTY1函数被破解了的话，GPU仅仅能获得挖矿速度的优势，我们的区块依旧是安全的。
+                  </p>
+              </div>
+
+              <div class="tab-pane fade" id="decentralised-voting">
+                  <i class="fa fa-users pull-left fa-4x"></i>
+                  <p>
+                  到目前为止，所有的电子货币都有它们固定的开采计划，计划是由电子货币的开发者决定的。Heavycoin运用了基于用户民主投票决定开采计划的去中心化投票系统。开采计划和货币供应量（依然有最大的上限）由一个可证明为防作弊的去中心化的过程来决定。
+                  </p>
+
+		  <h3>参与我们的实验</h3>
+		  <p>
+                  通过开采Heavycoin，你可以参与去中心化区块奖励的民主化的以下事项：
+		  </p>
+		  <ul>
+		    <li>货币所需的开采时间：128天到25年以上</li>
+		    <li>最大货币供应量：6300万或1亿2800万</li>
+		    <li>开采奖励时间：5年到38年以上</li>
+		  </ul>
+
+		  <h3>怎么进行</h3>
+		  <p>
+                  Heavycoin的创始块没有区块奖励，第一个开采者第一个开采块和第一个投票决定区块的奖励额度。前100个块（3.3小时）将会决定开始的块的奖励额度。从这以后，区块奖励额度的投票将会继续进行，但是投票的话是正对大约每3600个块的奖励额度。
+		  </p>
+
+		  <p>
+                  Heavycoin开采的时候预先设置为投票，投票的区块奖励额度为512个HVC。如果你想改变区块奖励额度的话，参见怎么投票。当你每一次开采一个块的时候，你的钱包会自动的投一票关于区块奖励的额度。Heavycoin的网络会自动的设置根据投票结果的区块奖励额度，每5天（3600块）。3600个块的区块奖励额度是根据前面那一轮投票决定的，额度取整数。
+		  </p>
+
+		  <h3>投票阶段</h3>
+		  <p>
+                  为了让投票能影响到产币的速度和货币量供给，投票分为三个阶段（铸造阶段、限制阶段、可持续阶段），同时划分也考虑到了网络的在很长时间阶段的持续性。第一阶段（铸造阶段），在这个阶段中我们允许的最大区块奖励额度为1024个HVC，第二个阶段（限制阶段），我们允许的最大区块奖励额度为1024个HVC,当然这是针对59876个块前的区块的，而最后阶段（可持续阶段）的最大区块奖励额度为8个HVC。
+		  </p>
+
+                  </br>   
+
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+    <table class="table table-bordered vphases col-center">
+        <thead>
+          <tr>
+            <th width="25%"><h3>阶段</h3></th>
+            <th width="25%"><h3>投票</h3></th>
+            <th width="25%"><h3>时间</h3></th>
+            <th width="25%"><h3>货币量</h3></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="center">
+            <td><h3>铸造阶段</h3> 45,000,000 HVC</td>
+            <td>投票会影响初始的开采进度，区块奖励额度越高，4500万HVC的奖励越快被分配</td>
+            <td>72天到25年以上</br>（根据投票结果）</td>
+            <td>450000000 HVC</br>(固定)</td>
+          </tr>
+          <tr>
+            <td><h3>限制阶段</h3> 63,476个块</td>
+            <td>投票会影响最终的货币量供给，区块奖励额度越小，货币量也越小。最大的货币量为1亿2800万HVC</td>
+            <td>56天</br>（固定）</td>
+            <td>0 − 64,999,424 HVC</br>（根据投票结果）</td>
+          </tr>
+          <tr>
+            <td><h3>可持续阶段</h3> 10,000,576 HVC</td>
+            <td>投票会影响长远的开采时间。投票关于最大的区块奖励额度为8 HVC。</td>
+            <td>4.7年到38年以上</br>（根据投票结果）</td>
+            <td>10,000,576 HVC</br> （固定）</td>
+          </tr>
+          <tr>
+            <td colspan="4"><strong>总计货币量供应</strong></br>63,000,576 to 128,000,000 HVC</br>（根据投票结果)</td>
+          </tr>
+        </tbody>
+    </table>
+</div>
+<p><img src="../images/age-limit.png" style="vertical-align: middle;" alt="*"/> 最小投票年龄限制：没有</p>
+              </div>
+
+              <div class="tab-pane fade" id="fast-transactions">
+                  <i class="fa fa-rocket pull-left fa-4x"></i>
+                  <p>
+                  Heavycoin的交易时间大约在2分钟，这比Bitcoin和Litecoin都快。在每一次交易的基础上，用户通过等待稍微长的时间来获得额外的安全性能。相比较1分钟的区块时间，Heavycoin的2分钟区块时间可以减少区块链膨胀，并且减少分叉和区块链重组所带来的不稳定因素。
+		  </p>
+
+		  <h3>参数</h3>
+		  <ul>
+		    <li>区块时间：2分钟</li>
+		    <li>向上重定位：每5个区块</li>
+		    <li>向下重定位：每1个区块</li>
+		    <li>平均：最近1小时内</li>
+		    <li>防止多币自动矿池：临时重定位算法</li>
+		  </ul>
+
+		  <h3>细节</h3>
+
+		  <p>
+                  区块传播速度可能比你想象当中的更重要，在发表的一本出版物 <a href="http://www.tik.ee.ethz.ch/file/49318d3f56c1d525aabf7fda78b23fc0/P2P2013_041.pdf">在Bitcoin网络中的信息传播</a>
+                  ，作者表明一个节点发现一个块的时间是12.6秒，40秒后网络上95%的节点可以发现这一块。然而，这不意味着就可以选择40秒作为区块时间。
+                  我们必须考虑到短区块时间带来的弊端：诸如发生矿工冲突和小分叉。另外，更快的区块时间每天将会产生更多的块，这就是说1分钟区块时间将会产生2倍于2分钟区块时间的区块。
+		  </p>
+
+              </div>
+
+              <div class="tab-pane fade" id="temporal-retargeting">
+                  <i class="fa fa-gears pull-left fa-4x"></i>
+                  
+		  <p>
+                  初出茅庐的电子货币（译者注：特制除Bitcoin以外的电子货币，下同）必须在困难的环境中求得生存而且将面对Bitcoin不会面对的挑战。面临的最大挑战是承受当多币自动矿池（Multipools）开采一种货币时候带来的难度的巨大变化。大多数的电子货币通过Kimoto Gravity Well算法来解决这一问题，但是难度恢复可能会持续几周的时间。Heavycoin有自己的解决办法：临时重定位，这种解决办法相比较而言更加快速的实现难度恢复。
+		  </p>
+		  <br/>
+
+		  <center>
+		    <img src="images/retargeting.png"/>
+		  </center>
+
+		  <h3>问题</h3>
+		  <p>
+                  当一款刚出现的电子货币开始其越来越值钱的时候，就会受到大型的多币自动矿产的注意。这种矿池根据哪种货币利润率高来选择开采哪一种货币。当多币总动矿池的介入，其难度将呈现几何级增长，这或许很好。但是，当矿池又瞄准其他货币的时候，它们会迅速离开以至于该货币未能及时地将开采难度恢复，这一点很不好。
+		  </p>
+
+		  <p>
+                  上面所提的带来的后果将是网络的冻结，也就是交易不能被处理，因为没有区块被处理。网络的冻结（不能发现区块和处理交易）将持续几小时或者几天几周甚至几个月，这个问题影响到了很多山寨币，造成大规模的恐慌，价格下降和硬分叉。开发者不得不发布新的程序来“解冻”网络。
+                  其核心问题是由于大部分重定位算法只依靠区块数来实现重定位。Bitcoin设计初衷是基于挖矿的哈希功率不会突然的消失。它假设总会有另一块来计算新的开采难度。然而，这已然不是一个可行的假设。
+		  </p>
+
+		  <h3>解决办法</h3>
+		  <p>
+                  到现在为止，最著名的解决办法是 <a href="https://bitcointalk.org/index.php?topic=240861.msg3040291#msg3040291" target="_blank">Kimoto Gravity Well 算法</a>，它可以让难度迅速调整到正常水平。但幸的是，这个算法要求至少有一个块来解决问题，而这需要花费几周的时间。举个例子来说，最近<a href="https://bitcointalk.org/index.php?topic=391192.msg4987231#msg4987231" target="_blank"> 的FedoraCoin的硬分叉问题，</a> 用户经历了几周的Kimoto算法调整到原来难度水平。
+		  </p>
+		  <p>
+                  Heavycoin采用了不同的方法来应对多币自动矿池的问题，引入了临时重定位算法。在Heavycoin，网络在一段很长时间内没有发现新块的前提下降低难度来达到自我修复的功能。为了保证安全性，我们设定了自我修复的时间阈值来确保有人来操控网络来人工的降低难度。
+		  <p>
+                  Heavycoin的重定位算法保证每次交易不会被冻结超过3个小时。Heavycoin的网络可以自动从多币自动矿池瞬间难度激增后恢复过来，而这不会产生恐慌也不需要开发者的介入。考虑到bitcoin的确认时间，我们认为3个小时是可以接受的，这也将是相比Kimoto算法而言一个重大的提升。
+		  </p>
+	      </div>
+          </div>
+      </div>
+  </div>
+  <!-- /.row -->
+
+</div>
+</div>
