@@ -15,38 +15,38 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Launch <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="launch.html">Details</a>
+                            <li><a href="{% if page.subdir == "t"%}../{%endif%}launch.html">Details</a>
                             </li>
-                            <li><a href="mining-launch.html">Launch</a>
+                            <li><a href="{% if page.subdir == "t"%}../{%endif%}mining-launch.html">Launch</a>
                             </li>
-                            <li><a href="ipo-stakeholders.html">IPO stakeholders</a>
+                            <li><a href="{% if page.subdir == "t"%}../{%endif%}ipo-stakeholders.html">IPO stakeholders</a>
                             </li>
-                            <li><a href="video-demo.html">Video demo</a>
+                            <li><a href="{% if page.subdir == "t"%}../{%endif%}video-demo.html">Video demo</a>
                             </li>
-                            <li><a href="code-sample.html">Code sample</a>
+                            <li><a href="{% if page.subdir == "t"%}../{%endif%}code-sample.html">Code sample</a>
                             </li>
                         </ul>
                     </li>
-                    <li {% if page.name == "news" %} class="active" {% endif %}><a href="news.html">News</a>
+                    <li {% if page.name == "news" %} class="active" {% endif %}><a href="{% if page.subdir == "t"%}../{%endif%}news.html">News</a>
                     </li>
-                    <li {% if page.name == "community" %} class="active" {% endif %}><a href="community.html">Community</a>
+                    <li {% if page.name == "community" %} class="active" {% endif %}><a href="{% if page.subdir == "t"%}../{%endif%}community.html">Community</a>
                     </li>
-                    <li {% if page.name == "download" %} class="active" {% endif %}><a href="download.html">Download</a>
+                    <li {% if page.name == "download" %} class="active" {% endif %}><a href="{% if page.subdir == "t"%}../{%endif%}download.html">Download</a>
                     </li>
-                    <li {% if page.name == "merchants" %} class="active" {% endif %}><a href="merchants.html">Merchants</a>
+                    <li {% if page.name == "merchants" %} class="active" {% endif %}><a href="{% if page.subdir == "t"%}../{%endif%}merchants.html">Merchants</a>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Help <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="installation.html">Installation</a>
+                            <li><a href="{% if page.subdir == "t"%}../{%endif%}installation.html">Installation</a>
                             </li>
-                            <li><a href="voting.html">How to vote</a>
+                            <li><a href="{% if page.subdir == "t"%}../{%endif%}voting.html">How to vote</a>
                             </li>
-                            <li><a href="mining.html">How to mine</a>
+                            <li><a href="{% if page.subdir == "t"%}../{%endif%}mining.html">How to mine</a>
                             </li>
-                            <li><a href="rpc-voting.html">RPC voting</a>
+                            <li><a href="{% if page.subdir == "t"%}../{%endif%}rpc-voting.html">RPC voting</a>
                             </li>
-                            <li><a href="video-demo.html">Video demo</a>
+                            <li><a href="{% if page.subdir == "t"%}../{%endif%}video-demo.html">Video demo</a>
                             </li>
                         </ul>
                     </li>

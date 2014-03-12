@@ -4,8 +4,8 @@
                 <h2>Info</h2>
                 <ul>
                    <li><a href="https://github.com/heavycoin" target="_blank">Source Code (Github)</a></li>
-                   <li><a href="mining.html">How to Mine</a></li>
-                   <li><a href="voting.html">How to Vote</a></li>
+                   <li><a href="{% if page.subdir == "t"%}../{%endif%}mining.html">How to Mine</a></li>
+                   <li><a href="{% if page.subdir == "t"%}../{%endif%}voting.html">How to Vote</a></li>
                    <li><a href="{{ site.BTTINFO }}" target="_blank">Forum</a></li>
                  </ul>
               </div>
