@@ -31,7 +31,7 @@ subdir: t
                     Heavycoin引进了一系列新型的、超级安全的散列算法，这些算法利用冗余加密散列函数来确保区块链的安全。如果其中一个散列函数遭到攻击的话，其他函数依然保护着Heavycoin。这相对于Bitcoin、Litecoin和其他电子货币依赖一种加密散列算法是一个重要的进步。
                     </p>
 
-                    <p><center><img src="images/multi-hash.png" title="If one of these hash functions fail, then Heavycoin is still protected by the others. This is a significant step forward over Bitcoin and most other crypto-currencies." /></center></p>
+                    <p><center><img src="../images/multi-hash.png" title="If one of these hash functions fail, then Heavycoin is still protected by the others. This is a significant step forward over Bitcoin and most other crypto-currencies." /></center></p>
 
                     <p>
                     另外，Bitcoin和其他依赖SHA-256算法的电子货币，该算法由美国国家安全局（NSA）开发完成，而斯诺登泄密事件的出现却将SHA-256算法的安全性推上了风口浪尖，尤其是独立于政府的货币体系外的Bitcoin。
@@ -59,7 +59,7 @@ subdir: t
                     </p>
 
                     <center>
-                    <img src="images/quarkcoin-hash9.png" style="margin: 20px 0 20px; height: 24px;" title="Quarkcoin and its many clones implement the use of multiple hash functions incorrectly" alt="Quark(x) = ... SKEIN512(KECCAK512( ... BMW512(BLAKE512(x))))" />
+                    <img src="../images/quarkcoin-hash9.png" style="margin: 20px 0 20px; height: 24px;" title="Quarkcoin and its many clones implement the use of multiple hash functions incorrectly" alt="Quark(x) = ... SKEIN512(KECCAK512( ... BMW512(BLAKE512(x))))" />
                     </center>
                     <p>
                     这个散列函数包括JH-512，Keccak-512，BMW-512，BLAKE-512, SKEIN-512或者Grøestl-512。根据前面的散列函数输出的第四位来随机选择函数。
@@ -78,7 +78,7 @@ subdir: t
                     </p>
 
 		    <center>
-		    <img src="images/heavycoin-combined-hash.png" style="padding: 15px; height: 230px;" title="Heavycoin takes 64 bits from 4 well-known cryptographic hash functions and interleaves these bits into a combined 256-bit hash" />
+		    <img src="../images/heavycoin-combined-hash.png" style="padding: 15px; height: 230px;" title="Heavycoin takes 64 bits from 4 well-known cryptographic hash functions and interleaves these bits into a combined 256-bit hash" />
 		    </center>
 
                     <p>
@@ -94,7 +94,7 @@ subdir: t
 		  </p>
 
 		  <center>
-		    <img src="images/mining-centralization.png" style="height: 250px;"/>
+		    <img src="../images/mining-centralization.png" style="height: 250px;"/>
 		  </center>
 
                   <p>
@@ -118,7 +118,7 @@ subdir: t
 		  </p>
 
 		  <p>
-Heavycoin的设计初衷就是只允许CPU来开采，我们引进了HEFTY1算法来阻挠GPU和ASIC来破坏SIMD样式。哈希猜测会随着输入数据不同而不同。这就导致了内嵌的特定代码不能用于处理这些不同的哈希猜测。所以相较于CPU而言，GPU和ASIC矿机没有任何速度优势。
+                  Heavycoin的设计初衷就是只允许CPU来开采，我们引进了HEFTY1算法来阻挠GPU和ASIC来破坏SIMD样式。哈希猜测会随着输入数据不同而不同。这就导致了内嵌的特定代码不能用于处理这些不同的哈希猜测。所以相较于CPU而言，GPU和ASIC矿机没有任何速度优势。
 		  </p>
 
 		  <center>
@@ -255,7 +255,7 @@ Heavycoin的设计初衷就是只允许CPU来开采，我们引进了HEFTY1算�
 		  <br/>
 
 		  <center>
-		    <img src="images/retargeting.png"/>
+		    <img src="../images/retargeting.png"/>
 		  </center>
 
 		  <h3>问题</h3>
