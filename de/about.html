@@ -30,7 +30,7 @@ name: about
                     Heavycoin führt einen neuartigen ultra-sicheren Hash-Algorithmus ein, welcher Gebrauch mehrerer redundanter kryptographischer Hashfunktionen macht um seinen Blockchain zu sichern. Wenn einer dieser Hashfunktionen ausfällt, ist Heavycoin noch immer aufgrund seiner anderen Hashfunktionen gesichert. Dies ist ein signifikanter Schritt nach Vorne im Vergleich zu Bitcoin, Litecoin und anderen Kryptowährungen, welche sich auf eine einzige kryptographische Hashfunktion verlassen.
                     </p>
 
-                    <p><center><img src="images/multi-hash.png" title="Wenn einer dieser Hashfunktionen versagt, wird Heavycoin noch immer von den anderen gesichert. Dies ist ein signifikanter Schritt nach Vorne gegenüber Bitcoin und anderen Kryptowährungen."/></center></p>
+                    <p><center><img src="../images/multi-hash.png" title="Wenn einer dieser Hashfunktionen versagt, wird Heavycoin noch immer von den anderen gesichert. Dies ist ein signifikanter Schritt nach Vorne gegenüber Bitcoin und anderen Kryptowährungen."/></center></p>
 
                     <p>
                     Darüber hinaus verlassen sich Bitcoin und viele andere alternative Coins auf den SHA-256-Algorithmus, welcher von der NSA entwickelt wurde. Die kürzlichen Snowden-Enthüllungen könnten das Sicherheitsversprechen von SHA-256 und somit die Regierungsunabhängigkeit von Bitcoin in Frage stellen. 
@@ -58,7 +58,7 @@ name: about
                     </p>
 
                     <center>
-                    <img src="images/quarkcoin-hash9.png" style="margin: 20px 0 20px; height: 24px;" title="Quarkcoin und seine vielen Clones implementieren die Verwendung von multiplen Hashfunktionen inkorrekt." alt="Quark(x) = ... SKEIN512(KECCAK512( ... BMW512(BLAKE512(x))))" />
+                    <img src="../images/quarkcoin-hash9.png" style="margin: 20px 0 20px; height: 24px;" title="Quarkcoin und seine vielen Clones implementieren die Verwendung von multiplen Hashfunktionen inkorrekt." alt="Quark(x) = ... SKEIN512(KECCAK512( ... BMW512(BLAKE512(x))))" />
                     </center>
                     <p>
 		    wobei … zusätzliche Hashfunktionsmischung von JH-512, Keccak-512, BMW-512, BLAKE-512, SKEIN-512 oder Grøestl-512 beinhaltet, welche auf dem vierten Bit der vorherigen Hashausgabe basierend willkürlich ausgewählt wird.
@@ -77,7 +77,7 @@ name: about
                     </p>
 
 		    <center>
-		    <img src="images/heavycoin-combined-hash.png" style="padding: 15px; height: 230px;" title="Heavycoin nimmt 64 Bits von 4 namhaften kryptographischen Hashfunktionen und verschachtelt diese in einem kombinierten 256-Bit Hash." />
+		    <img src="../images/heavycoin-combined-hash.png" style="padding: 15px; height: 230px;" title="Heavycoin nimmt 64 Bits von 4 namhaften kryptographischen Hashfunktionen und verschachtelt diese in einem kombinierten 256-Bit Hash." />
 		    </center>
 
                     <p>
@@ -93,7 +93,7 @@ name: about
 		  </p>
 
 		  <center>
-		    <img src="images/mining-centralization.png" style="height: 250px;"/>
+		    <img src="../images/mining-centralization.png" style="height: 250px;"/>
 		  </center>
 
                   <p>
@@ -121,7 +121,7 @@ name: about
 		  </p>
 
 		  <center>
-		    <img src="images/simd.png"/>
+		    <img src="../images/simd.png"/>
 		  </center>
 
 		  <p>
@@ -136,19 +136,19 @@ name: about
 		  <h3>Sicherheit</h3>
 
                   <p>HEFTY1 ist neu und seine Sicherheit damit noch nicht bewiesen. Somit setzen wir es auf sicherem Wege ein, welcher nachweisbar mindestens so sicher wie die 4 Haupt-Hashfunktionen ist, welche Heavycoin schützen. Wir nutzen HEFTY1 als sekundären Hash des Inputs, während der ursprüngliche Input trotzdessen von SHA-256, Keccak-512, Grøestl-512 und BLAKE-512 gehasht wird.
-                  Für jede sichere Hashfunktion <img src="images/h-variable.png"
+                  Für jede sichere Hashfunktion <img src="../images/h-variable.png"
                   style="height: 12px; margin-bottom: 6px;" alt="H"/>
                   in (SHA-256, Keccak-512, Grøestl-512 und BLAKE-512), benutzen wir eigens die folgende Kollision-vermeidende Konstruktion.
 
                   </p>
 
                   <p><center>
-                  <img src="images/heavycoin-hash.png" style="margin: 10px 0 10px; height: 24px;" title="Wir garantieren, dass der Heavycoin Hash immer mindestens so gut ist wie SHA256, KECCAK, GROESTL und BLAKE" alt="Heavycoin(x) = H(x + HEFTY1(x))ROESTL(SKEIN(BLAKE(x))))" />
+                  <img src="../images/heavycoin-hash.png" style="margin: 10px 0 10px; height: 24px;" title="Wir garantieren, dass der Heavycoin Hash immer mindestens so gut ist wie SHA256, KECCAK, GROESTL und BLAKE" alt="Heavycoin(x) = H(x + HEFTY1(x))ROESTL(SKEIN(BLAKE(x))))" />
                   </center></p>
 
                   <p>
 
-                  wobei <font size="4">&#8853;</font> die Verkettungsoperation darstellt. Dies bedeutet, dass falls HEFTY1 Kollisionen hat, der Input zu <img src="images/h-variable.png" style="height:
+                  wobei <font size="4">&#8853;</font> die Verkettungsoperation darstellt. Dies bedeutet, dass falls HEFTY1 Kollisionen hat, der Input zu <img src="../images/h-variable.png" style="height:
                   12px; margin-bottom: 6px" alt="H"/> noch immer den ursprünglichen Input enthält, und somit nicht kollidieren wird.
 
 		  </p>
@@ -236,7 +236,7 @@ name: about
         </tbody>
     </table>
 </div>
-<p><img src="images/age-limit.png" style="vertical-align: middle;" alt="*"/>Minimales Wahlalter: Keines</p>
+<p><img src="../images/age-limit.png" style="vertical-align: middle;" alt="*"/>Minimales Wahlalter: Keines</p>
               </div>
 
               <div class="tab-pane fade" id="fast-transactions">
@@ -272,7 +272,7 @@ name: about
 		  <br/>
 
 		  <center>
-		    <img src="images/retargeting.png"/>
+		    <img src="../images/retargeting.png"/>
 		  </center>
 
 		  <h3>Problem</h3>
