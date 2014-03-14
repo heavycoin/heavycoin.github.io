@@ -1,0 +1,298 @@
+---
+layout: default-de
+title: About Heavycoin
+name: about
+---
+<div class="container">
+<div class="well well-main">
+    <!-- Service Tabs -->
+    <div class="row">
+        <div class="col-lg-12">
+
+            <h2 class="page-header">Innovationen und Features</h2>
+            <ul id="myTab" class="nav nav-tabs">
+                <li class="active"><a href="#ultra-secure" data-toggle="tab">Ultra-Sicher</a>
+                </li>
+                <li><a href="#asic-resistant" data-toggle="tab">ASIC-resistent</a>
+                </li>
+                <li><a href="#decentralised-voting" data-toggle="tab">Dezentralisiertes Voting</a>
+                </li>
+                <li><a href="#fast-transactions" data-toggle="tab">Schnelle Transaktionen</a>
+                </li>
+                <li><a href="#temporal-retargeting" data-toggle="tab">Zeitliches Retargeting</a>
+                </li>
+            </ul>
+
+            <div id="myTabContent" class="tab-content">
+                <div class="tab-pane fade in active" id="ultra-secure">
+                    <i class="fa fa-thumbs-o-up  pull-left fa-4x"></i>
+                    <p>
+                    Heavycoin führt einen neuartigen ultra-sicheren Hash-Algorithmus ein, welcher Gebrauch mehrerer redundanter kryptographischer Hashfunktionen macht um seinen Blockchain zu sichern. Wenn einer dieser Hashfunktionen ausfällt, ist Heavycoin noch immer aufgrund seiner anderen Hashfunktionen gesichert. Dies ist ein signifikanter Schritt nach Vorne im Vergleich zu Bitcoin, Litecoin und anderen Kryptowährungen, welche sich auf eine einzige kryptographische Hashfunktion verlassen.
+                    </p>
+
+                    <p><center><img src="../images/multi-hash.png" title="Wenn einer dieser Hashfunktionen versagt, wird Heavycoin noch immer von den anderen gesichert. Dies ist ein signifikanter Schritt nach Vorne gegenüber Bitcoin und anderen Kryptowährungen."/></center></p>
+
+                    <p>
+                    Darüber hinaus verlassen sich Bitcoin und viele andere alternative Coins auf den SHA-256-Algorithmus, welcher von der NSA entwickelt wurde. Die kürzlichen Snowden-Enthüllungen könnten das Sicherheitsversprechen von SHA-256 und somit die Regierungsunabhängigkeit von Bitcoin in Frage stellen. 
+                    </p>
+
+                    <p>
+						Heavycoin bedient sich folgender kryptographischer Hashfunktionen:
+                    <ul>
+                      <li><a href="https://en.wikipedia.org/wiki/SHA-256" target="_blank">SHA-256</a></li>
+                      <li><a href="https://en.wikipedia.org/wiki/SHA-3" target="_blank">Keccak-512</a> (a.k.a., SHA-3)</li>
+                      <li><a href="https://en.wikipedia.org/wiki/Groestl" target="_blank">Grøestl-512</a></li>
+                      <li><a href="https://en.wikipedia.org/wiki/BLAKE_(hash_function)" target="_blank">BLAKE-512</a></li>
+                    </ul>
+                    <p/>
+                    <p>
+                    Diese kryptographischen Hashfunktionen wurden ausgewählt weil sie jeweils wenig gemeinsam haben und eine gemeinsame Schwäche somit sehr unwahrscheinlich ist.
+                    </p>
+
+                    <p></br>
+                    <b>F: Implementiert nicht Quarkcoin bereits mehrere kryptographische Hashfunktionen?</b>
+                    </p>
+
+                    <p>
+                    <b>A:</b> Ja, jedoch ohne dabei die Sicherheit gegen Kollisionen zu erhöhen. Quarkcoin (und seine zahlreichen Clones) implementieren multiple Hashfunktionen tatsächlich als eine simple Kette von Funktionsmischung.
+                    </p>
+
+                    <center>
+                    <img src="../images/quarkcoin-hash9.png" style="margin: 20px 0 20px; height: 24px;" title="Quarkcoin und seine vielen Clones implementieren die Verwendung von multiplen Hashfunktionen inkorrekt." alt="Quark(x) = ... SKEIN512(KECCAK512( ... BMW512(BLAKE512(x))))" />
+                    </center>
+                    <p>
+		    wobei … zusätzliche Hashfunktionsmischung von JH-512, Keccak-512, BMW-512, BLAKE-512, SKEIN-512 oder Grøestl-512 beinhaltet, welche auf dem vierten Bit der vorherigen Hashausgabe basierend willkürlich ausgewählt wird.
+		    </p>
+
+		    <p>
+				Aufgrund Quarkcoin’s simpler Benutzung von Funktionsmischung ergibt sich das Problem, dass wenn BLAKE512(x) Kollisionen hat, dies auch BMW512(BLAKE512(x)) und SKEIN512(KECCAK512(… und so weiter betrifft, bis Quark(x) erreicht wird, wo somit die Kollisionen letztlich auch auftreten. Gleichermaßen verhält es sich für beispielsweise SKEIN-512 oder Grøestl-512. Haben diese Funktionen Kollisionen, so auch Quark(x). Einfach gesagt bedeutet dies, dass bei einer Kollisionsattacke oder bei einem Second-Preimage-Angriff von BLAKE-512(x), auch Quark(x) gecrackt wird.
+                    </p>
+
+                    <p></br>
+                    <b>F: Wie implementiert Heavycoin multiple kryptographische Hashfunktionen?</b>
+                    </p>
+
+                    <p>
+                    <b>A:</b> Heavycoin nimmt 64 Bits des Outputs von 4 namhaften kryptographischen Hashfunktionen (SHA-256, Keccak-512, Grøestl-512 und BLAKE-512) und verschachtelt diese Bits in einem gemeinsamen 256-Bit Hash, welcher resistenter gegenüber Kollisionen und Second-Preimage-Angriffen ist.
+                    </p>
+
+		    <center>
+		    <img src="../images/heavycoin-combined-hash.png" style="padding: 15px; height: 230px;" title="Heavycoin nimmt 64 Bits von 4 namhaften kryptographischen Hashfunktionen und verschachtelt diese in einem kombinierten 256-Bit Hash." />
+		    </center>
+
+                    <p>
+                    Das Diagramm oben gibt ein kurzes Beispiel davon, wie Heavycoin den Output seiner 4 kryptographischen Hashfunktionen kombiniert. Dies gibt Heavycoin einen signifikanten Sicherheitsvorteil, da es sich nicht auf die langfristige Sicherheit einer einzigen kryptographischen Hashfunktion verlässt. Sollte BLAKE-512 gecrackt werden, ist Heavy(x) lediglich geschwächt, jedoch weiterhin voll funktionstüchtig und sicher.
+                    </p>
+                </div>
+
+              <div class="tab-pane fade" id="asic-resistant">
+                  <i class="fa fa-gears pull-left fa-4x"></i>
+
+		  <p>
+			  Mining-Zentralisierung ist ein Problem für Bitcoin, Litecoin und die meisten anderen Kryptowährungen. Zunehmend werden mehr und mehr Transaktionen von einer Handvoll großer Player mit teurer, spezialisierter Hardware gemined. Wenn eine Mehrheit von Transaktionen von einer wohlhabenden, kleinen Gruppe bearbeitet werden, bedroht dies die Unabhängigkeit von Kryptowährungen und die zahlreichen Vorteile, welche sich aus Dezentralisierung ergeben.
+		  </p>
+
+		  <center>
+		    <img src="../images/mining-centralization.png" style="height: 250px;"/>
+		  </center>
+
+                  <p>
+                  Um die größte und dynamischste Gemeinschaft zu unterstützen, führte Heavycoin eine neuartige CPU-only Hashfunktion namens HEFTY1 ein. Dies erlaubte jedem, der über einen normalen Computer verfügt, Heavycoin zu minen und Stakeholder zu werden. Schließlich wurde auch ein HEFTY1 GPU-Miner entwickelt, so dass Heavycoin auch mittels GPU gemined werden kann. Heavycoin ist momentan als ASIC-resistent klassifiziert, was bedeutet, dass das meiste Mining von GPU-Minern ausgeführt wird.
+                  </p>
+
+		  <h3>Features</h3>
+		  
+          <p>
+          Frühe Erfahrungen mit dem GPU-Minen von Heavycoin haben gezeigt, dass es einige einzigartige Vorteile gibt, wie etwa <a href="https://bitcointalk.org/index.php?topic=167229.msg5721823#msg5721823" target="_blank">niedriger Energiebedarf</a> und <a href="https://bitcointalk.org/index.php?topic=506774.msg5746513#msg5746513" target="_blank">kühlerer Betrieb</a>. Ob dies ein permanentes Feature darstellt oder nur ein temporärer Vorteil ist, bleibt zunächst unklar.
+          </p>
+		  
+		  <ul>
+		    <li>ASIC-resistent</li>
+		    <li>Geringer Speicherbedarf</li>
+			<li>Energieeffizientes GPU-Mining</li>
+			<li>Niedrigtemperatur GPU-Mining</li>
+		  </ul>
+
+
+
+		  <h3>Sicherheit</h3>
+
+                  <p>HEFTY1 ist neu und seine Sicherheit damit noch nicht bewiesen. Somit setzen wir es auf sicherem Wege ein, welcher nachweisbar mindestens so sicher wie die 4 Haupt-Hashfunktionen ist, welche Heavycoin schützen. Wir nutzen HEFTY1 als sekundären Hash des Inputs, während der ursprüngliche Input trotzdessen von SHA-256, Keccak-512, Grøestl-512 und BLAKE-512 gehasht wird.
+                  Für jede sichere Hashfunktion <img src="../images/h-variable.png"
+                  style="height: 12px; margin-bottom: 6px;" alt="H"/>
+                  in (SHA-256, Keccak-512, Grøestl-512 und BLAKE-512), benutzen wir eigens die folgende Kollision-vermeidende Konstruktion.
+
+                  </p>
+
+                  <p><center>
+                  <img src="../images/heavycoin-hash.png" style="margin: 10px 0 10px; height: 24px;" title="Wir garantieren, dass der Heavycoin Hash immer mindestens so gut ist wie SHA256, KECCAK, GROESTL und BLAKE" alt="Heavycoin(x) = H(x + HEFTY1(x))ROESTL(SKEIN(BLAKE(x))))" />
+                  </center></p>
+
+                  <p>
+
+                  wobei <font size="4">&#8853;</font> die Verkettungsoperation darstellt. Dies bedeutet, dass falls HEFTY1 Kollisionen hat, der Input zu <img src="../images/h-variable.png" style="height:
+                  12px; margin-bottom: 6px" alt="H"/> noch immer den ursprünglichen Input enthält, und somit nicht kollidieren wird.
+
+		  </p>
+
+		  <p>
+
+                  Auf diese Weise wird HEFTY1 nur verwendet um sich GPU Minern entgegenzustellen, während der Blockchain mittels den 4 namhaften kryptographischen Hashfunktionen gesichert wird. In einem extrem unwahrscheinlichem schlimmsten Fall Szenario eines Bruches von HEFTY1, könnten GPU-Miner einen Arbeitstempo-Vorteil erlangen. Der Blockchain jedoch wäre noch immer durch SHA-256, Keccak-512, Grøestl-512 und BLAKE-512 gesichert.
+
+                  </p>
+              </div>
+
+              <div class="tab-pane fade" id="decentralised-voting">
+                  <i class="fa fa-users pull-left fa-4x"></i>
+                  <p>
+                  Bis jetzt hatten alle Kryptowährungen festgelegte Mining-Pläne welche von den Machern der Währungen vorgeschrieben wurden. Heavycoin nimmt einen anderen Ansatz indem es sich auf seine Nutzer verlässt den Mining-Plan mittels dezentralisiertem Voting demokratisch zu bestimmen. Sowohl der Mining-Plan sowie auch der Geldbestand (welcher allerdings eine maximale Obergrenze aufweist) werden mittels eines betrugssicheren Wahlsystems entschieden.
+                  </p>
+
+		  <h3>Treten Sie dem Experiment bei!</h3>
+
+		  <p>
+		  Indem Sie Heavycoin minen, können Sie am dezentralisierten Block-Reward-Voting teilnehmen und demokratisch folgendes bestimmen:
+		  </p>
+		  <ul>
+		    <li>Prägungsrate des Geldangebots: zwischen 128 Tagen bis zu 25+ Jahren</li>
+		    <li>Maximales Geldangebot: zwischen 63-128 Millionen</li>
+		    <li>Mining Reward Lebensdauer: 5-38+ Jahre</li>
+		  </ul>
+
+		  <h3>Wie es funktioniert</h3>
+
+		  <p>
+		    Zunächst beginnt Heavycoin mit einem Zero Block Reward. Die allerersten Miner werden die erste Gelegenheit haben Blocks zu lösen und darüber abzustimmen, wie hoch der erste demokratisch bestimmte Block Reward sein soll. Die ersten 100 Blocks (3,3 Stunden) werden den Anfangs-Block-Reward bestimmen. Ab dann wird das Block-Reward-Voting fortgeführt, die Stimmen werden jedoch gezählt und jede 3600 Blocks anteilsmäßig verteilt (5 Tage).
+		  </p>
+
+		  <p>
+		  Heavycoin ist konfiguriert standardmäßig zu minen und zu voten, wobei die Standardwahl 512 HVC ist. Wenn Sie ihre Block-Reward-Wahl ändern möchten, schauen Sie sich die Seiten
+		  <a href="voting.html">How to vote</a> und
+		  <a href="rpc-voting">RPC voting</a> an.  Andernfalls, um das Voting zu deaktivieren, schauen Sie sich bitte die Seite
+		  <a href="mining.html">How to mine</a> an.
+		  Wenn Mining aktiviert ist, wird ihre Wallet automatisch jeweils eine Block-Reward-Wahl abgeben sobald Sie einen Block minen. Das Heavycoin-Netzwerk ermittelt automatisch jede 5 Tage (3600 blocks) den Durchschnitt dieser Votes und setzt entsprechend den neuen Block Reward.
+		  </p>
+
+		  <h3>Voting-Phasen</h3>
+		  <p>
+		  Das Voting wird in drei Phasen (Mint, Limit und Sustain) eingeteilt um sich auswirkende Wahlen sowohl für die Prägungsrate als auch für den Geldbestand zu ermöglichen, aber auch um das Netzwerk langfristig aufrechtzuerhalten. Die erste Phase (Mint) erlaubt eine maximale Wahl von 1024 HVC. Die zweite Phase (Limit) erlaubt eine maximale ahl von 1024 HVC für die ersten 59876 Blocks, aber 8 HVC für die letzten ~3600 Blocks so dass diese Phase in die letzte Phase (Sustain) übergehen kann. Die Sustain-Phase erlaubt eine maximale Wahl von 8 HVC.
+		  </p>
+
+                  </br>   
+
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+    <table class="table table-bordered vphases col-center">
+        <thead>
+          <tr>
+            <th width="25%"><h3>Phase</h3></th>
+            <th width="25%"><h3>Voting</h3></th>
+            <th width="25%"><h3>Dauer</h3></th>
+            <th width="25%"><h3>Angebot</h3></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="center">
+            <td><h3>Mint</h3> 45,000,000 HVC</td>
+            <td>Wahlen beeinflussen die Dauer des Anfangsmining. Je höher der Block Reward, desto schneller werden die 45 Millionen Coins vergeben.</td>
+            <td>72 Tage bis 25+ Jahre<br/ > (Abhängig von den Wahlen)</td>
+            <td>45,000,000 HVC</br> (festgelegt)</td>
+          </tr>
+          <tr>
+            <td><h3>Limit</h3> 63,476 Blocks</td>
+            <td>Wahlen beeinflussen das endgültige Geldangebot. Je kleiner der Block Reward ist, desto kleiner auch das Angebot. Die maximale Anzahl möglichen Angebotes ist 128 Millionen Coins.</td>
+            <td>56 Tage</br> (festgelegt)</td>
+            <td>0 − 64,999,424 HVC</br> (Abhängig von den Wahlen)</td>
+          </tr>
+          <tr>
+            <td><h3>Sustain</h3> 10,000,576 Coins</td>
+            <td>Wahlen beeinflussen die langfristige Erhaltung des Netzwerks. Die höchste Wahl wird auf 8 reduziert.</td>
+            <td>4,7 Jahre bis 38+ Jahre</br> (Abhängig von den Wahlen)</td>
+            <td>10,000,576 HVC</br> (festgelegt)</td>
+          </tr>
+
+          <tr>
+            <td colspan="4"><strong>Maximales Angebot</strong></br>63,000,576 bis 128,000,000 HVC</br>(Abhängig von den Wahlen)</td>
+          </tr>
+
+        </tbody>
+    </table>
+</div>
+<p><img src="../images/age-limit.png" style="vertical-align: middle;" alt="*"/>Minimales Wahlalter: Keines</p>
+              </div>
+
+              <div class="tab-pane fade" id="fast-transactions">
+                  <i class="fa fa-rocket pull-left fa-4x"></i>
+                  <p>
+		  Heavycoin hat eine durchschnittliche Transaktionszeit von 2 Minuten, was schneller als Bitcoin oder Litecoin ist. Nutzer haben die Flexibilität, falls nötig, länger per Transaktion für zusätzliche Sicherheit zu warten.  Verglichen mit einer 1 Minute Blockzeit, reduziert Heavycoin’s 2 Minuten Blockzeit die Aufblähung des Blockchains und ermöglicht Stabilität indem es Forking und Blockchain Umgestaltung reduziert. 
+		  </p>
+
+		  <h3>Parameter</h3>
+		  <ul>
+		    <li>Blockzeit: 2 Minuten</li>
+		    <li>Retarget nach Oben: jede 5 Blocks</li>
+		    <li>Retarget nach Unten: jeden Block</li>
+		    <li>Durchschnitt: letzte Stunde</li>
+		    <li>Multipool-Schutz: temporal retargeting algorithm</li>
+		  </ul>
+
+		  <h3>Details</h3>
+
+		  <p>
+		  Die Blockverbreitungseschwindigkeiten sind höher als Sie möglicherweise erwarten. In der Publikation <a href="http://www.tik.ee.ethz.ch/file/49318d3f56c1d525aabf7fda78b23fc0/P2P2013_041.pdf">Information
+		  Propagation in the Bitcoin Network</a>, zeigen die Autoren, dass die mittlere Zeit für einen Node (Knotenpunkt) um einen Block zu sehen 12,6 Sekunden beträgt und nach 40 Sekunden 95% aller Nodes den Block gesehen haben. Allerdings ist dies kein Freibrief 40 Sekunden Blockzeiten zu wählen. Wir müssen weiterhin die negativen Folgen kurzer Blockzeiten berücksichtigen, wenn Miner widerstreiten und kleine Forks erzeugen. Zusätzlich produziert eine schnellere Blockzeit mehr Blocks pro Tag, womit ein 1-Minuten-Blockchain doppelt so schnell wächst wie ein 2-Minuten-Blockchain.
+		  </p>
+
+              </div>
+
+              <div class="tab-pane fade" id="temporal-retargeting">
+                  <i class="fa fa-gears pull-left fa-4x"></i>
+                  
+		  <p>
+		  Grünschnabel-Kryptowährungen müssen sich in einer rauen Umgebung beweisen und Herausforderungen bewältigen, deren gegenüber sich Bitcoin nicht zu beweisen hat. Die ernsteste Herausforderung ist den gewaltigen Schwierigkeits-Fluktuationen (difficulty fluctuations) zu widerstehen, welche auftreten wenn automatische Profit-wechselnde Mining Pools (auch Multipools genannt) auf neue Kryptowährungen abzielen. Die meisten Kryptowährungen entschärfen dieses Problem mittels Kimono Gravity Well, jedoch kann die Erholung Wochen dauern. Heavycoin hat seine eigene Lösung namens Temporal Retargeting (zeitliche Neu-Einstellung), welche viel schneller ist.
+		  </p>
+		  <br/>
+
+		  <center>
+		    <img src="../images/retargeting.png"/>
+		  </center>
+
+		  <h3>Problem</h3>
+		  <p>
+		  Grünschnabel-Kryptowährungen müssen sich in einer rauen Umgebung beweisen und Herausforderungen bewältigen, deren gegenüber sich Bitcoin nicht zu beweisen hat. Die ernsteste Herausforderung ist den gewaltigen Schwierigkeits-Fluktuationen (difficulty fluctuations) zu widerstehen, welche auftreten wenn automatische Profit-wechselnde Mining Pools (auch Multipools genannt) auf neue Kryptowährungen abzielen. Die meisten Kryptowährungen entschärfen dieses Problem mittels Kimono Gravity Well, jedoch kann die Erholung Wochen dauern. Heavycoin hat seine eigene Lösung namens Temporal Retargeting (zeitliche Neu-Einstellung), welche viel schneller ist.
+		  </p>
+
+		  <p>
+		  Das Ergebnis ist ein erstarrtes Netzwerk, in dem Transaktionen nicht bearbeitet werden können, da keine Blocks gelöst werden. Abhängig davon wie hoch der Schwierigkeitsausreißer war, kann das Netzwerk (nicht fähig einen Block zu lösen und Transaktionen zu arbeiten) für Stunden, Tage, Wochen oder sogar Monate erstarrt verbleiben. Dieses Problem hat viele alternative Kryptowährungen beeinflusst, große Paniken, fallende Preise und sogenannte “hard forks” verursacht, da die Entwickler eine neue Version der Software veröffentlichen mussten um das Netzwerk zu entstarren.
+		  </p>
+
+		  <p>
+		  Der Kern des Problems ist, dass die meisten Retargeting-Algorithmen nur periodisch an Hand der Block Nummer neu einstellen. Bitcoin wurde mit der Annahme designt, dass Hashing Power nicht plötzlich verschwindet. Es nimmt an, dass es immer einen anderen Block geben wird, von welchem aus der neue Schwierigkeitsgrad ermittelt werden kann. Dies ist jedoch keine gültige Annahme mehr.
+		  </p>
+
+		  <h3>Lösung</h3>
+
+		  <p>
+		  Bis jetzt war die beste Lösung für das Problem der <a href="https://bitcointalk.org/index.php?topic=240861.msg3040291#msg3040291" target="_blank">Kimoto
+		  Gravity Well retargeting algorithm</a>, welcher der Schwierigkeit erlaubt sich schneller als normal zu erholen. Leider setzt der Kimono Gravity Well jedoch voraus, dass ein Block gelöst wird, was Wochen dauern kann. Ein Beispiel ist der
+		  <a href="https://bitcointalk.org/index.php?topic=391192.msg4987231#msg4987231" target="_blank">kürzliche
+		  FedoraCoin hard fork</a>, bei dem Nutzer sich darüber empörten, mehrere Wochen auf das Einsetzen von Kimoto warten zu müssen.
+		  </p>
+
+		  <p>
+		  Heavycoin verfolgt einen anderen Ansatz gegenüber dem Multipool-Problem und führt ein Konzept namens “Temporal Retargeting” (Zeitliche Neu-Einstellung) ein. Bei Heavycoin, beginnt das Netzwerk mit seiner Selbstheilung indem es die Schwierigkeit senkt nachdem nach einer spezifischen Anzahl an Zeit kein Block gefunden wurde. Um jedoch Sicherheit zu gewährleisten, ist die Grenze der Selbstheilungszeit so gewählt, dass ein Kontrahent das Netzwerk nicht in manipulieren kann um die Schwierigkeit künstlich zu senken. 
+		  </p>
+
+		  <p>
+		  Heavycoin’s Temporal-Retargeting-Algorithmus garantiert, dass Transaktionen nie länger als 3 Stunden erstarren können. Das Network wird sich automatisch von Multipool-verursachten Schwierigkeitsausreißern ohne Panik oder Notfall-Eingreifen der Entwickler retten. Bitcoin’s Bestätigungszeit berücksichtigend, erachten wir 3 Stunden als akzeptable Gewährleistung und signifikante Verbesserung gegenüber Kimoto Gravity Well.
+		  </p>
+
+	      </div>
+
+          </div>
+      </div>
+  </div>
+  <!-- /.row -->
+
+</div>
+</div>
