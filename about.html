@@ -74,7 +74,7 @@ name: about
                     </p>
 
                     <center>
-                    <img src="images/quarkcoin-hash9.png" style="margin: 20px 0 20px; height: 24px;" title="Quarkcoin and its many clones implement the use of multiple hash functions incorrectly" alt="Quark(x) = ... SKEIN512(KECCAK512( ... BMW512(BLAKE512(x))))" />
+                    <img src="images/quarkcoin-hash9.png" style="margin: 20px 0 20px; height: 24px;" title="Quarkcoin (and its many clones) implement multiple hash functions as a simple chain of function compositions" alt="Quark(x) = ... SKEIN512(KECCAK512( ... BMW512(BLAKE512(x))))" />
                     </center>
                     <p>
 		    where ... contains additional hash function
@@ -91,9 +91,9 @@ name: about
                     SKEIN512(KECCAK512(... and so on, until we reach
                     Quark(x), which also has collisions.  Similarly,
                     if SKEIN-512 or Grøestl-512 have collisions,
-                    then so does Quark(x). Simply put, if there's a
-                    collision attack or second-preimage attack for
-                    BLAKE-512(x), then Quark(x) is cracked.
+                    then so does Quark(x). Simply put, if there's 
+                    a collision attack for BLAKE-512(x), 
+                    then the same attack applies to Quark(x).
                     </p>
 
                     <p></br>
@@ -104,9 +104,8 @@ name: about
                     <b>A:</b> Heavycoin takes 64 bits from the output
                     of each of 4 well-known cryptographic hash
                     functions (SHA-256, Keccak-512, Grøestl-512 and
-                    BLAKE-512) and interleaves these bits into a
-                    combined 256-bit hash that is more resistant
-                    against collisions and second-preimage attacks.
+                    BLAKE-512) and interleaves these bits into 
+                    a combined 256-bit hash that is more resistant against collisions.
                     </p>
 
 		    <center>
