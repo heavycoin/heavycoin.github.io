@@ -13,7 +13,7 @@ name: about
             <ul id="myTab" class="nav nav-tabs">
                 <li class="active"><a href="#ultra-secure" data-toggle="tab">Ultra-secure</a>
                 </li>
-                <li><a href="#cpu-only" data-toggle="tab">CPU-only</a>
+                <li><a href="#asic-resistant" data-toggle="tab">ASIC-resistant</a>
                 </li>
                 <li><a href="#decentralised-voting" data-toggle="tab">Decentralized voting</a>
                 </li>
@@ -27,24 +27,56 @@ name: about
                 <div class="tab-pane fade in active" id="ultra-secure">
                     <i class="fa fa-thumbs-o-up  pull-left fa-4x"></i>
                     <p>
-                    Heavycoin introduces a novel ultra-secure hash
-                    algorithm that employs multiple redundant
-                    cryptographic hash functions to secure its block
-                    chain.  If one of these hash functions fail, then
-                    Heavycoin is still protected by the others.  This
-                    is a significant step forward over Bitcoin,
-                    Litecoin and most other crypto-currencies, which
-                    rely on a single cryptographic hash function.
+                      Heavycoin introduces a novel ultra-secure hash
+                      algorithm that employs multiple redundant
+                      cryptographic hash functions to secure its block
+                      chain.  If one of these hash functions fails,
+                      then Heavycoin is still protected by the others.
+                      This is a step forward compared to Bitcoin,
+                      Litecoin and most other crypto-currencies, which
+                      rely on a single cryptographic hash function.
                     </p>
 
                     <p><center><img src="images/multi-hash.png" title="If one of these hash functions fail, then Heavycoin is still protected by the others. This is a significant step forward over Bitcoin and most other crypto-currencies." /></center></p>
 
                     <p>
-                    Moreover, Bitcoin and most other altcoins rely
-                    only on SHA-256, which was developed by the NSA.
-                    The recent Snowden revelations could bring into
-                    question the security promise of SHA-256 and,
-                    thus, the true government independence of Bitcoin.
+                      It is widely accepted that the collision
+                      resistance of cryptographic hash functions
+                      changes over time as cryptanalysis improves, the
+                      so-called <a href="http://valerieaurora.org/hash.html"
+                      target="_blank">Lifetime of cryptographic hash
+                      functions</a>.  There is
+                      a <a href="https://bitcointalk.org/index.php?topic=191.msg1585#msg1585"
+                      target="_blank">prophetic post by Satoshi</a> on
+                      this topic, where he speaks about what could be
+                      done to save Bitcoin if a "hash breakdown came
+                      gradually".  Heavycoin's philosophy is to try to
+                      increase the likelihood that such a "breakdown"
+                      would be as gradual as possible.
+                    </p>
+
+                    <p>
+                      When relying on a single cryptographic hash
+                      function, a significant breakdown due to
+                      advances in cryptanalysis could affect the
+                      entire 256-bit hash.  Heavycoin attempts to
+                      mitigate this risk by following the old adage of
+                      not putting all the eggs in one basket.  To this
+                      end, Heavycoin's 256-bit hash output is
+                      comprised from the outputs of four independent
+                      cryptographic hash functions (SHA-256,
+                      Keccak-512, Grøestl-512 and BLAKE-512).
+                    </p>
+
+                    <p>
+                      Heavycoin's basic premise is that a
+                      cryptoanalytic breakthrough is more likely for a
+                      single cryptographic hash function
+                      (eg. SHA-256), than for all four hash functions
+                      (SHA-256, Keccak-512, Grøestl-512 and
+                      BLAKE-512).  Thus, combining multiple hashes is
+                      used to limit the impact of a cryptoanalytic
+                      breakthrough.
                     </p>
 
                     <p>
@@ -55,11 +87,13 @@ name: about
                       <li><a href="https://en.wikipedia.org/wiki/Groestl" target="_blank">Grøestl-512</a></li>
                       <li><a href="https://en.wikipedia.org/wiki/BLAKE_(hash_function)" target="_blank">BLAKE-512</a></li>
                     </ul>
-                    <p/>
+                    </p>
+
                     <p>
-                    These cryptographic hash functions were selected
-                    because they have little in common and so a common
-                    weakness is thought to be extremely unlikely.
+                      These cryptographic hash functions were selected
+                      because they are thought to have little in
+                      common and thus a common weakness is thought to
+                      be extremely unlikely.
                     </p>
 
                     <p></br>
@@ -67,33 +101,49 @@ name: about
                     </p>
 
                     <p>
-                    <b>A:</b> Yes, but without increasing security
-		    against collisions.  Quarkcoin (and its many
-		    clones) actually implement multiple hash functions
-		    as a simple chain of function compositions
+                      <b>A:</b> Yes, but without increasing security
+		      against collisions.  Quarkcoin (and its many
+		      clones) actually implement multiple hash
+		      functions as a simple chain of function
+		      compositions
                     </p>
 
                     <center>
                     <img src="images/quarkcoin-hash9.png" style="margin: 20px 0 20px; height: 24px;" title="Quarkcoin (and its many clones) implement multiple hash functions as a simple chain of function compositions" alt="Quark(x) = ... SKEIN512(KECCAK512( ... BMW512(BLAKE512(x))))" />
                     </center>
                     <p>
-		    where ... contains additional hash function
-		    compositions using JH-512, Keccak-512, BMW-512,
-		    BLAKE-512, SKEIN-512 or Grøestl-512, which are
-		    randomly selected based on the 4th bit of previous
-		    hash outputs.
+		      where ... contains additional hash function
+		      compositions using JH-512, Keccak-512, BMW-512,
+		      BLAKE-512, SKEIN-512 or Grøestl-512, which are
+		      randomly selected based on the 4th bit of
+		      previous hash outputs.
 		    </p>
 
 		    <p>
-                    The problem is that, due to Quarkcoin's simple use
-                    of function compositions, if BLAKE512(x) has
-                    collisions, then so does BMW512(BLAKE512(x)) and
-                    SKEIN512(KECCAK512(... and so on, until we reach
-                    Quark(x), which also has collisions.  Similarly,
-                    if SKEIN-512 or Grøestl-512 have collisions,
-                    then so does Quark(x). Simply put, if there's 
-                    a collision attack for BLAKE-512(x), 
-                    then the same attack applies to Quark(x).
+                      The problem is that, due to Quarkcoin's simple
+                      use of function compositions, if BLAKE512(x) has
+                      collisions, then so does BMW512(BLAKE512(x)) and
+                      SKEIN512(KECCAK512(... and so on, until we reach
+                      Quark(x), which also has collisions.  Similarly,
+                      if SKEIN-512 or Grøestl-512 have collisions,
+                      then so does Quark(x). Simply put, if there's a
+                      collision attack for BLAKE-512(x), then the same
+                      attack applies to Quark(x).
+                    </p>
+
+                    <p>
+                      In terms of combining cryptographic hash
+                      functions, there doesn't seem to be perfect
+                      solution.  Nevertheless, Heavycoin tries to
+                      adopt a sensible method with the hope of
+                      "slowing down" the weakening of its hash
+                      algorithms over time (see Lifetime... above).
+                      There are different ways to achieve this goal,
+                      but there is no perfect solution and each has
+                      different advantages and disadvantages.
+                      Heavycoin has chosen a
+                      concatenation/interleaving approach, whereas
+                      Quark has selected a function chaining approach.
                     </p>
 
                     <p></br>
@@ -101,11 +151,12 @@ name: about
                     </p>
 
                     <p>
-                    <b>A:</b> Heavycoin takes 64 bits from the output
-                    of each of 4 well-known cryptographic hash
-                    functions (SHA-256, Keccak-512, Grøestl-512 and
-                    BLAKE-512) and interleaves these bits into 
-                    a combined 256-bit hash that is more resistant against collisions.
+                      <b>A:</b> Heavycoin takes the output from the
+                      each of 4 well-known cryptographic hash
+                      functions (SHA-256, Keccak-512, Grøestl-512 and
+                      BLAKE-512) and interleaves these bits into a
+                      combined 256-bit hash that is more resistant
+                      against collisions.
                     </p>
 
 		    <center>
@@ -113,31 +164,34 @@ name: about
 		    </center>
 
                     <p>
-                    The diagram above gives a quick snapshot example
-                    of how Heavycoin combines the outputs from its 4
-                    cryptographic hash functions.  This gives
-                    Heavycoin a significant security advantage because
-                    it does not rely on the long-term security of any
-                    single cryptographic hash function.  If BLAKE-512
-                    is cracked, then Heavy(x) is only weakened, but
-                    Heavycoin would remain fully functional and
-                    secure.
+                      The diagram above gives a quick snapshot example
+                      of how Heavycoin combines the outputs from its 4
+                      cryptographic hash functions.  This gives
+                      Heavycoin an advantage because it does not rely
+                      on the long-term security of any single
+                      cryptographic hash function.  If BLAKE-512 were
+                      cracked, then the impact would limited to at
+                      most 64-bits.  Heavy(x) would be weakened, but
+                      Heavycoin would still remain functional and
+                      there would be time to replace the insecure hash
+                      function for a better one.
                     </p>
+
                 </div>
 
-              <div class="tab-pane fade" id="cpu-only">
+              <div class="tab-pane fade" id="asic-resistant">
                   <i class="fa fa-gears pull-left fa-4x"></i>
 
 		  <p>
-		  Mining centralization is a problem for Bitcoin,
-		  Litecoin and most other crypto-currencies.
-		  Increasingly, more and more transactions are mined
-		  by a handful of big players with expensive,
-		  specialized hardware.  When most transaction
-		  processing is handled by a wealthy, small group,
-		  then this threatens the crypto-currency's
-		  independence and the numerous benefits that come
-		  from decentralization.
+		    Mining centralization is a problem for Bitcoin,
+		    Litecoin and most other crypto-currencies.
+		    Increasingly, more and more transactions are mined
+		    by a handful of big players with expensive,
+		    specialized hardware.  When most transaction
+		    processing is handled by a wealthy, small group,
+		    then this threatens the crypto-currency's
+		    independence and the numerous benefits that come
+		    from decentralization.
 		  </p>
 
 		  <center>
@@ -145,86 +199,39 @@ name: about
 		  </center>
 
                   <p>
-                  To support the largest, most vibrant mining
-                  community, Heavycoin introduces a novel CPU-only
-                  cryptographic hash function called HEFTY1.  This
-                  enables anyone with a normal computer to mine
-                  Heavycoins and become a stakeholder, so that
-                  transaction processing is spread among a more
-                  wide-range of individuals and organizations.  HEFTY1
-                  works by breaking out of the SIMD
-                  (single-instruction, multiple-data) assumption that
-                  GPU and ASIC miners rely on, with the long-term
-                  promise of always being CPU-only.
+                    To support the largest, most vibrant mining
+                    community, Heavycoin launched with a novel
+                    CPU-only cryptographic hash function called
+                    HEFTY1.  This enabled thousands of people with
+                    normal computers to mine Heavycoins and become
+                    early stakeholders.  Eventually HEFTY1 was ported
+                    to a GPU miner, allowing GPU miners to also mine
+                    Heavycoins and become stakeholders.  Currently
+                    Heavycoin is classed as ASIC-resistant, which
+                    means the majority of mining is done by GPU
+                    miners.
                   </p>
 
 		  <h3>Features</h3>
+                  <p>
+                    Early experiences in GPU mining Heavycoin indicate
+                    that there are currently some unique advantages,
+                    including <a href="https://bitcointalk.org/index.php?topic=167229.msg5721823#msg5721823" target="_blank">lower
+                    power consumption</a>
+                    and <a href="https://bitcointalk.org/index.php?topic=506774.msg5746513#msg5746513" target="_blank">cooler
+                    operation</a>.  It is thought that this is due to
+                    HEFTY1 creating stalls in the GPU implementations.
+                    Whether this is a permanent feature or just a
+                    temporary advantage due to unoptimized GPU
+                    implementations is unknown at this stage.
+                  </p>
+
 		  <ul>
-		    <li>CPU-only forever</li>
+		    <li>ASIC-resistant</li>
 		    <li>Tiny memory footprint</li>
+		    <li>Power efficient GPU mining</li>
+		    <li>Low temperature GPU mining</li>
 		  </ul>
-
-		  <h3>Details</h3>
-
-		  <p>
-		  In a nutshell, GPU and ASIC miners are able to
-		  parallelize multiple block hash guesses into a single
-		  instruction cycle by loading up the functional units
-		  with multiple guesses at the same time.  They then
-		  exploit the SIMD properties of SHA-256 by executing
-		  the same instructions on each register set
-		  simultaneously, which comprise the rounds of
-		  SHA-256.  This is what enables the tremendous
-		  hashing power of GPUs and ASICS.
-		  </p>
-
-		  <p>
-		  There are many GPU and ASIC resistant
-		  crypto-currencies, but they have all been broken and
-		  eventually mined by GPUs.  Some tried to make mining
-		  memory-hard (Scrypt, Litecoin, Yacoin, Memorycoin).
-		  Others tried to increase the implementation
-		  complexity of the cryptographic hash functions
-		  (Quark, et al).  However, at the end of the day, all
-		  of these efforts were overcome because GPU and ASIC
-		  miners are always able to increase their fast access
-		  memory capacity and also the complexity of their
-		  implementations.  Moreover, making mining
-		  memory-hard has serious drawbacks, which prevents
-		  your average desktop user from mining.
-		  </p>
-
-		  <p>
-                  Heavycoin is different because it is designed from
-		  its core to be permanently CPU-only.  Heavycoin
-		  introduces the HEFTY1 cryptographic hash function in
-		  order to thwart GPU and ASIC miners by breaking out
-		  of the SIMD paradigm.  The machine instructions that
-		  comprise HEFTY1 vary depending on input data.  That
-		  is, the particular instructions that are executed
-		  will not be the same for each hash guess.  Thus, it
-		  impossible for a GPU or ASIC to have an advantage
-		  over a CPU.
-		  </p>
-
-		  <center>
-		    <img src="images/simd.png"/>
-		  </center>
-
-		  <p>
-		  HEFTY1 must thwart GPU and ASIC miners while also
-		  providing secure cryptographic hashing.  To this
-		  end, HEFTY1 was carefully constructed by making a
-		  minimalistic extension to
-		  SHA-256's <a href="https://en.wikipedia.org/wiki/Merkle–Damgård_construction" target="_blank">Merkle–Damgård
-		  construction</a> and experimentally validating it
-		  against <a href="https://en.wikipedia.org/wiki/FIPS_140-2" target="_blank">FIPS
-		  140-2</a> and
-		  the <a href="http://www.phy.duke.edu/~rgb/General/dieharder.php" target="_blank">Dieharder</a>
-		  statistical test suite.  For more details, please
-		  visit the
-		  <a href="">HEFTY1 project page</a>.
-		  </p>
 
 		  <h3> Security</h3>
 
@@ -345,7 +352,7 @@ name: about
 		  a maximum vote of 8 HVC.
 		  </p>
 
-                  </br>   
+                  </br>
 
 <div class="panel panel-default">
   <!-- Default panel contents -->
@@ -433,7 +440,7 @@ name: about
 
               <div class="tab-pane fade" id="temporal-retargeting">
                   <i class="fa fa-gears pull-left fa-4x"></i>
-                  
+
 		  <p>
 		  Fledgling crypto-currencies must survive in a harsh
 		  environment and face challenges that Bitcoin does
