@@ -118,6 +118,11 @@ code {
   line-height: 1.9em;
 }
 
+.bgGrey {
+  background-color: #f0f0f0;
+}
+
+
 .specialOffer{background:#f5f5f5; padding:18px 0; border-top: 1px solid #eee;}
 
 /* Global Styles */
@@ -220,7 +225,7 @@ body {
 .footer, .footer-home {
   margin: 50px 0;
   background-color: #222;
-  color: #fff;
+  color: #999999;
   text-align: center;
   padding: 70px;
 }
@@ -228,8 +233,8 @@ body {
   margin: 0;
 
 }
-.footer p, .footer-home p {
-    color: #fff;
+.footer p, .footer-home p, .footer > li {
+    color: #999999;
 }
 
 #footer {
@@ -262,8 +267,9 @@ body {
 .footer p,
 .footer a, .footer-home a, .footer-home p {
   line-height: 24px;
-  color: #fff;
+  color: #aaaaaa;
   font-size: 12px;
+
 }
 
 .footer a:hover, .footer-home a:hover {
