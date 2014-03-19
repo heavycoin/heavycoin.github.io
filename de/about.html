@@ -13,7 +13,7 @@ name: about
             <ul id="myTab" class="nav nav-tabs">
                 <li class="active"><a href="#ultra-secure" data-toggle="tab">Ultra-Sicher</a>
                 </li>
-                <li><a href="#cpu-only" data-toggle="tab">CPU-only</a>
+                <li><a href="#asic-resistant" data-toggle="tab">ASIC-resistent</a>
                 </li>
                 <li><a href="#decentralised-voting" data-toggle="tab">Dezentralisiertes Voting</a>
                 </li>
@@ -97,41 +97,23 @@ name: about
 		  </center>
 
                   <p>
-                  Um die größte und dynamischste Gemeinschaft zu unterstützen, führt Heavycoin eine neuartige CPU-only Hashfunktion namens HEFTY1 ein. Dies erlaubt jedem, der über einen normalen Computer verfügt, Heavycoin zu minen und Stakeholder zu werden. HEFTY1 funktioniert indem es die SIMD (single-instruction, multiple-data) Annahme bricht, auf welche sich GPU und ASIC Miner verlassen.
+                  Um die größte und dynamischste Gemeinschaft zu unterstützen, führte Heavycoin eine neuartige CPU-only Hashfunktion namens HEFTY1 ein. Dies erlaubte jedem, der über einen normalen Computer verfügt, Heavycoin zu minen und Stakeholder zu werden. Schließlich wurde auch ein HEFTY1 GPU-Miner entwickelt, so dass Heavycoin auch mittels GPU gemined werden kann. Heavycoin ist momentan als ASIC-resistent klassifiziert, was bedeutet, dass das meiste Mining von GPU-Minern ausgeführt wird.
                   </p>
 
 		  <h3>Features</h3>
+		  
+          <p>
+          Frühe Erfahrungen mit dem GPU-Minen von Heavycoin haben gezeigt, dass es einige einzigartige Vorteile gibt, wie etwa <a href="https://bitcointalk.org/index.php?topic=167229.msg5721823#msg5721823" target="_blank">niedriger Energiebedarf</a> und <a href="https://bitcointalk.org/index.php?topic=506774.msg5746513#msg5746513" target="_blank">kühlerer Betrieb</a>. Ob dies ein permanentes Feature darstellt oder nur ein temporärer Vorteil ist, bleibt zunächst unklar.
+          </p>
+		  
 		  <ul>
-		    <li>Für immer CPU-Only</li>
+		    <li>ASIC-resistent</li>
 		    <li>Geringer Speicherbedarf</li>
+			<li>Energieeffizientes GPU-Mining</li>
+			<li>Niedrigtemperatur GPU-Mining</li>
 		  </ul>
 
-		  <h3>Details</h3>
 
-		  <p>
-		  Auf den Punkt gebracht, sind GPU und ASIC Miner dazu in der Lage multiple Block Hash Schätzungen in einem “single instruction cycle” zu parallelisieren indem sie die funktionalen Einheiten mit multiplen Schätzungen zur gleichen Zeit erhöhen. Sie beuten dann die SIMD-Eigenschaften von SHA-256 aus, indem sie die gleichen Befehle auf jedem Register-Set simultan ausführen, welche die SHA-256 Runden in sich fassen. Dies ermöglicht die immense Hash-Power von GPUs und ASICs.
-		  </p>
-
-		  <p>
-		  Es gibt zahlreiche GPU und ASIC-resistente Kryptowährungen, jedoch wurden bisher alle gebrochen und letztlich von GPUs gemined. Manche versuchten das Mining memory-hard zu machen (Scrypt, Litecoin, Yacoin, Memorycoin). Andere wiederum versuchten die Implementationskomplexität der kryptographischen Hashfunktionen (Quark, und co) zu erhöhen. Letzten Endes, jedoch, wurden alle diese Bemühungen überwunden weil GPU und ASIC Miner immer dazu in der Lage sind, ihre Schnellzugriff-Speicherkapazität und die Komplexität ihrer Implementationen zu erhöhen. Ferner hat das Bestreben, das Mining memory-hard zu machen, erhebliche Nachteile — was den durchschnittlichen Desktop-Nutzer vom Mining ausschließt.
-		  </p>
-
-		  <p>
-                  Heavycoin ist anders, weil es in seinem Kern darauf ausgelegt ist permanent CPU-only zu sein. Heavycoin führt die HEFTY1 kryptographische Hashfunktion ein um sich GPU und ASIC Minern in den Weg zu stellen, indem es sich vom SIMD-Modell löst. Die Maschinenbefehle welche HEFTY1 umfasst, variieren abhängig von Input Daten. Das bedeutet, dass die jeweiligen ausgeführten Befehle für jede Hash-Schätzung nicht die gleichen sind. Somit ist es unmöglich für eine GPU oder ASIC Vorteile gegenüber CPU zu haben.
-		  </p>
-
-		  <center>
-		    <img src="../images/simd.png"/>
-		  </center>
-
-		  <p>
-		  HEFTY1 muss GPU und ASIC Minern entgegenwirken und zur gleichen Zeit sicheres kryptographisches Hashing liefern. Zu diesem Zweck wurde HEFTY1 vor sorgfältig konstruiert indem es eine minimalistische Erweiterung zu <a href="https://de.wikipedia.org/wiki/Merkles_Meta-Verfahren" target="_blank">Merkles Meta-Verfahren</a> von SHA-256 vollzieht und sie experimentell an
-		  against <a href="https://en.wikipedia.org/wiki/FIPS_140-2" target="_blank">FIPS
-		  140-2</a> und
-		  der <a href="http://www.phy.duke.edu/~rgb/General/dieharder.php" target="_blank">Dieharder</a>
-		  statistical test suite validiert.  Für mehr Details besuchen Sie bitte die
-		  <a href="">HEFTY1 Projektseite</a>.
-		  </p>
 
 		  <h3>Sicherheit</h3>
 
