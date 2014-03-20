@@ -46,3 +46,15 @@
   osicon: fa-linux 
   sha256: c855c345c3fafaa33896ddd731a8c96ee968c604a0b3b7b95d10304e65964e31
 
+- title: CUDA ccMiner
+  desc: 
+  filename: https://github.com/cbuchner1/ccminer/releases
+  mirror1: https://github.com/cbuchner1/ccminer/releases
+  mirror2: 
+  modified:  
+  size: 
+  version: 
+  gpgsiglink: 
+  osicon:  
+  sha256: 
+

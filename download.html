@@ -13,8 +13,12 @@ name: download
               </div>
               <div class="cell col-md-5 download-data">
                   <ul>
+                    {% if item.version %}
                     <li><span>Version:</span> {{ item.version }}</li>
+                    {% endif %}
+                    {% if item.size %}
                     <li><span>File Size:</span> {{ item.size }}</li>
+                    {% endif %}
                     {% if item.gpgsiglink %}
                     <li><span>GPG Sig:</span> <a href="{{ item.gpgsiglink }}" class="file-link">Click</a> </li>
                     {% endif %}
