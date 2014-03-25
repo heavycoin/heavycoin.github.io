@@ -1,50 +1,50 @@
 - title: Windows
   desc: 
-  filename: heavycoin-1.0-win32.zip
-  mirror1: http://ubuntuone.com/7PpBvo99P7maKSNAtGGa36
-  mirror2: http://s000.tinyupload.com/?file_id=15661720162575159581
-  modified: 2014-03-08 
-  size: 14.7 MB
-  version: 1.0
-  gpgsiglink: http://ubuntuone.com/7Jyuejq3OB0cI6evP7G5Ok
+  filename: heavycoin-1.1-win32.zip
+  mirror1: http://ubuntuone.com/7OZsY027LWbv8ZakdWZZew
+  mirror2:
+  modified: 2014-03-25
+  size: 13.0 MB
+  version: 1.1
+  gpgsiglink: http://ubuntuone.com/0ifQgYi1GfeVRrDJK5ZC4R
   osicon: fa-windows 
-  sha256: 9365aac05e86fb0de8fd8046bcc82b73c6ab2b3ebdc5d745a9b9b7de744a6737
+  sha256: 427d350b6d006928e6ff731236ddf30a61ba3ff2548fc42891b9c7b519826398
 
 - title: OSX (Mavericks)
   desc: 
-  filename: heavycoin-1.0-2-osx-mavericks.zip
-  mirror1: http://ubuntuone.com/3AxBC0uTI4DIq7HP18BIgv
-  mirror2: http://s000.tinyupload.com/?file_id=28236154285945874300
-  modified: 2014-03-10
+  filename: heavycoin-1.1-osx-mavericks.zip
+  mirror1: http://ubuntuone.com/196xhWre8tJAyNZ2MXxx8C
+  mirror2:
+  modified: 2014-03-25
   size: 17.0 MB
-  version: 1.0-2
-  gpgsiglink: http://ubuntuone.com/0KiLogLFk7IFFnpCfe3y9G
+  version: 1.1
+  gpgsiglink: http://ubuntuone.com/0qTK4ZBotlTSz5za4ROMNb
   osicon: fa-apple 
-  sha256: 655d1ddcfd6bb7bfa0efb2ecb3886ef8a5c65093cd7f97dc6d1e23736765d8f6
+  sha256: 14f8b380fbfd3b841017f68a906641d87ac92d4be0fca9ca2835b3003653a24a
 
 - title: Debian7 (Wheezy)
   desc: 
-  filename: heavycoin-1.0-debian-7.tar.gz
-  mirror1: http://ubuntuone.com/4PhJ1tsUyRnGFHO47HbAZ4
-  mirror2: http://s000.tinyupload.com/?file_id=20507992901116257559
-  modified: 2014-03-08 
-  size: 5.8 MB
-  version: 1.0
-  gpgsiglink: http://ubuntuone.com/4YIJuBmjppnkOisfl0qHDQ
+  filename: heavycoin-1.1-debian-7.tar.gz
+  mirror1: http://ubuntuone.com/6HMvoHcAVaR9xefhgLAJuZ
+  mirror2:
+  modified: 2014-03-25
+  size: 5.1 MB
+  version: 1.1
+  gpgsiglink: http://ubuntuone.com/4pCI4LVzZpqVMh643S1r1c
   osicon: fa-linux 
-  sha256: 0e2dc4444bb98dc54dee039e288b231aa2590e6872388158cdde922c432ed44c
+  sha256: 92fa2f07b7a5adafc837577bbef5b16a86a19f0da92be87e3de9e52d12935f09
 
 - title: Ubuntu 13.10 (Saucy)
   desc: 
-  filename: heavycoin-1.0-ubuntu-13.10.tar.gz
-  mirror1: http://ubuntuone.com/1ox7ymGI6B1L0MymIMOW0A
-  mirror2: http://s000.tinyupload.com/?file_id=34927297995560214234
-  modified: 2014-03-08 
-  size: 4.9 MB
-  version: 1.0
-  gpgsiglink: http://ubuntuone.com/3sM57lhfWC7SAXrynwJlX5
+  filename: heavycoin-1.1-ubuntu-13.10.tar.gz
+  mirror1: http://ubuntuone.com/2cs977hmkoNT1IACTwN5Rj
+  mirror2:
+  modified: 2014-03-25
+  size: 5.0 MB
+  version: 1.1
+  gpgsiglink: http://ubuntuone.com/2gq8G9MZAi3ZRDDHCOOhex
   osicon: fa-linux 
-  sha256: c855c345c3fafaa33896ddd731a8c96ee968c604a0b3b7b95d10304e65964e31
+  sha256: 2919dabeb41446215fc852b3a7b719eae32d3a8257aafbfb86d000f57b0d0a26
 
 - title: CUDA ccMiner
   desc: 
