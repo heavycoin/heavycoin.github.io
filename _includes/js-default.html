@@ -69,3 +69,263 @@ $('.nav-tabs a').on('shown', function (e) {
 
 {% endif %}
 
+
+{% if page.name == "difficulty-graph" %}
+
+var diffbaseline;
+var diffcurrentdelta;
+var seconds_since_update = 0;
+var seconds_since_fetch = 0;
+
+$(document).ready(function() {
+ go();
+});
+
+function go()
+{
+	$.getJSON('http://198.52.200.43/getdiffbaseline.php', function(data) {
+          diffbaseline = data;
+          $.getJSON('http://198.52.200.43/getdiffdelta.php', function(data) {
+             diffcurrentdelta = data;
+		    // Create the chart
+		    $('#difficultygraph').highcharts('StockChart', {
+                chart : {
+                    events : {
+	    		        load : function() {
+					        // set up the updating of the chart
+                            var chart = this;
+					        setInterval(function() {
+					                                if (seconds_since_fetch == 30)
+                                                    {
+                                                        seconds_since_fetch = 0;
+                                                        $.getJSON('http://198.52.200.43/getdiffdelta.php', function(data) {
+                                                            if (data)
+                                                            {
+                                                                if (data.blockcount > diffcurrentdelta.blockcount)
+                                                                {
+                                                                    for (var i = diffcurrentdelta.blockcount; i < data.blockcount; i++)
+                                                                    {
+                                                                        var x = i;
+                                                                        var y = data.blocks[i - diffbaseline.blockcount];
+                                                                        chart.series[0].addPoint([x, y], false, true);
+                                                                        console.log('Adding block ' + x + ', difficulty ' + y);
+                                                                    }
+                                                                    diffcurrentdelta = data;
+                                                                    chart.redraw();
+                                                                    seconds_since_update = 0;
+                                                                }
+                                                            }
+                                                        });
+                                                    }
+                                                    seconds_since_update++;
+                                                    seconds_since_fetch++;
+                                                    $('#last_update span:first-child').next().text(seconds_since_update + " seconds ago");
+					        }, 1000);
+				        }
+			        }
+		        },
+
+			title : { text : 'Difficulty' },
+            xAxis: { labels: {   formatter: function () {return this.value;}} },
+            yAxis: { min: 0 },
+            navigator: {
+                        xAxis: { labels: {   formatter: function () {return this.value;}} }
+            },
+            tooltip: {
+                       formatter: function() {
+                                                var s = '<p>Block: '+ this.x +'</p>';
+                                                $.each(this.points, function(i, point) {
+                                                   s += '<br/><span style="color: '+Highcharts.getOptions().colors[0]+'">'+ point.series.name +'</span>: <b>'+ point.y.toFixed(2) + '</b>';
+                                                });
+                                                return s;
+                                             },
+                                             shared: true
+            },
+            exporting: { enabled: false },
+            credits: { enabled: false },
+            rangeSelector: {
+                            buttons: [{
+                                        count: 360,
+                                        type: 'millisecond',
+                                        text: '360'
+		                              }, {
+                                        count: 720,
+                                        type: 'millisecond',
+                                        text: '720'
+                                      }, {
+                                        type: 'all',
+                                        text: 'All'
+		                            }],
+		                    inputEnabled: false,
+		                    selected: 2
+	    },
+        series : [{
+		            name : 'Difficulty',
+                    data : diffbaseline.blocks.concat(data.blocks),
+			    }]
+		});
+    });
+});
+}
+
+{% endif %}
+
+{% if page.name == "voting-graph" %}
+var votebaseline;
+var votedelta;
+var rewardestbaseline;
+var rewardestdelta;
+
+var seriesOptions = [],
+    yAxisOptions = [],
+    seriesCounter = 2,
+    names = ['Vote', 'Estimated next reward'],
+    colors = Highcharts.getOptions().colors.splice(1,1);
+var seconds_since_update = 0;
+var seconds_since_fetch = 0;
+$(document).ready(function() {
+ go();
+});
+
+var loaded = 0;
+function go()
+{
+    $.getJSON('http://198.52.200.43/getvotesbaseline.php', function(data) {
+            votebaseline = data;
+            $.getJSON('http://198.52.200.43/getvotesdelta.php', function(data) {
+                votecurrentdelta = data;
+                loaded++;
+                if (loaded == 2)
+                    createChart();
+            });
+        });
+    $.getJSON('http://198.52.200.43/getrewardestbaseline.php', function(data) {
+            rewardestbaseline = data;
+            $.getJSON('http://198.52.200.43/getrewardestdelta.php', function(data) {
+                rewardestdelta = data;
+                loaded++;
+                if (loaded == 2)
+                    createChart();
+            });
+        });
+}
+
+function createChart()
+{
+    seriesOptions[0] = {
+		name: "Vote",
+		data: votebaseline.blocks.concat(votecurrentdelta.blocks)
+	};
+    seriesOptions[1] = {
+		name: "Estimated next reward",
+		data: rewardestbaseline.blocks.concat(rewardestdelta.blocks)
+	};
+
+	// Create the chart
+	$('#votinggraph').highcharts('StockChart', {
+        chart : {
+            events : {
+	            load : function() {
+    		        // set up the updating of the chart each second
+                    var chart = this;
+			        setInterval(function() {
+
+                        if (seconds_since_fetch == 30)
+                        {
+                            seconds_since_fetch = 0;
+			                loaded = 0;
+                            $.getJSON('http://198.52.200.43/getvotesdelta.php', function(data) {
+                                if (data)
+                                {
+                                    if (data.blockcount > votecurrentdelta.blockcount)
+                                    {
+                                        for (var i = votecurrentdelta.blockcount; i < data.blockcount; i++)
+                                        {
+                                            var x = i;
+                                            var y = data.blocks[i - votebaseline.blockcount];
+                                            chart.series[0].addPoint([x, y], false, true);
+                                            console.log('Adding block ' + x + ', difficulty ' + y);
+                                        }
+                                        votecurrentdelta = data;
+                                        chart.redraw();
+                                        loaded++;
+                                        if (loaded == 2)
+                                            seconds_since_update = 0;
+                                    }
+                                }
+                            });
+                            $.getJSON('http://198.52.200.43/getrewardestdelta.php', function(data) {
+                                if (data)
+                                {
+                                    if (data.blockcount > rewardestdelta.blockcount)
+                                    {
+                                        for (var i = rewardestdelta.blockcount; i < data.blockcount; i++)
+                                        {
+                                            var x = i;
+                                            var y = data.blocks[i - rewardestbaseline.blockcount];
+                                            chart.series[1].addPoint([x, y], false, true);
+                                            console.log('Adding block ' + x + ', estimated next reward ' + y);
+                                        }
+                                        rewardestdelta = data;
+                                        chart.redraw();
+                                        loaded++;
+                                        if (loaded == 2)
+                                            seconds_since_update = 0;
+                                    }
+                                }
+                            });
+                        }
+                        seconds_since_update++;
+                        seconds_since_fetch++;
+                        $('#last_update span:first-child').next().text(seconds_since_update + " seconds ago");
+
+				    }, 1000);
+			    }
+		    }
+	    },
+		title : { text : 'Decentralized voting' },
+        xAxis: { labels: {   formatter: function () {return this.value;}} },
+        yAxis: {
+                       min: 0,
+                       max: 1024
+                },
+        navigator: {
+                    xAxis: {
+                            labels: {   formatter: function () {return this.value;}} 
+                           }
+                },
+       tooltip: {
+                formatter: function() {
+                                   var s = '<p>Block: '+ this.x +'</p>';
+                                   $.each(this.points, function(i, point) {
+                                       s += '<br/><span style="color: '+Highcharts.getOptions().colors[i]+'">'+ point.series.name +'</span>: <b>'+ point.y.toFixed(0) + '</b>';
+                                     });
+                                   return s;
+                                   },
+                shared: true
+                },
+        exporting: { enabled: false },
+        credits: { enabled: false },
+        rangeSelector: {
+                        buttons: [{
+                                    count: 30,
+                                    type: 'millisecond',
+                                    text: '30'
+		                          }, {
+                                    count: 60,
+                                    type: 'millisecond',
+                                    text: '60'
+                                  }, {
+                                    type: 'all',
+                                    text: 'All'
+		                        }],
+		                inputEnabled: false,
+		                selected: 0
+	},
+    series : seriesOptions
+	});
+
+}
+
+{% endif %}
+
