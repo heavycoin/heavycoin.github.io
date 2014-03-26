@@ -349,6 +349,7 @@ body {
 .marketcap li {
   display: inline-block;
   width: 20%;
+  vertical-align: middle;
 }
 
 .marketcap li span {
