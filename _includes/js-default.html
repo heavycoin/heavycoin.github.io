@@ -27,7 +27,7 @@ function fetch()
       $('#max_supply').text(data.max_supply);
       $('#current_reward').text(data.reward);
       $('#price').text(data.current_price.toFixed(3));
-      $('#marketcap').text(data.market_cap.toFixed(0));
+      $('#marketcap').text(data.market_cap.toFixed(2));
 
       $('#total_supply').formatCurrency({
                    symbol: 'HVC',
@@ -46,12 +46,12 @@ function fetch()
                    });
       $('#marketcap').formatCurrency({
                    symbol: '&#36;',
-                   positiveFormat: '%s %n',
-                   roundToDecimalPlace: '0'
+                   positiveFormat: '%s%n',
+                   roundToDecimalPlace: '2'
                    });
       $('#price').formatCurrency({
                    symbol: '&#36;',
-                   positiveFormat: '%s %n',
+                   positiveFormat: '%s%n USD',
                    roundToDecimalPlace: '3'
                    });
 

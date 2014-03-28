@@ -338,7 +338,7 @@ body {
   text-align: center;
   padding-top: 30px;
   color: #000;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .marketcap ul {
@@ -354,7 +354,7 @@ body {
 
 .marketcap li span {
   display: block;
-  font-size: 26px;
+  font-size: 22px;
 }
 
 .marketcap li span:last-child {
@@ -365,6 +365,43 @@ body {
 }
 
 .marketcap .updated {
+  font-size: 14px;
+  font-weight: 300;
+  padding-top: 15px;
+  color: #ccc;
+}
+
+.download {
+  text-align: center;
+  padding: 0px;
+  color: #000;
+  font-size: 14px;
+}
+
+.download ul {
+  margin: 0;
+  padding: 0;
+}
+
+.download li {
+  display: inline-block;
+  width: 20%;
+  vertical-align: middle;
+}
+
+.download li span {
+  display: block;
+  font-size: 22px;
+}
+
+.download li span:last-child {
+  font-weight: 100;
+  text-transform: uppercase;
+  font-size: 16px;
+  padding-top: 5px;
+}
+
+.download .updated {
   font-size: 14px;
   font-weight: 300;
   padding-top: 15px;
