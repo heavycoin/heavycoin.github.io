@@ -1,60 +1,119 @@
 - title: Windows
-  desc: 
-  filename: heavycoin-1.1-win32.zip
-  mirror1: http://ubuntuone.com/7OZsY027LWbv8ZakdWZZew
+  desc:
+  filename: heavycoin-1.2-win32.zip
+  mirror1: http://198.52.200.43/downloads/heavycoin-1.2-win32.zip
   mirror2:
-  modified: 2014-03-25
+  modified: 2014-04-14
   size: 13.0 MB
-  version: 1.1
-  gpgsiglink: http://ubuntuone.com/0ifQgYi1GfeVRrDJK5ZC4R
-  osicon: fa-windows 
-  sha256: 427d350b6d006928e6ff731236ddf30a61ba3ff2548fc42891b9c7b519826398
+  version: 1.2
+  gpgsiglink: http://198.52.200.43/downloads/heavycoin-1.2-win32.zip.sig
+  osicon: fa-windows
+  sha256: 2694d2e42269c3d0e03d46fef83a127f02b3b3f516de8af2925a843c084928fb
 
 - title: OSX (Mavericks)
-  desc: 
-  filename: heavycoin-1.1-osx-mavericks.zip
-  mirror1: http://ubuntuone.com/196xhWre8tJAyNZ2MXxx8C
+  desc:
+  filename: heavycoin-1.2-osx-mavericks.zip
+  mirror1: http://198.52.200.43/downloads/heavycoin-1.2-osx-mavericks.zip
   mirror2:
-  modified: 2014-03-25
+  modified: 2014-04-14
   size: 17.0 MB
-  version: 1.1
-  gpgsiglink: http://ubuntuone.com/0qTK4ZBotlTSz5za4ROMNb
-  osicon: fa-apple 
-  sha256: 14f8b380fbfd3b841017f68a906641d87ac92d4be0fca9ca2835b3003653a24a
+  version: 1.2
+  gpgsiglink: http://198.52.200.43/downloads/heavycoin-1.2-osx-mavericks.zip.sig
+  osicon: fa-apple
+  sha256: 6b6bd06e92e2be00808d09a5fa767c9ccdf8ba03de1dfd457aead1dbe1872c6b
 
 - title: Debian7 (Wheezy)
-  desc: 
-  filename: heavycoin-1.1-debian-7.tar.gz
-  mirror1: http://ubuntuone.com/6HMvoHcAVaR9xefhgLAJuZ
+  desc:
+  filename: heavycoin-1.2-debian-7.tar.gz
+  mirror1: http://198.52.200.43/downloads/heavycoin-1.2-debian-7.tar.gz
   mirror2:
-  modified: 2014-03-25
-  size: 5.1 MB
-  version: 1.1
-  gpgsiglink: http://ubuntuone.com/4pCI4LVzZpqVMh643S1r1c
-  osicon: fa-linux 
-  sha256: 92fa2f07b7a5adafc837577bbef5b16a86a19f0da92be87e3de9e52d12935f09
+  modified: 2014-04-14
+  size: 3.8 MB
+  version: 1.2
+  gpgsiglink: http://198.52.200.43/downloads/heavycoin-1.2-debian-7.tar.gz.sig
+  osicon: fa-linux
+  sha256: a00bcdd27f75e2dd15eaa29467f86f91d769260de781651090cf42d91eb23125
 
 - title: Ubuntu 13.10 (Saucy)
-  desc: 
-  filename: heavycoin-1.1-ubuntu-13.10.tar.gz
-  mirror1: http://ubuntuone.com/2cs977hmkoNT1IACTwN5Rj
+  desc:
+  filename: heavycoin-1.2-ubuntu-13.10.tar.gz
+  mirror1: http://198.52.200.43/downloads/heavycoin-1.2-ubuntu-13.10.tar.gz
   mirror2:
-  modified: 2014-03-25
-  size: 5.0 MB
-  version: 1.1
-  gpgsiglink: http://ubuntuone.com/2gq8G9MZAi3ZRDDHCOOhex
-  osicon: fa-linux 
-  sha256: 2919dabeb41446215fc852b3a7b719eae32d3a8257aafbfb86d000f57b0d0a26
+  modified: 2014-04-14
+  size: 3.5 MB
+  version: 1.2
+  gpgsiglink: http://198.52.200.43/downloads/heavycoin-1.2-ubuntu-13.10.tar.gz.sig
+  osicon: fa-linux
+  sha256: 9a5bd887b4e0c57b820d4881867f632e849ddea1184a26505ce2c77a74421afc
+
+- title: Source code
+  desc:
+  filename: Heavycoin source
+  mirror1: https://github.com/heavycoin/heavycoin
+  mirror2:
+  modified:
+  size:
+  version:
+  gpgsiglink:
+  osicon: fa-github
+  sha256:
+
+- title: CPU miner
+  desc:
+  filename: cpuminer-heavycoin
+  mirror1: https://github.com/heavycoin/cpuminer-heavycoin
+  mirror2:
+  modified:
+  size:
+  version:
+  gpgsiglink:
+  osicon: fa-github
+  sha256:
 
 - title: CUDA ccMiner
-  desc: 
-  filename: https://github.com/cbuchner1/ccminer/releases
+  desc:
+  filename: ccMiner source
   mirror1: https://github.com/cbuchner1/ccminer/releases
-  mirror2: 
-  modified:  
-  size: 
-  version: 
-  gpgsiglink: 
-  osicon:  
-  sha256: 
+  mirror2:
+  modified:
+  size:
+  version:
+  gpgsiglink:
+  osicon: fa-github
+  sha256:
 
+- title: Python hash module
+  desc:
+  filename: heavycoin-hash-python
+  mirror1: https://github.com/heavycoin/heavycoin-hash-python
+  mirror2:
+  modified:
+  size:
+  version:
+  gpgsiglink:
+  osicon: fa-github
+  sha256:
+
+- title: Stratum server
+  desc:
+  filename: stratum-mining-heavycoin
+  mirror1: https://github.com/heavycoin/stratum-mining-heavycoin
+  mirror2:
+  modified:
+  size:
+  version:
+  gpgsiglink:
+  osicon: fa-github
+  sha256:
+
+- title: MPOS
+  desc: Reference mpos fork
+  filename: php-mpos-heavycoin
+  mirror1: https://github.com/heavycoin/php-mpos-heavycoin
+  mirror2:
+  modified:
+  size:
+  version:
+  gpgsiglink:
+  osicon: fa-github
+  sha256:
