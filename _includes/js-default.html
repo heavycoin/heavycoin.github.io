@@ -341,3 +341,104 @@ function createChart()
 
 {% endif %}
 
+{% if page.name == "avgblocktime-graph" %}
+var diffbaseline;
+var diffcurrentdelta;
+var seconds_since_update = 0;
+var seconds_since_fetch = 0;
+
+$(document).ready(function() {
+ go();
+});
+
+function go()
+{
+	$.getJSON('http://94.102.53.183/getblocktimeavgbaseline.php', function(data) {
+          diffbaseline = data;
+          $.getJSON('http://94.102.53.183/getblocktimeavgdelta.php', function(data) {
+             diffcurrentdelta = data;
+             $('#lastavgtime').text(data.blocks[data.blocks.length-1] + ' seconds');
+		    // Create the chart
+		    $('#avgblocktimegraph').highcharts('StockChart', {
+                chart : {
+                    events : {
+	    		    load : function() {
+                            // set up the updating of the chart
+                            var chart = this;
+			    setInterval(function() {
+			                            if (seconds_since_fetch == 30)
+                                                    {
+                                                        seconds_since_fetch = 0;
+                                                        $.getJSON('http://94.102.53.183/getblocktimeavgdelta.php', function(data) {
+                                                            if (data)
+                                                            {
+                                                                if (data.blockcount > diffcurrentdelta.blockcount)
+                                                                {
+                                                                    for (var i = diffcurrentdelta.blockcount; i < data.blockcount; i++)
+                                                                    {
+                                                                        var x = i;
+                                                                        var y = data.blocks[i - diffbaseline.blockcount];
+                                                                        chart.series[0].addPoint([x, y], false, true);
+                                                                        console.log('Adding block ' + x + ', difficulty ' + y);
+                                                                    }
+                                                                    diffcurrentdelta = data;
+                                                                    chart.redraw();
+                                                                    seconds_since_update = 0;
+                                                                    $('#lastavgtime').text(data.blocks[data.blocks.length-1] + ' seconds');
+                                                                }
+                                                            }
+                                                        });
+                                                    }
+                                                    seconds_since_update++;
+                                                    seconds_since_fetch++;
+                                                    $('#last_update span:first-child').next().text(seconds_since_update + " seconds ago");
+					        }, 1000);
+				        }
+			        }
+		        },
+
+			title : { text : 'Average block time' },
+            xAxis: { labels: {   formatter: function () {return this.value;}} },
+            yAxis: { min: 0 },
+            navigator: {
+                        xAxis: { labels: {   formatter: function () {return this.value;}} }
+            },
+            tooltip: {
+                       formatter: function() {
+                                                var s = '<p>Block: '+ this.x +'</p>';
+                                                $.each(this.points, function(i, point) {
+                                                   s += '<br/><span style="color: '+Highcharts.getOptions().colors[0]+'">'+ point.series.name +'</span>: <b>'+ point.y.toFixed(2) + ' sec</b>';
+                                                });
+                                                return s;
+                                             },
+                                             shared: true
+            },
+            exporting: { enabled: false },
+            credits: { enabled: false },
+            rangeSelector: {
+                            buttons: [{
+                                        count: 360,
+                                        type: 'millisecond',
+                                        text: '360'
+		                              }, {
+                                        count: 720,
+                                        type: 'millisecond',
+                                        text: '720'
+                                      }, {
+                                        type: 'all',
+                                        text: 'All'
+		                            }],
+		                    inputEnabled: false,
+		                    selected: 2
+	    },
+        series : [{
+		            name : 'Avg time',
+                    data : diffbaseline.blocks.concat(data.blocks),
+			    }]
+		});
+    });
+});
+}
+
+{% endif %}
+
