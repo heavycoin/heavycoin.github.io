@@ -20,7 +20,7 @@
   version: 1.3
   gpgsiglink: http://198.52.200.43/downloads/heavycoin-1.3-osx-mavericks.zip.sig
   osicon: fa-apple
-  sha256: 257396cafe99615adb61e61e94a2a43519826be8291b8072e8c6aeee0a58260e
+  sha256: c6bcb0df37f54daef4f5c1af6801003c008b25212d6f799089d64d250186fbff
 
 - title: Debian7 (Wheezy)
   desc:
