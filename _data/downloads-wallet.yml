@@ -3,48 +3,48 @@
   filename: heavycoin-1.3-win32.zip
   mirror1: http://198.52.200.43/downloads/heavycoin-1.3-win32.zip
   mirror2:
-  modified: 2014-06-17
+  modified: 2014-06-18
   size: 13.0 MB
   version: 1.3
   gpgsiglink: http://198.52.200.43/downloads/heavycoin-1.3-win32.zip.sig
   osicon: fa-windows
-  sha256: 3e2a8a3c412a6b3d3ae29612e980fdaaa9df0d0d7b1ef0ddeddf04707ef5cadf
+  sha256: da6bec6a815d1bacd3585c4f07e0f4d4e0e1de3e3b6511072eaa067d264564f7
 
 - title: OSX (Mavericks)
   desc:
   filename: heavycoin-1.3-osx-mavericks.zip
   mirror1: http://198.52.200.43/downloads/heavycoin-1.3-osx-mavericks.zip
   mirror2:
-  modified: 2014-06-17
+  modified: 2014-06-18
   size: 16.0 MB
   version: 1.3
   gpgsiglink: http://198.52.200.43/downloads/heavycoin-1.3-osx-mavericks.zip.sig
   osicon: fa-apple
-  sha256: c6bcb0df37f54daef4f5c1af6801003c008b25212d6f799089d64d250186fbff
+  sha256: 638efb8d484961638c224cc85bf85410d6079218fccaa95d4599e840f303e085
 
 - title: Debian7 (Wheezy)
   desc:
   filename: heavycoin-1.3-debian-7.tar.gz
   mirror1: http://198.52.200.43/downloads/heavycoin-1.3-debian-7.tar.gz
   mirror2:
-  modified: 2014-06-17
+  modified: 2014-06-18
   size: 3.8 MB
   version: 1.3
   gpgsiglink: http://198.52.200.43/downloads/heavycoin-1.3-debian-7.tar.gz.sig
   osicon: fa-linux
-  sha256: c7eb9558cf332354c3956ab8bfec2475f44e7ce2e392bd0b5fd3f8db42fc19c7
+  sha256: 457fee241f4cbb38d3251a14fa4d3e0bd57e416664128caef692525e931c208c
 
 - title: Ubuntu 13.10 (Saucy)
   desc:
   filename: heavycoin-1.3-ubuntu-13.10.tar.gz
   mirror1: http://198.52.200.43/downloads/heavycoin-1.3-ubuntu-13.10.tar.gz
   mirror2:
-  modified: 2014-06-17
-  size: 3.8 MB
+  modified: 2014-06-18
+  size: 3.5 MB
   version: 1.3
   gpgsiglink: http://198.52.200.43/downloads/heavycoin-1.3-ubuntu-13.10.tar.gz.sig
   osicon: fa-linux
-  sha256: 43920e14b45bf2d945f6fbb0b863e1aef85962661d53c74a90b45e150499d36b
+  sha256: bebe4e669b6af26c5c0a9a9dcb008ee5c56097bf140380cea8de1a21af526966
 
 - title: Source code
   desc:
